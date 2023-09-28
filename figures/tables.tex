@@ -1,0 +1,55 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+
+\begin{document}
+    \begin{table*}[h!]
+	\small
+	\centering
+	\caption{\textbf{Vertex records.}}\label{tab:vertices}
+	\begin{tabular}{c c c}
+	    \toprule
+	    vertex & coordinates & incident edge \\
+	    \midrule
+	    a      & (0,2)  & $\vec{ba}$ \\
+	    b      & (2,0)  & $\vec{db}$ \\
+	    \vdots & \vdots & \vdots     \\
+	    e      & (4,6)  & $\vec{fe}$ \\
+	    f      & (6,4)  & $\vec{df}$ \\
+	    \vdots & \vdots & \vdots \\
+	    \bottomrule
+	\end{tabular}
+    \end{table*}
+
+    \begin{table*}[h!]
+	\small
+	\centering
+	\caption{\textbf{Face records.}}\label{tab:faces}
+	\begin{tabular}{c c c}
+	    \toprule
+		& boundary  & hole\\
+	    face & edge      & list\\
+	    \midrule
+	    $f_1$ & $\vec{ab}$ & $nil$ \\
+	    $f_2$ & $\vec{fe}$ & $nil$ \\
+	    $f_3$ & $nil$      & $nil$ \\
+	    \bottomrule
+	\end{tabular}
+    \end{table*}
+
+    \begin{table*}[h!]
+	\small
+	\centering
+	\caption{\textbf{Half-edge records.}}\label{tab:hedges}
+	\begin{tabular}{c c c c c c}
+	    \toprule
+	    half-edge & origin & face & twin & next & prev \\
+	    \midrule
+	    $\vec{fe}$ & f & $f_2$  & $\vec{ef}$ & $\vec{ec}$ & $\vec{df}$ \\
+	    $\vec{ca}$ & c & $f_1$  & $\vec{ac}$ & $\vec{ab}$ & $\vec{dc}$ \\
+	    $\vec{db}$ & d & $f_3$  & $\vec{bd}$ & $\vec{ba}$ & $\vec{fd}$ \\
+	    \vdots     & \vdots & \vdots & \vdots     & \vdots     & \vdots     \\
+	    \bottomrule
+	\end{tabular}
+    \end{table*}
+\end{document}
