@@ -1,0 +1,9 @@
+\begin{abstract}
+The Doubly Connected Edge List (DCEL) is an edge-list structure that has been widely utilized in spatial applications for planar topological computations.
+An important operation is the \textit{overlay} which combines the DCELs of two input layers and can easily support spatial queries like the intersection, union
+ and difference between these layers.
+Here we propose a distributed and scalable way to compute the overlay operation and its related supported queries.
+Previous sequential implementations do not scale and fail to complete for large datasets (for example the US census tracks).
+We address the issues involved in distributing the overlay operator and offer various optimizations.
+Using real datasets, our scalable solution can compute the overlay of very large datasets (32M edges) in few minutes.
+\end{abstract}

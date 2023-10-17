@@ -1,0 +1,430 @@
+\section{Preliminaries}
+
+\begin{table} %\label{tab:records}
+    \ssp
+    \begin{minipage}{0.5\textwidth}
+        \small
+        \centering
+        \caption{Vertex records.}\label{tab:vertices}
+        \begin{tabular}{c c c}
+            \toprule
+            vertex & coordinates & incident edge \\
+            \midrule
+            a      & (0,2)  & $\vec{ba}$ \\
+            b      & (2,0)  & $\vec{db}$ \\
+            c      & (2,4)  & $\vec{dc}$ \\
+            \vdots & \vdots & \vdots     \\
+            \bottomrule
+        \end{tabular}
+    \end{minipage}\hfill % maximize the horizontal separation
+    \begin{minipage}{0.5\textwidth}
+        \small
+        \centering
+        \caption{Face records.}\label{tab:faces}
+        \begin{tabular}{c c c}
+            \toprule
+                & boundary  & hole\\
+            face & edge      & list\\
+            \midrule
+            $f_1$ & $\vec{ab}$ & $nil$ \\
+            $f_2$ & $\vec{fe}$ & $nil$ \\
+            $f_3$ & $nil$      & $nil$ \\
+            \bottomrule
+        \end{tabular}
+    \end{minipage}
+\end{table}
+
+\begin{table}
+    \ssp
+    \small
+    \centering
+    \caption{Half-edge records.}\label{tab:hedges}
+    \begin{tabular}{c c c c c c} 
+        \toprule
+        half-edge & origin & face & twin & next & prev \\
+        \midrule
+        $\vec{fe}$ & f & $f_2$  & $\vec{ef}$ & $\vec{ec}$ & $\vec{df}$ \\
+        $\vec{ca}$ & c & $f_1$  & $\vec{ac}$ & $\vec{ab}$ & $\vec{dc}$ \\
+        $\vec{db}$ & d & $f_3$  & $\vec{bd}$ & $\vec{ba}$ & $\vec{fd}$ \\
+        \vdots     & \vdots & \vdots & \vdots     & \vdots     & \vdots     \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\label{sec:prelim}
+
+The DCEL \cite{muller_finding_1978} structure is used to represent an embedding of a planar subdivision in the plane. It provides efficient manipulation of the geometric and topological features of spatial objects (polygons, lines and points) using \textit{faces}, \textit{edges} and \textit{vertices} respectively.  
+A DCEL uses three tables (relations) to store records for the faces, edges and vertices, respectively. 
+An important characteristic is that all these records are defined using edges as the main component (thus termed as an edge-based structure). 
+Examples appear in Tables \ref{tab:vertices}-\ref{tab:hedges} below, following the subdivision depicted in Figure \ref{fig:dcel_example}.
+
+An edge corresponds to a straight line segment, shared by two adjacent faces (polygons).
+Each of these two faces will use this edge in its description; to distinguish, each edge has two \textit{half-edges}, one for each orientation (direction).
+It is important to note that half-edges are oriented counter clockwise inside each face (Figure \ref{fig:dcel_example}).
+A half-edge is thus defined by its two vertices, one called the \textit{origin} vertex and the other the \textit{target} vertex, clearly specifying the half-edge's orientation (origin to target).
+Each half-edge record contains references to its origin vertex, its face, its \textit{twin} half-edge, as well as the next and previous half-edges (using the orientation of its face); see Table \ref{tab:hedges}. These references are used as keys to the tables that contain the referred attributes. 
+
+Figure \ref{fig:dcel_example} shows half-edge $\overrightarrow{fe}$, its \textit{twin($\overrightarrow{fe}$)} (which is half-edge $\overrightarrow{ef}$), the \textit{next($\overrightarrow{fe}$)} (half-edge $\overrightarrow{ec}$) and the \textit{prev($\overrightarrow{fe}$)} (half-edge $\overrightarrow{df}$). Note the counter clockwise direction used by the half-edges comprising face $f_2$. 
+The \textit{incidentFace} of a half-edge corresponds to the face that this edge belongs to (for example \textit{incidentFace}($\overrightarrow{fe}$) is face $f_2$).
+
+Each vertex corresponds to a record in the vertex table (see Table \ref{tab:vertices}) that contains its coordinates as well as one of its incident half-edges. An incident half-edge is one whose target is this vertex. Any of the incident edges can be used; the rest of a vertex's incident half-edges can be found easily following next and twin half-edges.
+
+Finally, each record in the faces table contains one of the face's half edges to describe the polygon's outer boundary (following this face's orientation); see Table \ref{tab:faces}. 
+All other half-edges for this face's boundary can be easily retrieved following next half-edges in orientation order.
+In addition to regular faces, there is one face that covers the area outside all faces; it is called the  \textit{unbounded} face (face $f_3$ in Figure \ref{fig:dcel_example}). 
+Since $f_3$ has no boundary, its boundary edge is set to \textit{nil} in Table \ref{tab:faces}.
+Note, that polygons can contain one or more \textit{holes} (a hole is an area inside the polygon that does not belong to it). 
+Each such hole is itself described by one of its half-edges; this information is stored as a list attribute (hole list) in the faces table where each element of the list is the half-edge's id which describe the hole. Note that in Table \ref{tab:faces} this list is empty as there are no holes in any of the faces in the example of Figure \ref{fig:dcel_example}. 
+
+An important advantage with the DCEL structure is that a user can combine two DCELs from different layers over the same area (e.g. the census tracks from two
+different years) and compute their \textit{overlay} which is a DCEL structure that combines the two layers into one. Other operators like the intersection,
+difference etc. can then be computed from the overlay very efficiently.
+Given two DCEL layers $S_1$ and $S_2$, a face $f$ appears in their overlay  $OVL(S_1, S_2)$ if and only if there are faces $f_1$ in $S_1$ and $f_2$ in $S_2$ such that $f$ is a maximal connected subset of $f1 \cap f2$ \cite{berg_computational_2008}.  
+This property implies that the overlay $OVL(S_1, S_2)$ can be constructed using the half-edges from $S_1$ and $S_2$ . 
+
+The sequential algorithm \cite{fogel_cgal_2012} to construct the overlay between two DCELs first extracts the half-edge segments from the half-edge tables and then finds intersection points between half-edges from the two layers (using a sweep line approach) \cite{berg_computational_2008}. 
+The intersection points found will become new vertices of the resulting overlay. 
+If an existing half-edge contains an intersection point it is split into two new half-edges. 
+Using the list of outgoing and incoming half-edges for the newly added vertices (intersection points) the algorithm can compute the attributes for the records of the new half-edges. For example, the list of outgoing and incoming half-edges at each new vertex will be used to update the next, previous and twin pointers. Finally, records for faces and vertices tables are also updated with the new information. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figures/dcel_seq/dcel2}
+    \caption{Sequential computations of an overlay of two DCEL layers.}\label{fig:dcel_seq}
+\end{figure}
+
+Figure \ref{fig:dcel_seq} illustrates an example for computing the overlay between two DCEL layers with one face each ($A_1$ and $B_1$ respectively), that overlap over the same area. First, intersection points are found and create new vertices in the overlay (red vertices $c_1$ and $c_2$). Finally, new half edges are created around these new vertices. 
+As a result, face $A_1$ is modified (to an L-shaped boundary) as does face $B_1$, while a new face $A_1B_1$ is created. 
+Since this new face is the intersection of the boundaries of $A_1$ and $B_1$, its label contains the concatenation of both face labels. 
+By convention \cite{berg_computational_2008}, even though $A_1$ changes its shape, it does not change its label since its new shape is created by its intersection with the unbounded face of $B_1$; similarly the new shape of $B_1$ maintains its original label. 
+These labels are crucial for the creation of the overlay (and the operators it supports) as they are used to identify which polygons overlap an existing face.
+
+Once the overlay structure of two DCELs is computed, queries like their intersection, union, difference etc. (Figure \ref{fig:dcel_operators}) can be performed in linear time to the number of faces in the overlay. 
+The space requirement for the overlay structure remains linear to the number of vertices, edges and faces.  
+Since an overlay is itself a DCEL, it can support the traditional DCEL operations (e.g., find the boundary of a face, access a face from an adjacent one, visit all the edges around a vertex, etc.)
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/dcel_operators/dcel_operators.pdf}
+    \caption{Examples of overlay operators supported by DCEL; results are shown in gray.}
+    \label{fig:dcel_operators}
+\end{figure*}
+
+\section{Scalable Overlay Construction} \label{sec:methods}
+
+The overlay computation depends on the size of the input DCELs and the size of the resulting overlay.
+The DCEL of a planar subdivision $S_1$ has size $O(n_1)$ where $n_1$ = $\Sigma (vertices_1 + edges_1 + faces_1$).
+The sequential algorithm constructing the overlay of $S_1$ and $S_2$ takes $O(n \log n + k \log n)$ time, where $n = n_1 + n_2$ and $k$ is the size of their
+overlay.
+Note that $k$ depends on how many intersections occur between the input DCELs, which can be very large \cite{berg_computational_2008}. 
+
+While the sequential algorithm is efficient with small DCEL layers, it suffers when the input layers are large and have many intersections. 
+For example, creating the overlay between the DCELs of two census tracks (from years 2000 and 2010) from California (each with 7K-8K polygons and 2.7M-2.9M edges) took about 800sec on an Intel Xeon CPU at 1.70GHz  with 2GB of memory (see Section  \ref{sec:experiments}).
+With DCELs corresponding to the whole US, the algorithm crashed. 
+
+Nevertheless, the overlay computation can take advantage of partitioning (and thus parallelism), by observing that the edges in a given area of one input layer, can only intersect with edges from the same area in the other input layer. 
+One can thus spatially partition the two input DCELs using a spatial index (or grid) and then compute the overlay within each cell; such computations are independent and can be performed in parallel. 
+While this is a high level view of our scalable approach, there are various challenges, including how to deal with edges that cross cells, how to manage the extra complexity introduced by \textit{orphan} holes (i.e., when holes and their polygons are in different cells), how and where to combine partition overlays into a global overlay, as well as how to balance the computation if one layer is much larger than the other. 
+
+\subsection{Partition Strategy} \label{sec:strategy}
+The main idea of the partition strategy is to split the area covered by the input layers into non-overlapping cells which could then be processed independently.  
+One could use a simple grid to divide the area but our early experiments showed that such approach would result in unbalanced cells (in number of edges) which affects performance. 
+In the rest we assume that the partitioning is performed using a quadtree index which adapts to skewed spatial distributions and helps to assign a similar number of edges to each cell. 
+
+The overall approach can be summarized in the following steps: (i) Partition the input layers into the index cells and build local DCEL representations of them at each cell; and (ii) Compute the overlay of the DCELs at each cell.  
+Overlay operators and other functions can be run over the local overlays and then local results are collected to generate the final answer.  
+
+Note that each input layer is given as a sequence of polygon edges, where each edge record contains the coordinates of the edge's vertices (origin and target vertex) as well as the polygon id and a hole id in the case that an edge belongs to a hole inside of a polygon. We assume there are not overlapping or stacked polygons in the dataset.  To quickly build the partitioning quadtree structure we take a sample from the edges of each layer (1\% of the total number of edges in that layer). After the quadtree is created, we use its leaf nodes as the partitioning cells for each layer. 
+Each input layer file is then read from disk and \textit{all} of its edges are inserted to the appropriate cells of the partitioning structure.
+
+For this approach to work, it is important that each cell can compute its two DCELs independently. 
+Note that an edge can be fully contained in a cell, or it can intersect the cell's boundary.
+In the second case, we copy this edge to all cells that it intersects, but within each cell, we use the part of the edge that lies fully inside the cell. 
+Figure \ref{fig:partition_strategy} shows an example, where there are 4 cells and two edges of the upper polygon from layer A cross the cell borders. Such edges are clipped at the cell borders, introducing new edges (e.g. edges $\alpha^{\prime}$ and $\alpha^{\prime \prime}$ in the Figure \ref{fig:partition_strategy}).  
+Similarly, a polygon that crosses over a cell is clipped to the cell by introducing \textit{\textbf{artificial}} edges on the cell's border (see face $A_2$ in cell 3 of Figure \ref{fig:partition_strategy}). 
+Such artificial edges are shown in red in the figure. 
+This allows to create a smaller polygon that is contained within each cell. For example polygon $A_2$ is clipped into four smaller polygons as it overlaps all four cells. 
+The clipping of edges and polygons ensures that each cell has all needed information to complete its DCEL computations. 
+As such computations can be performed independently, they are sent to different compute nodes to be processed in parallel.  The assignment is delegate to the distributed framework (i.e. Apache Spark).  
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=0.65\textwidth]{figures/partition_schema/PolygonsParted}
+    \caption{Partitioning example using input layers A and B over four cells.}\label{fig:partition_strategy}
+\end{figure*}
+
+Once a cell is assigned to a node, the sequential algorithm is used to create a DCEL for each layer (using the cell edges from that layer and any artificial edges, vertices and faces created by the clipping procedures above) and then compute the corresponding (local) overlay for this cell. 
+Using the example from Figure \ref{fig:partition_strategy}, Figure \ref{fig:overlay_partition} depicts an overview of the process for creating a local overlay DCEL inside cell 2.  
+Similarly, Figure \ref{fig:distributed_dcel} shows all local overlay DCELs computed at each cell (again, artificial edges are shown in red). 
+
+Nevertheless, the partitioning can create two problems (not present in the sequential environment) that need to be addressed. 
+The first is the case where a cell is empty, that is, it does not intersect with (or contain) any regular edge from neither layer. A regular edge is one that is not part of a hole.
+This empty cell does not contain any label and thus we do not know which face it may belongs to. We term this as the \textbf{\textit{orphan cell}} problem.
+An example is shown in Figure \ref{fig:emptycellexample} which depicts a face (from one of the input layers) whose boundary goes over many quadtree cells; orphan cells are shown in grey. 
+
+Note that an orphan cell may contain a hole (see Figure \ref{fig:emptycellexample}). 
+In this case the original label of the face where the hole belongs (and reported in the hole's edges) may have changed during the overlay computation (because it overlapped with a face from the other layer). 
+However, this new label has not been propagated to the hole edges.
+We term this as the \textbf{\textit{orphan hole}} problem.
+While for simplicity we focus in the case where a hole is within one orphan cell, in the general case, a hole can split among many such cells.
+
+The issue with both `orphan' problems is the missing labels. Below we propose an algorithm that correctly labels an orphan cell. If this cell contains a hole, the new label is used to update the hole edges as well. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/overlay_partition/overlay_partition.pdf}
+    \caption{Local overlay DCEL for cell 2.}\label{fig:overlay_partition}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\linewidth]{figures/distributed_dcel/distributed_dcel.pdf}    
+    \caption{Result of the local overlay DCEL computations.}\label{fig:distributed_dcel}
+\end{figure}
+
+\begin{figure*}
+    \centering
+    \subfloat[]{\includegraphics[page=1, width=0.23\textwidth]{figures/empty_cells/emptycells2}\label{fig:orphan1}}
+    \subfloat[]{\includegraphics[page=1, width=0.22\textwidth]{figures/empty_cells/example}\label{fig:orphan2}}
+    \subfloat[]{\includegraphics[page=2, width=0.22\textwidth]{figures/empty_cells/example}}
+    \subfloat[]{\includegraphics[page=3, width=0.22\textwidth]{figures/empty_cells/example}}
+    
+    \caption{(a) Empty cell and hole examples; (b)-(c)-(d) show three iterations of the proposed solution.} 
+    \label{fig:emptycellexample}
+\end{figure*}
+
+\subsection{Labeling Orphan Cells and Holes} \label{sec:anomalies}
+
+To find the label of an orphan cell we propose an algorithm that recursively searches the space around the orphan cell until it identifies a nearby cell which contains edge(s) of the face that contains the orphan cell and thus acquire the appropriate label information. 
+This search is accommodated by the quadtree index. 
+Two observations are in order: (1) each cell is a leaf of the quadtree index (by construction), and (2) each cell has a unique id created by the way this cell was created; this id effectively provides the \textit{lineage} (unique path) from the quadtree root to this leaf. 
+Recall that the root has four possible children (typically numbered as 0,1,2,3 corresponding to the four children NW, NE, SW and SE). 
+The lineage is the sequence of these numbers in the path to the leaf.
+For example, the lineage for the shaded orphan cell in Figure \ref{fig:orphan1} is 03.
+Further, note that the quadtree is an unbalanced structure, having more deep leaves where there are more edges. Thus higher leaves correspond to larger areas and deeper leaves to smaller areas (since a cell split is created when a cell has more edges than a threshold). 
+
+After identifying an orphan cell, the question is where to search for a cell that will contain an edge. The following Lemma applies:
+
+\begin{lemma}\label{lem:cells}
+Given an orphan cell, one of its siblings at the same quadtree level  must contain a regular edge (directly or in its subtree). 
+\end{lemma}
+
+This lemma arises from the simple observation that if all three siblings of an orphan cell are empty then there is no reason for the quadtree to make this split and create these four siblings. 
+Based on the lemma, we know that one of the three siblings of the orphan cell can lead us to a cell with an edge. 
+However, these siblings may not be cells (leaves). 
+Instead of searching each one of them in the quadtree until we reach their leaves, we want a way to quickly reach their leaves. 
+To do so, we pick the centroid point of the orphan cell's parent (which is also one of the corners of the orphan cell). 
+For example, the parent centroid for the orphan cell 03 is the green point in Figure \ref{fig:orphan2}.
+We then query the quadtree to identify which cells (leaves; one from each sibling) contain this point. 
+We check these cells if they contain an edge; if we find such a cell we stop (and use the label in that cell).
+If all three cells are orphans, we need to continue the search. This is the case in Figure \ref{fig:orphan2}, where all three cells (green in the figure) are also orphan.
+
+The algorithm has to pick one of them as the current orphan cell and repeat the process recursively. One can use different heuristics. 
+Below we consider the case where we use the deepest cell (i.e. the one with the longest lineage) among the three. This is because, we expect that this will lead us to the denser areas of the quadtree index, where there is more chance to find cells with edges.
+Figure \ref{fig:emptycellexample} shows a three-iteration run of the algorithm.
+
+During the search process we keep any orphan cells we discover; after a cell with an edge (non-orphan cell) is found, the algorithm stops and labels the original orphan cell and any other orphan cells retrieved in the search with the label found in the non-orphan cell.
+Note that if the non-orphan cell contains many labels (because different faces pass through it), we assign the label of the face that contains the original centroid.
+The pseudocode of the search process can be seen at Algorithms \ref{alg:one} and \ref{alg:two}.  
+
+Another heuristic we used (not described here) is to follow the highest among the three orphan cells (the one with the shorter lineage) since this has larger area and will thus help us cover more empty space and possibly reach the border of the face faster.
+
+\begin{algorithm}
+    \ssp
+    \small
+    \caption{\textsc{getNextCellWithEdges} algorithm}\label{alg:one}
+    \begin{algorithmic}[1]
+    \Require a quadtree $\mathcal Q$ and a list of orphan cells $\mathcal M$.
+    \Function{ getNextCellWithEdges }{ $\mathcal Q$, $\mathcal M$ }
+        \State $\mathcal C \gets $ list of orphan cells in $\mathcal M$
+        \ForEach{ $orphanCell$ in $\mathcal C $ }
+            \State initialize $cellList$ with $orphanCell$
+            \State $nextCellWithEdges \gets null$
+            \State $referenceCorner \gets null$
+            \State $done \gets false$
+            \While{ not $done$ }
+                \State $c \gets $ last cell in $cellList$
+                \State $cells, corner \gets \textsc{getCellsAtCorner}(\mathcal Q, c)$
+                %\Comment{ return 3 cells and the reference corner }
+                \ForEach{$cell$ in $cells$}
+                    \State $nedges \gets$ get edge count of $cell$ in $\mathcal M$
+                    \If{ $nedges > 0$ }
+                        \State $nextCellWithEdges \gets cell$
+                        \State $referenceCorner \gets corner$
+                        \State $done \gets true$
+                    \Else
+                        \State add $cell$ to $cellList$
+                    \EndIf
+                \EndFor
+            \EndWhile
+            \ForEach{ $cell$ in $cellList$ }
+                \State \textbf{output}($cell$, \\
+                \hspace{2.5cm} $nextCellWithEdges$, $referenceCorner$)
+                \State remove $cell$ from $\mathcal C$
+            \EndFor
+        \EndFor
+    \EndFunction
+    \end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+    \ssp
+    \small
+    \caption{\textsc{getCellsAtCorner} algorithm}\label{alg:two}
+    \begin{algorithmic}[1]
+    \Require a quadtree with cell envelopes $\mathcal Q$ and a cell $c$.
+    \Function{ getCellsInCorner }{ $\mathcal Q$, $c$ }
+        \State $region \gets $ quadrant region of $c$ in $c.parent$
+        \Switch{ $region$ }
+            \Case{ `SW' }
+                \State $corner \gets$ left bottom corner of $c.envelope$
+            \EndCase
+            \Case{ `SE' }
+                \State $corner \gets$ right bottom corner of $c.envelope$
+            \EndCase
+            \Case{ `NW' }
+                \State $corner \gets$ left upper corner of $c.envelope$
+            \EndCase
+            \Case{ `NE' }
+                \State $corner \gets$ right upper corner of $c.envelope$
+            \EndCase
+        \EndSwitch
+        \State $cells \gets$ cells which intersect $corner$ in $\mathcal Q$
+        \State $cells \gets cells - c$
+        %\Comment{ Remove the current cell from the intersected cells }
+        \State $cells \gets$ sort $cells$ on basis of their depth
+        %\Comment{ using $cell.lineage$ }
+        \State \Return{ ($cells$, $corner$) }
+    \EndFunction
+    \end{algorithmic}
+\end{algorithm}
+
+% \begin{algorithm}
+%     \caption{\textsc{getNextCellWithEdges} algorithm}\label{alg:one}
+%
+%     \SetKwProg{Function}{function}{:}{end}
+%     \KwIn{a quadtree $\mathcal Q$ and a list of cells $\mathcal M$.}
+%     \Function{\textsc{getNextCellWithEdges}($\mathcal Q$,$\mathcal M$)}{
+%         $\mathcal C \gets $ orphan cells in $\mathcal M$\\
+%          \ForEach{$orphanCell$ in $\mathcal C$}{
+%             initialize $cellList$ with $orphanCell$ \\
+%             $nextCellWithEdges \gets nil$ \\
+%             $referenceCorner \gets nil$ \\
+%             $done \gets false$ \\
+%             \While{ $\neg done$}{
+%                 $c \gets $ last cell in $cellList$ \\
+%                 $cells, corner \gets \textsc{getCellsAtCorner}(\mathcal Q, c)$ \\
+%                 \ForEach{$cell$ in $cells$}{
+%                     $nedges \gets$ get edge count of $cell$ in $\mathcal M$ \\
+%                     \eIf{ $nedges > 0$ }{
+%                         $nextCellWithEdges \gets cell$ \\
+%                         $referenceCorner \gets corner$ \\
+%                         $done \gets true$ \\
+%                     }{
+%                         add $cell$ to $cellList$ \\
+%                     }
+%                 }
+%             }
+%             \ForEach{ $cell$ in $cellList$ }{
+%                 \textbf{output}($cell$,$nextCellWithEdges$, $referenceCorner$) \\
+%                 remove $cell$ from $\mathcal C$ \\
+%             }
+%         }
+%     }
+% \end{algorithm}
+%
+% \begin{algorithm}
+%     \small
+%     \caption{\textsc{getCellsAtCorner} algorithm}\label{alg:two}
+%
+%     \SetKwProg{Function}{function}{:}{end}
+%     \KwIn{a quadtree with cell envelopes $\mathcal Q$ and a cell $c$.}
+%     \Function{ \textsc{getCellsAtCorner}($\mathcal Q$, $c$) }{
+%         $region \gets $ quadrant region of $c$ in $c.parent$ \\
+%         \Switch{ $region$ }{
+%             \uCase{ `SW' }{
+%                 $corner \gets$ left bottom corner of $c.envelope$ \\
+%             }
+%             \uCase{ `SE' }{
+%                 $corner \gets$ right bottom corner of $c.envelope$ \\
+%             }
+%             \uCase{ `NW' }{
+%                 $corner \gets$ left upper corner of $c.envelope$ \\
+%             }
+%             \uCase{ `NE' }{
+%                 $corner \gets$ right upper corner of $c.envelope$ \\
+%             }
+%         }
+%         $cells \gets$ cells which intersect $corner$ in $\mathcal Q$ \\
+%         $cells \gets cells - c$ \\
+%         $cells \gets$ sort $cells$ on basis of their depth \\
+%
+%         \Return{ ($cells$, $corner$) }
+%     }
+% \end{algorithm}
+
+\subsection{Answering global overlay queries} \label{sec:reduce}
+
+Using the local overlay DCELs we can easily compute the global overlay DCEL; for that we simply need a reduce phase (described below) to remove artificial edges (and concatenate split edges) from all the faces. Using the local overlay DCELs we can also compute (in a scalable way) global operators like intersection, difference, symmetric difference, etc. For these operators there is first a map phase that computes the specific operator on each local DCEL, followed by a reduce phase to remove artificial edges/added vertices.
+Figure \ref{fig:overlay_operator} shows how the intersection overlay operator ($A \cap B$) is computed, starting with the local DCELs for 4 cells (Figure \ref{fig:overlay_operatora}).
+First each cell computes the intersection using its local overlay DCEL (Figure \ref{fig:overlay_operatorb}).
+This is a simple map operation as we just need to identify overlay faces that contain both labels (from layer A and layer B).
+Each cell can then report every such face that does not include any artificial edges (like face $A_1B_1$ in Figure \ref{fig:overlay_operatorb}); note that these faces are fully included in the cell. 
+
+Using a reduce phase, the remaining faces are sent to a master node, in our implementation it would be the driver node of the spark application, that will: (i) remove the artificial edges (shown red in the figure), and (ii) concatenate edges that were split because they were crossing cell borders.
+This is done by pairing faces with the same label and concatenating their geometries by removing the artificial edges and vertices added during the partition stage (for example the two faces with label $A_2B_1$ from two different cells in Figure \ref{fig:overlay_operatorb} were combined into one face in Figure \ref{fig:overlay_operatorc} while the extra vertex was also removed).
+In section ~\ref{sec:optimizing} we discuss techniques to optimize the reduce process of combining faces.  
+
+For symmetric difference ($A \bigtriangleup B$), the map phase filters faces whose label is a single layer (A or B).  
+For the difference ($A \setminus B$), it filters faces with label A. For union ($A \cup B$), all faces in the overlay structure are retrieved. 
+
+\begin{figure}
+    \centering
+    \subfloat[\label{fig:overlay_operatora}]{\includegraphics[width=0.32\linewidth]{figures/overlay_operator/overlay}}
+    \hfill
+    \subfloat[\label{fig:overlay_operatorb}]{\includegraphics[width=0.32\linewidth]{figures/overlay_operator/operator}}
+    \hfill
+    \subfloat[\label{fig:overlay_operatorc}]{\includegraphics[width=0.32\linewidth]{figures/overlay_operator/reduce}}
+    \caption{Example of an overlay operator querying the distributed DCEL.} \label{fig:overlay_operator}
+\end{figure}
+
+\section{Overlay evaluation optimizations}\label{sec:alternative_methods}
+\subsection{Optimizations for faces expanding cells}\label{sec:optimizing}
+
+The (naive) reduce phase described above has the potential for a bottleneck since all faces (which can be a very large number) are sent to one node.
+One observation is that faces from different cells that are concatenated are in contiguous cells. 
+This implies that faces from a particular cell will be combined with faces from neighboring cells.
+We will use this spatial proximity property to reduce the overhead in the central node.
+
+
+We thus propose an alternative, where an intermediate reduce processing step is introduced.
+In particular, the user can specify a level in the quadtree structure (measured as the depth from the root) that can be used to combine cells together. 
+Given level \textit{i}, the quadtree nodes in that level (at most $4^i$) will serve as intermediate reducers, collecting the faces from all the cells below that node. (Note: level 0 corresponds to the root, which is the naive method where all the cells are sent to one node).
+
+By introducing this intermediate step it is expected that much of the reduce work can be distributed in a larger number of nodes.
+Nevertheless, there may be faces (typically few) that cannot be completed by these intermediate reducers because they span the borders of the level $i$ nodes. 
+Such faces still have to be evaluated in a master/root node.
+
+Clearly, picking the appropriate level is important. 
+Choosing a large level $i$ (i.e., going to nodes lower in the quadtree structure) implies larger number of intermediate reducers and thus higher parallelism.
+However, at the same time, it increases the number of faces that would need to be evaluated by the master/root node.  
+On the other hand, lowering $i$ reduces parallelism but fewer faces will need to go to the master/root node.
+
+We also examine another approach to deal with the bottleneck in the naive reduce phase. 
+This approach re-partitions the faces using the label as the key. 
+Such partitions represent small independent amounts of work since they only combine faces with the same label (typically few).
+Partitions are then shuffled among the available nodes.  
+The second approach effectively avoids the reduce phase; it has to account for the cost of the re-partitioning however as we will show in the experimental section, this cost is negligible.
+
+\subsection{Optimizing for unbalanced layers}\label{sec:unbalance}
+During the overlay computation, the most critical task is finding the intersections between the half-edges.
+In many cases the number of half-edges from each layer within a cell can be unbalanced, that is one of the layers has many more half-edges than the other.
+
+In the current approach, the input sets of half-edges within a cell are combined into one dataset which is first ordered by the x-origin of each half-edge and then a sweep-line algorithm is performed scanning the half-edges from left to right (in the x-axis).
+This scanning takes time proportional to the total number of half-edges.
+However, if one layer has much fewer half-edges, the running time will still be affected by the cardinality of the larger dataset.
+
+An alternative approach is to scan the larger dataset only for the x-intervals where we know that there are half-edges in the smaller dataset.
+To do so, we order the two input set separately. We scan the smaller dataset in x-order and identify x-intervals occupied by at least one half-edge. 
+For each x-interval we then scan the larger dataset with the sweep-line algorithm. 
+This focused approach avoids unnecessary scanning of the large dataset (for example, areas where there are no half-edges present from the smaller dataset).

@@ -1,0 +1,28 @@
+\vspace{-5pt}
+\section{Related Work}
+\label{sec:related}
+The fundamentals of the DCEL data structure were introduced in the seminal paper by Muller and Preparata  \cite{muller_finding_1978}. The advantages of DCELs are highlighted in \cite{preparata_computational_1985, berg_computational_2008}.
+%, including the ability to capture topological information and support various overlay operators 
+Examples of using DCELs for diverse applications appear in\cite{barequet_dcel_1998, boltcheva_topological-based_2020, freiseisen_colored_1998}. 
+Once the overlay DCEL is created by combining two layers,  
+%A DCEL can be constructed in $\mathcal{O}(n log(n))$ time using $\mathcal{O}(n)$ additional memory where $n$ is the number of vertices in the input layer \cite{freiseisen_colored_1998}. 
+%Given the overlay DCEL of two layers, 
+overlay operators like union, difference etc., can be computed in linear time to the number of faces in their overlay \cite{freiseisen_colored_1998}. 
+
+Currently, few sequential implementations are available: LEDA
+%\footnote{\url{https://www.algorithmic-solutions.com/}} 
+\cite{mehlhorn_leda_1995}, Holmes3D
+%\footnote{\url{http://www.holmes3d.net/graphics/}} 
+\cite{holmes_dcel_2021} and CGAL
+%\footnote{\url{https://www.cgal.org/}} 
+\cite{fogel_cgal_2012}.  Among them CGAL is an open-source project widely used for computational geometry research. 
+%It offers a wide-ranging number of packages and modules to support diverse topics including a solid support for DCEL construction.
+To the best of our knowledge, there is no scalable implementation for the computation of overlay DCEL.
+
+While there is a lot of work on using spatial access methods to support spatial joins, intersections, unions etc. in a parallel way (using clusters, multicores or GPUs), \cite{challa_dd-rtree_2016, sabek_spatial_2017, li_scalable_2019, franklin_data_2018, magalhaes_fast_2015, puri_efficient_2013, puri_mapreduce_2013} these approaches are different in two ways: (i) after the index filtering, they need a time-consuming refine phase where the operator (union, intersection etc.) has to be applied on each pair of (typically) complex spatial objects; (ii) if the operator changes, we need to run the filter/refine phases from scratch (in contrast, the same overlay DCEL can be used to run all operators.)
+
+%Although there is not reference to scalable DCEL implementations, other dynamic parallel data structures has been described   However, spatial indexes and spatial joins could support overlay operators in certain way but just for an individual operator at a time. 
+
+%Another works present parallel map overlay algorithms whose focus on GPU and multi-core architecture \cite{franklin_data_2018, magalhaes_fast_2015, puri_efficient_2013, puri_mapreduce_2013}.  Most of them use scan line algorithms to partition the edges and hierarchical tree structures (such as octree or rtree) to partition the input data. However, they support only the intersection overlay operator. Even though, these works focus on solutions aim to multi-core architectures or GPGPU models which scalability can be affected by very large datasets.  In addition, implementations over the traditional multi-core ecosystem could not take total advantage of modern distributed memory frameworks such as Apache Spark.
+
+
