@@ -1,0 +1,66 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: thesis.aux
+The style file: plain.bst
+Database file #1: thesis.bib
+Warning--to sort, need author or key in noauthor_dcel_2015
+Warning--to sort, need author or key in noauthor_qgis_nodate
+Warning--to sort, need author or key in noauthor_shapely_nodate
+Warning--to sort, need author or key in noauthor_postgis_nodate
+Warning--to sort, need author or key in noauthor_googlemaps_nodate
+Warning--to sort, need author or key in noauthor_openstreetmap_nodate
+Warning--to sort, need author or key in noauthor_jts_nodate
+Warning--to sort, need author or key in noauthor_geos_nodate
+Warning--to sort, need author or key in noauthor_us_nodate
+Warning--to sort, need author or key in noauthor_openstreetmap_nodate-1
+Warning--to sort, need author or key in noauthor_atc_nodate
+Warning--empty note in arimura_finding_2014
+Warning--empty booktitle in becker_algorithms_1999
+Warning--empty booktitle in becker_algorithms_1999-1
+Warning--empty journal in samudrala_graph-theoretic_nodate
+Warning--empty year in samudrala_graph-theoretic_nodate
+Warning--empty booktitle in tanaka_efficient_2015
+Warning--empty school in valladares_cereceda_gpu_2013
+Warning--empty booktitle in yu_geospark_2015
+You've used 177 entries,
+            2118 wiz_defined-function locations,
+            1349 strings with 34514 characters,
+and the built_in function-call counts, 65983 in all, are:
+= -- 6410
+> -- 3430
+< -- 60
++ -- 1375
+- -- 1170
+* -- 4666
+:= -- 10551
+add.period$ -- 543
+call.type$ -- 177
+change.case$ -- 1096
+chr.to.int$ -- 0
+cite$ -- 196
+duplicate$ -- 2536
+empty$ -- 5093
+format.name$ -- 1170
+if$ -- 14030
+int.to.chr$ -- 0
+int.to.str$ -- 177
+missing$ -- 165
+newline$ -- 859
+num.names$ -- 340
+pop$ -- 1327
+preamble$ -- 1
+purify$ -- 931
+quote$ -- 0
+skip$ -- 1884
+stack$ -- 0
+substring$ -- 3706
+swap$ -- 667
+text.length$ -- 60
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 682
+warning$ -- 19
+while$ -- 593
+width$ -- 180
+write$ -- 1889
+(There were 19 warnings)

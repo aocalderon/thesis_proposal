@@ -1,0 +1,33 @@
+\contentsline {chapter}{List of Figures}{iv}{Doc-Start}%
+\contentsline {chapter}{List of Tables}{vi}{Doc-Start}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Scalable overlay operations over DCEL polygon layers}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Related Work}{10}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Preliminaries}{12}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Scalable Overlay Construction}{17}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Partition Strategies}{18}{subsection.2.4.1}%
+\contentsline {subsubsection}{Quadtree Partition Strategy}{19}{section*.7}%
+\contentsline {subsubsection}{Kd-tree Partition Strategy}{24}{section*.12}%
+\contentsline {subsection}{\numberline {2.4.2}Labeling Orphan Cells and Holes}{24}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Answering global overlay queries}{28}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Overlay evaluation optimizations}{32}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Optimizations for faces spanning multiple cells}{32}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Optimizing for unbalanced layers}{34}{subsection.2.5.2}%
+\contentsline {section}{\numberline {2.6}Scalable Polygon Extraction for Line-based Input}{35}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Gen Phase}{36}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Rem Phase}{42}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Data Partitioning}{46}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.4}Overlaying Polygons with Dangle and Cut Edges}{48}{subsection.2.6.4}%
+\contentsline {section}{\numberline {2.7}Experimental Evaluation}{51}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Overlay face optimizations}{53}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Unbalanced layers optimization}{54}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.3}Varying the number of cells}{56}{subsection.2.7.3}%
+\contentsline {subsection}{\numberline {2.7.4}Speed-up and Scale-up experiments}{60}{subsection.2.7.4}%
+\contentsline {subsection}{\numberline {2.7.5}Kd-tree versus quadtree performance}{62}{subsection.2.7.5}%
+\contentsline {subsection}{\numberline {2.7.6}Polygonization Scalability}{68}{subsection.2.7.6}%
+\contentsline {subsection}{\numberline {2.7.7}Polygonization Speed Up Evaluation}{69}{subsection.2.7.7}%
+\contentsline {subsection}{\numberline {2.7.8}Overlaying Polygons with Dangle and Cut Edges}{70}{subsection.2.7.8}%
+\contentsline {section}{\numberline {2.8}Conclusions}{71}{section.2.8}%
+\contentsline {chapter}{\numberline {3}Conclusions}{73}{chapter.3}%
+\contentsline {chapter}{Bibliography}{74}{chapter.3}%

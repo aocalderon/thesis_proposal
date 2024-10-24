@@ -1,0 +1,1060 @@
+\begin{thebibliography}{100}
+
+\bibitem{noauthor_atc_nodate}
+{ATC} shopping center tracking dataset.
+
+\bibitem{noauthor_geos_nodate}
+{GEOS} {Polygonizer} {Implementation}.
+
+\bibitem{noauthor_googlemaps_nodate}
+{GoogleMaps}.
+
+\bibitem{noauthor_jts_nodate}
+{JTS} {Polygonizer} {Implementation}.
+
+\bibitem{noauthor_openstreetmap_nodate}
+{OpenStreetMap}.
+
+\bibitem{noauthor_openstreetmap_nodate-1}
+{OpenStreetMap} {Data} {Extracts}.
+
+\bibitem{noauthor_postgis_nodate}
+{PostGIS}.
+
+\bibitem{noauthor_qgis_nodate}
+{QGIS} {Geographic} {Information} {System}.
+
+\bibitem{noauthor_shapely_nodate}
+Shapely: {Manipulation} and {Analysis} of {Geometric} {Objects}.
+
+\bibitem{noauthor_us_nodate}
+U.{S}. {Street} {Network} {Shapefiles}, {Node}/{Edge} {Lists}, and {GraphML}
+  {Files}.
+
+\bibitem{noauthor_dcel_2015}
+{DCEL} {Python} {Implementation}, 2015.
+
+\bibitem{LailaMDMPaper}
+Laila Abdelhafeez, Amr Magdy, and Vassilis Tsotras.
+\newblock {DDCEL}: Efficient distributed doubly connected edge list for large
+  spatial networks.
+\newblock In {\em 2023 24th IEEE International Conference on Mobile Data
+  Management (MDM)}, pages 122--131, 2023.
+
+\bibitem{abdelhafeez_ddcel_2023}
+Laila Abdelhafeez, Amr Magdy, and Vassilis Tsotras.
+\newblock {DDCEL}: {Efficient} {Distributed} {Doubly} {Connected} {Edge} {List}
+  for {Large} {Spatial} {Networks}.
+\newblock In {\em 2023 24th {IEEE} {International} {Conference} on {Mobile}
+  {Data} {Management} ({MDM})}, pages 122--131, 2023.
+
+\bibitem{agarwal_arrangements_1998}
+P.K. Agarwal and M.~Sharir.
+\newblock Arrangements and {Their} {Applications}.
+\newblock In {\em Handbook of {Computational} {Geometry}}, pages 49--119.
+  Elsevier Science, 1998.
+
+\bibitem{AWV+13}
+Ablimit Aji, Fusheng Wang, Hoang Vo, Rubao Lee, Qiaoling Liu, Xiaodong Zhang,
+  and Joel Saltz.
+\newblock {Hadoop-GIS}: A high performance spatial data warehousing system over
+  {Map-Reduce}.
+\newblock In {\em VLDB Journal}, 2013.
+
+\bibitem{aji_hadoop-gis_2013}
+Ablimit Aji, Fusheng Wang, Hoang Vo, Rubao Lee, Qiaoling Liu, Xiaodong Zhang,
+  and Joel Saltz.
+\newblock Hadoop-{GIS}: {A} {High} {Performance} {Spatial} {Data} {Warehousing}
+  {System} {Over} {Map}-{Reduce}.
+\newblock In {\em {VLDB} {Journal}}, 2013.
+
+\bibitem{akleman_new_2000}
+Ergun Akleman, Jianer Chen, and Vinod Srinivasan.
+\newblock A {New} {Paradigm} for {Changing} {Topology} {Of} 2-{Manifold}
+  {Polygonal} {Meshes}.
+\newblock In {\em Pacific {Graphics}}, 2000.
+
+\bibitem{akutsu_simple_2018}
+Tatsuya Akutsu, Colin de~la Higuera, and Takeyuki Tamura.
+\newblock A {Simple} {Linear}-{Time} {Algorithm} for {Computing} the {Centroid}
+  and {Canonical} {Form} of a {Plane} {Graph} and {Its} {Applications}.
+\newblock In {\em Annual {Symposium} on {Combinatorial} {Pattern} {Matching}},
+  2018.
+
+\bibitem{alam_performance_2018}
+Md~Mahbub Alam, Suprio Ray, and Virendra~C. Bhavsar.
+\newblock A {Performance} {Study} of {Big} {Spatial} {Data} {Systems}.
+\newblock In {\em Proceedings of the 7th {ACM} {SIGSPATIAL} {International}
+  {Workshop} on {Analytics} for {Big} {Geospatial} {Data}}, {BigSpatial} 2018,
+  pages 1--9, New York, NY, USA, 2018. ACM.
+
+\bibitem{amor_persistence_2016}
+T.~Amor, S.~Reis, D.~Campos, H.~Herrmann, and J.~Andrade.
+\newblock Persistence in {Eye} {Movement} during {Visual} {Search}.
+\newblock {\em Scientific Reports}, 6:20815, 2016.
+
+\bibitem{arimura_finding_2014}
+H.~Arimura, T.~Takagi, X.~Geng, and T.~Uno.
+\newblock Finding {All} {Maximal} {Duration} {Flock} {Patterns} in
+  {High}-{Dimensional} {Trajectories}.
+\newblock 2014.
+
+\bibitem{avis_generating_1996}
+David Avis.
+\newblock Generating {Rooted} {Triangulations} {Without} {Repetitions}.
+\newblock {\em Algorithmica}, 1996.
+
+\bibitem{barequet_dcel_1998}
+G.~Barequet.
+\newblock {DCEL} - {A} {Polyhedral} {Database} and {Programming} {Environment}.
+\newblock {\em Ijcga}, 08(05n06):619--636, 1998.
+
+\bibitem{becker_algorithms_1999}
+L.~Becker, A.~Giesen, K.~Hinrichs, and J.~Vahrenhold.
+\newblock Algorithms for {Performing} {Polygonal} {Map} {Overlay} and {Spatial}
+  {Join} on {Massive} {Data} {Sets}.
+\newblock pages 270--285. Springer, 1999.
+
+\bibitem{becker_algorithms_1999-1}
+L.~Becker, A.~Giesen, K.~Hinrichs, and J.~Vahrenhold.
+\newblock Algorithms for {Performing} {Polygonal} {Map} {Overlay} and {Spatial}
+  {Join} on {Massive} {Data} {Sets}.
+\newblock pages 270--285. Springer, 1999.
+
+\bibitem{beckmann_r-tree_1990}
+N.~Beckmann, H.~Kriegel, R.~Schneider, and B.~Seeger.
+\newblock The {R}*-{Tree}: {An} {Efficient} and {Robust} {Access} {Method} for
+  {Points} and {Rectangles}.
+\newblock In {\em Acm {Sigmod} {Pods}}, pages 322--331, New York, NY, USA,
+  1990. Association for Computing Machinery.
+
+\bibitem{benkert_reporting_2008}
+M.~Benkert, J.~Gudmundsson, F.~Hübner, and T.~Wolle.
+\newblock Reporting {Flock} {Patterns}.
+\newblock {\em Computational Geometry}, 41(3):111--125, 2008.
+
+\bibitem{berberich_arrangements_2010}
+E.~Berberich, E.~Fogel, D.~Halperin, M.~Kerber, and O.~Setter.
+\newblock Arrangements on {Parametric} {Surfaces}.
+\newblock {\em Mathematics in Computer Science}, 4(1):67--91, 2010.
+
+\bibitem{berg_computational_2008}
+M.~Berg, O.~Cheong, M.~Kreveld, and M.~Overmars.
+\newblock {\em Computational {Geometry}: {Algorithms} and {Applications}}.
+\newblock Springer, TU Eindhoven, P.O. Box 513, 2008.
+
+\bibitem{boguslawski_modelling_2011}
+P.~Boguslawski, C.~Gold, and H.~Ledoux.
+\newblock Modelling and analysing {3D} buildings with a primal/dual data
+  structure.
+\newblock {\em Isprs}, 66(2):188--197, 2011.
+
+\bibitem{boltcheva_topological-based_2020}
+D.~Boltcheva, J.~Basselin, C.~Poull, H.~Barthélemy, and D.~Sokolov.
+\newblock Topological-based roof modeling from {3D} point clouds.
+\newblock In {\em Wscg}, volume~28, pages 137--146, CZ 301 00 Plzen, 2020.
+  Union Agency, Science Press.
+
+\bibitem{bron_algorithm_1973}
+C.~Bron and J.~Kerbosch.
+\newblock Algorithm 457: finding all cliques of an undirected graph.
+\newblock {\em Communications of the ACM}, 16(9):575--577, 1973.
+
+\bibitem{brscic_person_2013}
+D.~Brščić, T.~Kanda, T.~Ikeda, and T.~Miyashita.
+\newblock Person {Tracking} in {Large} {Public} {Spaces} {Using} 3-{D} {Range}
+  {Sensors}.
+\newblock {\em IEEE Transactions on Human-Machine Systems}, 43(6):522--534,
+  November 2013.
+
+\bibitem{cai_discovering_2020}
+Jiannan Cai, Min Deng, Yiwen Guo, Yiqun Xie, and Shashi Shekhar.
+\newblock Discovering regions of anomalous spatial co-locations.
+\newblock {\em International Journal of Geographical Information Science},
+  0(0):1--25, November 2020.
+
+\bibitem{calderon_mining_2011}
+A.~Calderon.
+\newblock Mining {Moving} {Flock} {Patterns} in {Large} {Spatio}-{Temporal}
+  {Datasets} {Using} a {Frequent} {Pattern} {Mining} {Approach}.
+\newblock Master's thesis, University of Twente, 2011.
+
+\bibitem{sdcel_paper}
+Andres Calderon, Vassilis Tsotras, and Amr Magdy.
+\newblock Scalable overlay operations over {DCEL} polygon layers.
+\newblock In {\em Proceedings of the 18th International Symposium on Spatial
+  and Temporal Data}, SSTD '23, page 85–95, New York, NY, USA, 2023.
+  Association for Computing Machinery.
+
+\bibitem{calderon_scalable_2023}
+Andres Calderon, Vassilis Tsotras, and Amr Magdy.
+\newblock Scalable {Overlay} {Operations} over {DCEL} {Polygon} {Layers}.
+\newblock In {\em Proceedings of the 18th {International} {Symposium} on
+  {Spatial} and {Temporal} {Data}}, {SSTD} '23, pages 85--95, New York, NY,
+  USA, 2023. Association for Computing Machinery.
+
+\bibitem{cazals_note_2008}
+F.~Cazals and C.~Karande.
+\newblock A note on the problem of reporting maximal cliques.
+\newblock {\em Theoretical Computer Science}, 407(1-3):564--568, November 2008.
+
+\bibitem{challa_dd-rtree_2016}
+J.~Challa, P.~Goyal, S.~Nikhil, A.~Mangla, S.~Balasubramaniam, and N.~Goyal.
+\newblock {DD}-{Rtree}: {A} dynamic distributed data structure for efficient
+  data distribution among cluster nodes for spatial data mining algorithms.
+\newblock In {\em {IEEE} {Big} {Data}}, pages 27--36, 222 Rosewood Drive,
+  Danvers, MA 01923., 2016. Ieee.
+
+\bibitem{chen_real-time_2022}
+Lu~Chen, Dejun Teng, Tian Zhu, Jun Kong, Bruce~W. Herr, Andreas Bueckle, Katy
+  Börner, and Fusheng Wang.
+\newblock Real-time spatial registration for {3D} human atlas.
+\newblock In {\em Proceedings of the 10th {ACM} {SIGSPATIAL} {International}
+  {Workshop} on {Analytics} for {Big} {Geospatial} {Data}}, {BigSpatial} '22,
+  pages 27--35, New York, NY, USA, November 2022. Association for Computing
+  Machinery.
+
+\bibitem{chew_convex_1993}
+L.~Chew and K.~Kedem.
+\newblock A convex polygon among polygonal obstacles.
+\newblock {\em Computational Geometry}, 3(2):59--89, 1993.
+
+\bibitem{chvatal_combinatorial_1975}
+V.~Chvátal.
+\newblock A combinatorial theorem in plane geometry.
+\newblock {\em Combinatorial Theory}, 18(1):39--41, 1975.
+
+\bibitem{cudre-mauroux_trajstore_2010}
+Philippe Cudre-Mauroux, Eugene Wu, and Samuel Madden.
+\newblock Trajstore: {An} {Adaptive} {Storage} {System} for {Very} {Large}
+  {Trajectory} {Data} {Sets}.
+\newblock In {\em 2010 {IEEE} 26th {International} {Conference} on {Data}
+  {Engineering} ({ICDE} 2010)}, pages 109--120. Ieee, 2010.
+
+\bibitem{de_berg_simple_1996}
+Mark De~Berg, René Van~Oostrum, and Mark Overmars.
+\newblock Simple {Traversal} of a {Subdivision} without {Extra} {Storage}.
+\newblock {\em Proceedings of the Twelfth Annual Symposium on Computational
+  Geometry}, 1996.
+
+\bibitem{de_berg_computational_2000}
+Mark~Theodoor De~Berg, Marc Van~Kreveld, Mark Overmars, and Otfried
+  Schwarzkopf.
+\newblock {\em Computational {Geometry}: {Algorithms} and {Applications}}.
+\newblock Springer Science \& Business Media, 2000.
+
+\bibitem{demsar_establishing_2021}
+Urška Demšar, Jed~A. Long, Fernando Benitez-Paez, Vanessa~Brum Bastos,
+  Solène Marion, Gina Martin, Sebastijan Sekulić, Kamil Smolak, Beate Zein,
+  and Katarzyna Siła-Nowicka.
+\newblock Establishing the integrated science of movement: bringing together
+  concepts and methods from animal and human movement analysis.
+\newblock {\em International Journal of Geographical Information Science},
+  0(0):1--36, February 2021.
+
+\bibitem{di_lorenzo_allaboard_2016}
+G.~Di~Lorenzo, M.~Sbodio, F.~Calabrese, M.~Berlingerio, F.~Pinelli, and
+  R.~Nair.
+\newblock {AllAboard}: {Visual} {Exploration} of {Cellphone} {Mobility} {Data}
+  to {Optimise} {Public} {Transport}.
+\newblock {\em Ieee Tvcg}, 22(2):1036--1050, 2016.
+
+\bibitem{dodge_towards_2008}
+Somayeh Dodge, Robert Weibel, and Anna-Katharina Lautenschütz.
+\newblock Towards a taxonomy of movement patterns.
+\newblock {\em Information Visualization}, 7(3-4):240--252, September 2008.
+
+\bibitem{eldawy_spatialhadoop_2014}
+A.~Eldawy.
+\newblock {SpatialHadoop}: {Towards} {Flexible} and {Scalable} {Spatial}
+  {Processing} {Using} {Mapreduce}.
+\newblock In {\em {SIGMOD} {PhD} {Symposium}}, pages 46--50, 2014.
+
+\bibitem{EM15}
+Ahmed Eldawy and Mohamed~F Mokbel.
+\newblock Spatialhadoop: A {Map-Reduce} framework for spatial data.
+\newblock In {\em Proceedings of the IEEE International Conference on Data
+  Engineering, ICDE}, 2015.
+
+\bibitem{eldawy_spatialhadoop_2015}
+Ahmed Eldawy and Mohamed~F Mokbel.
+\newblock Spatialhadoop: {A} {Map}-{Reduce} {Framework} {For} {Spatial} {Data}.
+\newblock In {\em Proceedings of the {IEEE} {International} {Conference} on
+  {Data} {Engineering}, {ICDE}}, 2015.
+
+\bibitem{eppstein_listing_2010}
+D.~Eppstein, M.~Löffler, and D.~Strash.
+\newblock Listing {All} {Maximal} {Cliques} in {Sparse} {Graphs} in
+  {Near}-{Optimal} {Time}.
+\newblock In {\em Algorithms and {Computation}}, pages 403--414, 2010.
+
+\bibitem{eppstein_listing_2010-2}
+D.~Eppstein, M.~Löffler, and D.~Strash.
+\newblock Listing {All} {Maximal} {Cliques} in {Sparse} {Graphs} in
+  {Near}-{Optimal} {Time}.
+\newblock In {\em Algorithms and {Computation}}, pages 403--414, 2010.
+
+\bibitem{eppstein_listing_2010-3}
+D.~Eppstein, M.~Löffler, and D.~Strash.
+\newblock Listing {All} {Maximal} {Cliques} in {Sparse} {Graphs} in
+  {Near}-{Optimal} {Time}.
+\newblock In {\em Algorithms and {Computation}}, pages 403--414, 2010.
+
+\bibitem{eppstein_listing_2010-1}
+David Eppstein, Maarten Löffler, and Darren Strash.
+\newblock Listing {All} {Maximal} {Cliques} in {Sparse} {Graphs} in
+  {Near}-{Optimal} {Time}.
+\newblock In Otfried Cheong, Kyung-Yong Chwa, and Kunsoo Park, editors, {\em
+  Algorithms and {Computation}}, volume 6506, pages 403--414. Springer Berlin
+  Heidelberg, Berlin, Heidelberg, 2010.
+
+\bibitem{eppstein_listing_2011}
+David Eppstein and Darren Strash.
+\newblock Listing {All} {Maximal} {Cliques} in {Large} {Sparse} {Real}-{World}
+  {Graphs}.
+\newblock {\em arXiv:1103.0318 [cs]}, March 2011.
+
+\bibitem{fan_general_2016}
+Qi~Fan, Dongxiang Zhang, Huayu Wu, and Kian-Lee Tan.
+\newblock A general and parallel platform for mining co-movement patterns over
+  large-scale trajectories.
+\newblock {\em Proceedings of the VLDB Endowment}, 10(4):313--324, November
+  2016.
+
+\bibitem{ferreira_visual_2013}
+Nivan Ferreira, Jorge Poco, Huy~T. Vo, Juliana Freire, and Cláudio~T. Silva.
+\newblock Visual {Exploration} of {Big} {Spatio}-{Temporal} {Urban} {Data}: {A}
+  {Study} of {New} {York} {City} {Taxi} {Trips}.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  19(12):2149--2158, December 2013.
+
+\bibitem{finke_overlaying_1995}
+Ulrich Finke and Klaus~H Hinrichs.
+\newblock Overlaying {Simply} {Connected} {Planar} {Subdivisions} {In} {Linear}
+  {Time}.
+\newblock In {\em Symposium {On} {Computational} {Geometry}}, 1995.
+
+\bibitem{finkel_quad_1974}
+R.~Finkel and J.~Bentley.
+\newblock Quad {Trees}: {A} {Data} {Structure} for {Retrieval} on {Composite}
+  {Keys}.
+\newblock {\em Acta Inf.}, 4:1--9, 1974.
+
+\bibitem{finkel_quadtrees_1974}
+Raphael Finkel and Jon Bentley.
+\newblock Quadtrees: {A} {Data} {Structure} for {Retrieval} on {Composite}
+  {Keys}.
+\newblock {\em Acta Inf.}, 4:1--9, March 1974.
+
+\bibitem{fischer_fast_2003}
+Kaspar Fischer, Bernd Gärtner, and Martin Kutz.
+\newblock Fast {Smallest}-{Enclosing}-{Ball} {Computation} in {High}
+  {Dimensions}.
+\newblock In Gerhard Goos, Juris Hartmanis, Jan van Leeuwen, Giuseppe
+  Di~Battista, and Uri Zwick, editors, {\em Algorithms - {ESA} 2003}, volume
+  2832, pages 630--641. Springer Berlin Heidelberg, Berlin, Heidelberg, 2003.
+
+\bibitem{flato_design_2001}
+Eyal Flato, Dan Halperin, Iddo Hanniel, Oren Nechushtan, and Eti Ezra.
+\newblock The design and implementation of panar maps in {CGAL}.
+\newblock {\em ACM Journal of Experimental Algorithmics}, 5:13--es, December
+  2001.
+
+\bibitem{fogel_cgal_2012}
+E.~Fogel, D.~Halperin, and R.~Wein.
+\newblock {\em {CGAL} {Arrangements} and {Their} {Applications}}.
+\newblock Springer Berlin, Heidelberg, 2012.
+
+\bibitem{fort_parallel_2014}
+M.~Fort, J.~Antoni, and N.~Valladares.
+\newblock A {Parallel} {GPU}-{Based} {Approach} for {Reporting} {Flock}
+  {Patterns}.
+\newblock {\em Ijgis}, 28(9):1877--1903, 2014.
+
+\bibitem{fournier-viger_spmf_2016}
+Philippe Fournier-Viger, Jerry Chun-Wei Lin, Antonio Gomariz, Ted Gueniche,
+  Azadeh Soltani, Zhihong Deng, and Hoang~Thanh Lam.
+\newblock The {SPMF} {Open}-{Source} {Data} {Mining} {Library} {Version} 2.
+\newblock In Bettina Berendt, Björn Bringmann, Élisa Fromont, Gemma Garriga,
+  Pauli Miettinen, Nikolaj Tatti, and Volker Tresp, editors, {\em Machine
+  {Learning} and {Knowledge} {Discovery} in {Databases}: {European}
+  {Conference}, {ECML} {PKDD} 2016}, pages 36--40. Springer, 2016.
+
+\bibitem{frank_life_2000}
+Andrew Frank, Jonathan Raper, and J.~P. Cheylan, editors.
+\newblock {\em Life and {Motion} of {Socio}-{Economic} {Units}.}
+\newblock CRC Press, London ; New York, 1 edition edition, December 2000.
+
+\bibitem{franklin_data_2018}
+W.~Franklin, S.~Magalhães, and M.~Andrade.
+\newblock Data {Structures} for {Parallel} {Spatial} {Algorithms} on {Large}
+  {Datasets}.
+\newblock In {\em {ACM} {BigSpatial}}, pages 16--19, Seattle, WA, USA, 2018.
+  Acm.
+
+\bibitem{freiseisen_colored_1998}
+W.~Freiseisen.
+\newblock Colored {DCEL} for boolean operations in {2D}, 1998.
+
+\bibitem{freiseisen_colored_1998-1}
+W.~Freiseisen.
+\newblock Colored {DCEL} for boolean operations in {2D}, 1998.
+
+\bibitem{geng_enumeration_2014}
+X.~Geng, T.~Takagi, H.~Arimura, and T.~Uno.
+\newblock Enumeration of {Complete} {Set} of {Flock} {Patterns} in
+  {Trajectories}.
+\newblock In {\em Iwgs}, pages 53--61, 2014.
+
+\bibitem{geng_trajectory_2013}
+Xiaoliang Geng, Takeaki Uno, and Hiroki Arimura.
+\newblock Trajectory {Pattern} {Mining} in {Practice}-{Algorithms} for {Mining}
+  {Flock} {Patterns} from {Trajectories}.
+\newblock In {\em Kdir/kmis}, pages 143--151, 2013.
+
+\bibitem{web:geos:polygonizer}
+{GEOS Polygonizer Implementation}.
+\newblock https://github.com/libgeos/geos.
+
+\bibitem{goethals_advances_2004}
+B.~Goethals and M.~J. Zaki.
+\newblock Advances in {Frequent} {Itemset} {Mining} {Implementations}: {Report}
+  of {FIMI}'03.
+\newblock {\em ACM SIGKDD Explorations}, 6(1):109--117, June 2004.
+\newblock Publisher: Acm.
+
+\bibitem{gourdon_simplification_1995}
+Alexis Gourdon.
+\newblock Simplification of {Irregular} {Surfaces} {Meshes} in {3D} {Medical}
+  {Images}.
+\newblock In {\em Computer {Vision}, {Virtual} {Reality} and {Robotics} in
+  {Medicine}}, 1995.
+
+\bibitem{graser_exploratory_2021}
+A.~Graser.
+\newblock An exploratory data analysis protocol for identifying problems in
+  continuous movement data.
+\newblock {\em Journal of Location Based Services}, 0(0):1--29, March 2021.
+
+\bibitem{gudmundsson_computing_2006}
+J.~Gudmundsson and M.~van Kreveld.
+\newblock Computing {Longest} {Duration} {Flocks} in {Trajectory} {Data}.
+\newblock In {\em Acm {Sigspatial}}, pages 35--42, 2006.
+
+\bibitem{gudmundsson_efficient_2004}
+J.~Gudmundsson, M.~van Kreveld, and B.~Speckmann.
+\newblock Efficient {Detection} of {Motion} {Patterns} in {Spatio}-{Temporal}
+  {Data} {Sets}.
+\newblock In {\em Iwgis}, pages 250--257. Acm, 2004.
+
+\bibitem{guttman_r-trees_1984}
+A.~Guttman.
+\newblock R-{Trees}: {A} {Dynamic} {Index} {Structure} for {Spatial}
+  {Searching}.
+\newblock In {\em Acm {Sigmod} {Icmd}}, pages 47--57, New York, NY, United
+  States, 1984. Association for Computing Machinery.
+
+\bibitem{hagedorn_big_2017}
+Stefan Hagedorn, Philipp Götze, and Kai-Uwe Sattler.
+\newblock Big {Spatial} {Data} {Processing} {Frameworks}: {Feature} and
+  {Performance} {Evaluation}.
+\newblock In {\em {EDBT}}, 2017.
+
+\bibitem{haklay_openstreetmap_2008}
+Mordechai Haklay and Patrick Weber.
+\newblock Openstreetmap: {User}-generated street maps.
+\newblock {\em IEEE Pervasive computing}, 7(4):12--18, 2008.
+
+\bibitem{halperin_arrangements_2004}
+D.~Halperin.
+\newblock Arrangements.
+\newblock In Jacob~E. G and J.~O'Rourke, editors, {\em Handbook of {Discrete}
+  and {Computational} {Geometry}}, pages 529--562. CRC Press, 2004.
+\newblock Section: 24.
+
+\bibitem{han_data_2005}
+Jiawei Han.
+\newblock {\em Data {Mining}: {Concepts} and {Techniques}}.
+\newblock Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 2005.
+
+\bibitem{haran_experimental_2009}
+Idit Haran and Dan Halperin.
+\newblock An experimental study of point location in planar arrangements in
+  {CGAL}, February 2009.
+
+\bibitem{helland-hansen_trajectory_2009}
+W.~Helland-Hansen and G.~J. Hampson.
+\newblock Trajectory analysis: concepts and applications.
+\newblock {\em Basin Research}, 21(5):454--483, 2009.
+
+\bibitem{HS03}
+Erik~G Hoel and Hanan Samet.
+\newblock Data-parallel polygonization.
+\newblock {\em Parallel Computing}, 2003.
+
+\bibitem{hoel_data-parallel_2003}
+Erik~G Hoel and Hanan Samet.
+\newblock Data-parallel polygonization.
+\newblock {\em Parallel Computing}, 2003.
+
+\bibitem{holland_movements_1999}
+K.~Holland, B.~Wetherbee, C.~Lowe, and C.~Meyer.
+\newblock Movements of {Tiger} {Sharks} ({Galeocerdo} {Cuvier}) in {Coastal}
+  {Hawaiian} {Waters}.
+\newblock {\em Marine Biology}, 134(4):665--673, 1999.
+
+\bibitem{holmes_dcel_2021}
+R.~Holmes.
+\newblock The {DCEL} {Data} {Structure} for {3D} {Graphics}, 2021.
+
+\bibitem{huang_mining_2015}
+P.~Huang and B.~Yuan.
+\newblock Mining {Massive}-{Scale} {Spatiotemporal} {Trajectories} in
+  {Parallel}: {A} {Survey}.
+\newblock In {\em Takddm}, volume 9441. Springer, 2015.
+
+\bibitem{huang_trajgraph_2016}
+Xiaoke Huang, Ye~Zhao, Chao Ma, Jing Yang, Xinyue Ye, and Chong Zhang.
+\newblock {TrajGraph}: {A} {Graph}-{Based} {Visual} {Analytics} {Approach} to
+  {Studying} {Urban} {Network} {Centralities} {Using} {Taxi} {Trajectory}
+  {Data}.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  22(1):160--169, January 2016.
+
+\bibitem{hughes_geomesa_2015}
+J.~Hughes, A.~Annex, C.~Eichelberger, A.~Fox, A.~Hulbert, and M.~Ronquest.
+\newblock {GeoMesa}: a distributed architecture for spatio-temporal fusion.
+\newblock In {\em Defense + {Security} {Symposium}}, 2015.
+
+\bibitem{isufaj_gti_2023}
+Keivin Isufaj, Mohamed~Mokhtar Elshrif, Sofiane Abbar, and Mohamed Mokbel.
+\newblock {GTI}: {A} {Scalable} {Graph}-based {Trajectory} {Imputation}.
+\newblock In {\em Proceedings of the 31st {ACM} {International} {Conference} on
+  {Advances} in {Geographic} {Information} {Systems}}, {SIGSPATIAL} '23, pages
+  1--10, New York, NY, USA, 2023. Association for Computing Machinery.
+
+\bibitem{iwase_tracking_2002}
+Sachiko Iwase and Hideo Saito.
+\newblock Tracking {Soccer} {Player} {Using} {Multiple} {Views}.
+\newblock In {\em Mva}, pages 102--105, 2002.
+
+\bibitem{jeung_trajectory_2011}
+H.~Jeung, M.~Yiu, and C.~Jensen.
+\newblock Trajectory {Pattern} {Mining}.
+\newblock In {\em Computing with {Spatial} {Trajectories}}, pages 143--177.
+  Springer, 2011.
+
+\bibitem{jeung_discovery_2008}
+H.~Jeung, M.~Yiu, X.~Zhou, C.~Jensen, and H.~Shen.
+\newblock Discovery of {Convoys} in {Trajectory} {Databases}.
+\newblock {\em Vldb}, 1(1):1068--1080, 2008.
+
+\bibitem{johansson_efficiency_2015}
+Karl Johansson and Hakan Terelius.
+\newblock An {Efficiency} {Measure} for {Road} {Transportation} {Networks} with
+  {Application} to {Two} {Case} {Studies}.
+\newblock In {\em 2015 54th {IEEE} {Conference} on {Decision} and {Control}
+  ({CDC})}, pages 5149--5155. Ieee, 2015.
+
+\bibitem{johnston_abundance_2015}
+Alison Johnston, Daniel Fink, Mark~D. Reynolds, Wesley~M. Hochachka, Brian~L.
+  Sullivan, Nicholas~E. Bruns, Eric Hallstein, Matt~S. Merrifield, Sandi
+  Matsumoto, and Steve Kelling.
+\newblock Abundance {Models} {Improve} {Spatial} and {Temporal}
+  {Prioritization} of {Conservation} {Resources}.
+\newblock {\em Ecological Applications}, 25(7):1749--1756, 2015.
+
+\bibitem{web:jts:polygonizer}
+{JTS Polygonizer Implementation}.
+\newblock https://github.com/locationtech/jts.
+
+\bibitem{kalnis_discovering_2005}
+P.~Kalnis, N.~Mamoulis, and S.~Bakiras.
+\newblock On {Discovering} {Moving} {Clusters} in {Spatio}-{Temporal} {Data}.
+\newblock In {\em Astd}, pages 364--381. Springer, 2005.
+
+\bibitem{karavelas_voronoi_2006}
+Menelaos~I Karavelas.
+\newblock Voronoi diagrams in {CGAL}.
+\newblock In {\em European {Workshop} on {Computational} {Geometry}}, 2006.
+
+\bibitem{karmakar_fast_2012}
+Nilanjana Karmakar, Arindam Biswas, and Partha Bhowmick.
+\newblock Fast {Slicing} {Of} {Orthogonal} {Covers} {Using} {DCEL}.
+\newblock In {\em International {Workshop} on {Combinatorial} {Image}
+  {Analysis}}, 2012.
+
+\bibitem{katz_shapefile_2007}
+Phil Katz and Stephen~St Vincent.
+\newblock Shapefile {Overlay} {Using} a {Doubly}-{Connected} {Edge} {List}.
+\newblock In {\em Senior {Conference} on {Computational} {Geometry} and {GIS}},
+  2007.
+
+\bibitem{kaziyeva_large-scale_2023}
+Dana Kaziyeva, Petra Stutz, Gudrun Wallentin, and Martin Loidl.
+\newblock Large-scale agent-based simulation model of pedestrian traffic flows.
+\newblock {\em Computers, Environment and Urban Systems}, 105:102021, October
+  2023.
+
+\bibitem{kettner_halfedge_2022}
+Lutz Kettner.
+\newblock Halfedge {Data} {Structures}.
+\newblock In {\em {CGAL} {User} and {Reference} {Manual}}. CGAL Editorial
+  Board, 2022.
+
+\bibitem{krajzewicz_recent_2012}
+Daniel Krajzewicz, Jakob Erdmann, Michael Behrisch, and Laura Bieker.
+\newblock Recent {Development} and {Applications} of {SUMO} - {Simulation} of
+  {Urban} {MObility}.
+\newblock {\em International Journal On Advances in Systems and Measurements},
+  5(3\&4):128--138, December 2012.
+
+\bibitem{kuntzsch_framework_2013}
+Colin Kuntzsch and Alexander Bohn.
+\newblock A {Framework} for {On}-{Line} {Detection} of {Custom} {Group}
+  {Movement} {Patterns}.
+\newblock In Jukka~M. Krisp, editor, {\em Progress in {Location}-{Based}
+  {Services}}, Lecture {Notes} in {Geoinformation} and {Cartography}, pages
+  91--107. Springer Berlin Heidelberg, January 2013.
+
+\bibitem{la_sorte_convergence_2016}
+F.~La~Sorte, D.~Fink, W.~Hochachka, and S.~Kelling.
+\newblock Convergence of {Broad}-{Scale} {Migration} {Strategies} in
+  {Terrestrial} {Birds}.
+\newblock {\em Royal Society: Biological Sciences}, 283(1823):2588, 2016.
+
+\bibitem{lam_blue_2015}
+Hoang~Thanh Lam, Ernesto Diaz-Aviles, Alessandra Pascale, Yiannis Gkoufas, and
+  Bei Chen.
+\newblock ({Blue}) {Taxi} {Destination} and {Trip} {Time} {Prediction} from
+  {Partial} {Trajectories}.
+\newblock {\em ECML/PKDD Discovery Challenge 2015}, 2015.
+
+\bibitem{leung_knowledge_2010}
+Y.~Leung.
+\newblock {\em Knowledge {Discovery} in {Spatial} {Data}}.
+\newblock Springer, 2010.
+
+\bibitem{li_aoi-shapes_2021}
+Mingzhao Li, Zhifeng Bao, Farhana Choudhury, Hanan Samet, Matt Duckham, and
+  Timos Sellis.
+\newblock {AOI}-shapes: {An} {Efficient} {Footprint} {Algorithm} to {Support}
+  {Visualization} of {User}-defined {Urban} {Areas} of {Interest}.
+\newblock {\em ACM Transactions on Interactive Intelligent Systems}, 2021.
+
+\bibitem{li_trends_2015}
+X.~Li, T.~Cao, E.~Lim, Z.~Zhou, T.~Ho, and D.~Cheung, editors.
+\newblock {\em Trends and {Applications} in {Knowledge} {Discovery} and {Data}
+  {Mining}}, volume 9441.
+\newblock Springer, 2015.
+
+\bibitem{li_scalable_2019}
+Y.~Li, A.~Eldawy, J.~Xue, N.~Knorozova, M.~Mokbel, and R.~Janardan.
+\newblock Scalable computational geometry in {Map}-{Reduce}.
+\newblock {\em VLDB}, 28(1):523--548, 2019.
+
+\bibitem{li_scalable_2019-1}
+Y.~Li, A.~Eldawy, J.~Xue, N.~Knorozova, M.~Mokbel, and R.~Janardan.
+\newblock Scalable computational geometry in {MapReduce}.
+\newblock {\em Vldb}, 28(1):523--548, 2019.
+
+\bibitem{li_swarm_2010}
+Z.~Li, B.~Ding, J.~Han, and R.~Kays.
+\newblock Swarm: {Mining} relaxed temporal moving object clusters.
+\newblock {\em Vldb}, 3(1-2):723--734, 2010.
+
+\bibitem{long_combining_2015}
+Ying Long and Jean-Claude Thill.
+\newblock Combining {Smart} {Card} {Data} and {Household} {Travel} {Survey} to
+  {Analyze} {Jobs}–housing {Relationships} in {Beijing}.
+\newblock {\em Computers, Environment and Urban Systems}, 53:19--35, September
+  2015.
+
+\bibitem{magalhaes_fast_2015}
+S.~Magalhães, M.~Andrade, W.~Franklin, and W.~Li.
+\newblock Fast exact parallel map overlay using a two-level uniform grid.
+\newblock In {\em {ACM} {BigSpatial}}, pages 45--54, New York, NY, USA, 2015.
+  Association for Computing Machinery.
+
+\bibitem{makris_path_2002}
+Dimitrios Makris and Tim Ellis.
+\newblock Path {Detection} in {Video} {Surveillance}.
+\newblock {\em Image and Vision Computing}, 20(12):895--903, October 2002.
+
+\bibitem{maqbool_mobilerec_2023}
+M.~H. Maqbool, Umar Farooq, Adib Mosharrof, A.~B. Siddique, and Hassan Foroosh.
+\newblock {MobileRec}: {A} {Large} {Scale} {Dataset} for {Mobile} {Apps}
+  {Recommendation}.
+\newblock In {\em Proceedings of the 46th {International} {ACM} {SIGIR}
+  {Conference} on {Research} and {Development} in {Information} {Retrieval}},
+  {SIGIR} '23, pages 3007--3016, New York, NY, USA, July 2023. Association for
+  Computing Machinery.
+
+\bibitem{mehlhorn_leda_1995}
+K.~Mehlhorn and S.~Näher.
+\newblock {LEDA}: a platform for combinatorial and geometric computing.
+\newblock {\em Communications of the ACM}, 38(1):96--102, 1995.
+
+\bibitem{miller_geographic_2001}
+H.~Miller and J.~Han.
+\newblock {\em Geographic {Data} {Mining} and {Knowledge} {Discovery}}.
+\newblock Taylor \& Francis, Inc., 2001.
+
+\bibitem{mirzaei_chahardeh_trajectory_2023}
+Niloofar Mirzaei~Chahardeh, Behrouz Minaei-Bidgoli, and Mohammad~Reza
+  Abbasi~Fard.
+\newblock Trajectory {Pattern} {Mining} for {Moving} {Objects} in {Road}
+  {Networks}.
+\newblock {\em Journal of Iranian Association of Electrical and Electronics
+  Engineers}, 20(3):125--133, September 2023.
+
+\bibitem{mokbel_towards_2023}
+Mohamed Mokbel, Mahmoud Sakr, Li~Xiong, Andreas Züfle, Jussara Almeida, Walid
+  Aref, Gennady Andrienko, Natalia Andrienko, Yang Cao, Sanjay Chawla, Reynold
+  Cheng, Panos Chrysanthis, Xiqi Fei, Gabriel Ghinita, Anita Graser, Dimitrios
+  Gunopulos, Christian Jensen, Joon-Sook Kim, Kyoung-Sook Kim, Peer Kröger,
+  John Krumm, Johannes Lauer, Amr Magdy, Mario Nascimento, Siva Ravada,
+  Matthias Renz, Dimitris Sacharidis, Cyrus Shahabi, Flora Salim, Mohamed
+  Sarwat, Maxime Schoemans, Bettina Speckmann, Egemen Tanin, Yannis
+  Theodoridis, Kristian Torp, Goce Trajcevski, Marc van Kreveld, Carola Wenk,
+  Martin Werner, Raymond Wong, Song Wu, Jianqiu Xu, Moustafa Youssef, Demetris
+  Zeinalipour, Mengxuan Zhang, and Esteban Zimányi.
+\newblock Towards {Mobility} {Data} {Science} ({Vision} {Paper}), June 2023.
+
+\bibitem{moreira-matias_predicting_2013}
+Luis Moreira-Matias, Joao Gama, Michel Ferreira, Joao Mendes-Moreira, and Luis
+  Damas.
+\newblock Predicting {Taxi}-{Passenger} {Demand} {Using} {Streaming} {Data}.
+\newblock {\em Trans. Intell. Transport. Sys.}, 14(3):1393--1402, September
+  2013.
+
+\bibitem{muller_finding_1978}
+D.~Muller and F.~Preparata.
+\newblock Finding the intersection of two convex polyhedra.
+\newblock {\em Theoretical Computer Science}, 7(2):217--236, 1978.
+
+\bibitem{musleh_demonstration_2023}
+Mashaal Musleh and Mohamed Mokbel.
+\newblock A {Demonstration} of {KAMEL}: {A} {Scalable} {BERT}-based {System}
+  for {Trajectory} {Imputation}.
+\newblock In {\em Companion of the 2023 {International} {Conference} on
+  {Management} of {Data}}, pages 191--194, Seattle WA USA, June 2023. ACM.
+
+\bibitem{musleh_lets_2022}
+Mashaal Musleh, Mohamed~F. Mokbel, and Sofiane Abbar.
+\newblock Let's speak trajectories.
+\newblock In {\em Proceedings of the 30th {International} {Conference} on
+  {Advances} in {Geographic} {Information} {Systems}}, pages 1--4, Seattle
+  Washington, November 2022. ACM.
+
+\bibitem{nievergelt_grid_1984}
+J.~Nievergelt, H.~Hinterberger, and K.~Sevcik.
+\newblock The {Grid} {File}: {An} {Adaptable}, {Symmetric} {Multikey} {File}
+  {Structure}.
+\newblock {\em ACM Trans. Database Syst.}, 9(1):38--71, 1984.
+
+\bibitem{orourke_art_1987}
+J.~O'Rourke.
+\newblock {\em Art {Gallery} {Theorems} and {Algorithms}}.
+\newblock Oxford University Press, United States, 1987.
+
+\bibitem{web:data:continents}
+{OpenStreetMap Data Extracts}.
+\newblock http://download.geofabrik.de/.
+
+\bibitem{PVK21}
+Varun Pandey, Alexander van Renen, Andreas Kipf, and Alfons Kemper.
+\newblock How good are modern spatial libraries?
+\newblock {\em Data Science and Engineering}, 2021.
+
+\bibitem{pandey_how_2021}
+Varun Pandey, Alexander van Renen, Andreas Kipf, and Alfons Kemper.
+\newblock How {Good} {Are} {Modern} {Spatial} {Libraries}?
+\newblock {\em Data Science and Engineering}, 2021.
+
+\bibitem{piciarelli_trajectory_2005}
+C.~Piciarelli, G.~L. Foresti, and L.~Snidaro.
+\newblock Trajectory {Clustering} and {Its} {Applications} for {Video}
+  {Surveillance}.
+\newblock In {\em {IEEE} {Conference} on {Advanced} {Video} and {Signal}
+  {Based} {Surveillance}, 2005.}, pages 40--45, September 2005.
+
+\bibitem{preparata_computational_1985}
+F.~Preparata and M.~Shamos.
+\newblock {\em Computational {Geometry}: {An} {Introduction}}.
+\newblock Springer, New York, NY, 1985.
+
+\bibitem{prosser_exact_2012}
+Patrick Prosser.
+\newblock Exact {Algorithms} for {Maximum} {Clique}: {A} {Computational}
+  {Study}.
+\newblock {\em Algorithms}, 5(4):545--587, December 2012.
+
+\bibitem{puri_map-reduce_2013}
+S.~Puri, D.~Agarwal, X.~He, and S.~Prasad.
+\newblock Map-{Reduce} {Algorithms} for {GIS} {Polygonal} {Overlay}
+  {Processing}.
+\newblock In {\em {IEEE} {IPDPS}}, pages 1009--1016, Cambridge, MA, USA, 2013.
+  IEEE.
+
+\bibitem{puri_mapreduce_2013}
+S.~Puri, D.~Agarwal, X.~He, and S.~Prasad.
+\newblock {MapReduce} {Algorithms} for {GIS} {Polygonal} {Overlay}
+  {Processing}.
+\newblock In {\em Ieee {Ipdps}}, pages 1009--1016, Cambridge, MA, USA, 2013.
+  Ieee.
+
+\bibitem{puri_efficient_2013}
+S.~Puri and S.~Prasad.
+\newblock Efficient {Parallel} and {Distributed} {Algorithms} for {GIS}
+  {Polygonal} {Overlay} {Processing}.
+\newblock In {\em Ieee {Ipdps}}, pages 2238--2241, Usa, 2013. IEEE Computer
+  Society.
+
+\bibitem{qu_how_2022}
+Boting Qu, Linran Mao, Zhenzhou Xu, Jun Feng, and Xin Wang.
+\newblock How {Many} {Vehicles} {Do} {We} {Need}? {Fleet} {Sizing} for {Shared}
+  {Autonomous} {Vehicles} {With} {Ridesharing}.
+\newblock {\em IEEE Transactions on Intelligent Transportation Systems},
+  23(9):14594--14607, September 2022.
+
+\bibitem{qu_location_2019}
+Zhaowei Qu, Xin Wang, Xianmin Song, Zhaotian Pan, and Haitao Li.
+\newblock Location {Optimization} for {Urban} {Taxi} {Stands} {Based} on {Taxi}
+  {GPS} {Trajectory} {Big} {Data}.
+\newblock {\em IEEE Access}, 7:62273--62283, 2019.
+
+\bibitem{rao_cats_2023}
+Jinmeng Rao, Song Gao, and Sijia Zhu.
+\newblock {CATS}: {Conditional} {Adversarial} {Trajectory} {Synthesis} for
+  privacy-preserving trajectory data publication using deep learning
+  approaches.
+\newblock {\em International Journal of Geographical Information Science},
+  0(0):1--37, 2023.
+
+\bibitem{sabek_spatial_2017}
+I.~Sabek and M.~Mokbel.
+\newblock On {Spatial} {Joins} in {Map}-{Reduce}.
+\newblock In {\em {ACM} {SIGSPATIAL}}, pages 1--10, New York, NY, USA, 2017.
+  Association for Computing Machinery.
+
+\bibitem{sabek_spatial_2017-1}
+I.~Sabek and M.~Mokbel.
+\newblock On {Spatial} {Joins} in {MapReduce}.
+\newblock In {\em Acm {Sigspatial}}, pages 1--10, New York, NY, USA, 2017.
+  Association for Computing Machinery.
+
+\bibitem{samet_design_1990}
+H.~Samet.
+\newblock {\em The {Design} and {Analysis} of {Spatial} {Data} {Structures}}.
+\newblock Wesley, 75 Arlington Street, Suite 300 Boston, MA, United States,
+  1990.
+
+\bibitem{samudrala_graph-theoretic_nodate}
+R~Samudrala and J~Moult.
+\newblock A {Graph}-theoretic {Algorithm} for {Comparative} {Modeling} of
+  {Protein} {Structure}.
+\newblock page~16.
+
+\bibitem{sanches_top-down_2018}
+Denis~Evangelista Sanches, Luis~O. Alvares, Vania Bogorny, Marcos~R. Vieira,
+  and Daniel~S. Kaster.
+\newblock A {Top}-{Down} {Algorithm} with {Free} {Distance} {Parameter} for
+  {Mining} {Top}-k {Flock} {Patterns}.
+\newblock In Ali Mansourian, Petter Pilesjö, Lars Harrie, and Ron van
+  Lammeren, editors, {\em Geospatial {Technologies} for {All}}, Lecture {Notes}
+  in {Geoinformation} and {Cartography}, pages 233--249, Cham, 2018. Springer
+  International Publishing.
+
+\bibitem{saux_new_2004}
+Eric Saux, R'emy Thibaud, Ki-Joune Li, and Min-Hwan Kim.
+\newblock A {New} {Approach} {For} {A} {Topographic} {Feature}-{Based}
+  {Characterization} of {Digital} {Elevation} {Data}.
+\newblock In {\em Proceedings of {ACM} {GIS}}, 2004.
+
+\bibitem{shoval_trajectories_2017}
+Noam Shoval.
+\newblock Trajectories: {Analysis}.
+\newblock In {\em International {Encyclopedia} of {Geography}}, pages 1--5.
+  John Wiley \& Sons, Ltd, 2017.
+
+\bibitem{tanaka_improved_2016}
+P.~Tanaka, M.. Vieira, and D.~Kaster.
+\newblock An {Improved} {Base} {Algorithm} for {Online} {Discovery} of {Flock}
+  {Patterns} in {Trajectories}.
+\newblock {\em Jidm}, 7(1), 2016.
+
+\bibitem{tanaka_efficient_2015}
+Pedro~Sena Tanaka, Marcos~R. Vieira, and D.~S. Kaster.
+\newblock Efficient {Algorithms} to {Discover} {Flock} {Patterns} in
+  {Trajectories}.
+\newblock 2015.
+
+\bibitem{tomita_simple_2010}
+Etsuji Tomita, Yoichi Sutani, Takanori Higashi, Shinya Takahashi, and Mitsuo
+  Wakatsuki.
+\newblock A {Simple} and {Faster} {Branch}-and-{Bound} {Algorithm} for
+  {Finding} a {Maximum} {Clique}.
+\newblock In Md.~Saidur Rahman and Satoshi Fujita, editors, {\em {WALCOM}:
+  {Algorithms} and {Computation}}, pages 191--203, Berlin, Heidelberg, 2010.
+  Springer Berlin Heidelberg.
+
+\bibitem{tomita_simple_2013}
+Etsuji Tomita, Yoichi Sutani, Takanori Higashi, and Mitsuo Wakatsuki.
+\newblock A {Simple} and {Faster} {Branch}-and-{Bound} {Algorithm} for
+  {Finding} a {Maximum} {Clique} with {Computational} {Experiments}.
+\newblock {\em IEICE Transactions on Information and Systems},
+  E96.D(6):1286--1298, 2013.
+
+\bibitem{tomita_worst-case_2006}
+Etsuji Tomita, Akira Tanaka, and Haruhisa Takahashi.
+\newblock The worst-case time complexity for generating all maximal cliques and
+  computational experiments.
+\newblock {\em Theoretical Computer Science}, 363(1):28--42, October 2006.
+
+\bibitem{turdukulov_visual_2014}
+U.~Turdukulov, A.~Calderon, O.~Huisman, and V.~Retsios.
+\newblock Visual {Mining} of {Moving} {Flock} {Patterns} in {Large}
+  {Spatio}-{Temporal} {Data} {Sets} {Using} a {Frequent} {Pattern} {Approach}.
+\newblock {\em Ijgis}, 28(10):2013--2029, 2014.
+
+\bibitem{uno_lcm_2004}
+Takeaki Uno, Masashi Kiyomi, and Hiroki Arimura.
+\newblock {LCM} {Ver}. 2: {Efficient} {Mining} {Algorithms} for
+  {Frequent}/{Closed}/{Maximal} {Itemsets}.
+\newblock In {\em Fimi}, volume 126, 2004.
+
+\bibitem{web:data:usa}
+{U.S. Street Network Shapefiles, Node/Edge Lists, and GraphML Files}.
+\newblock https://doi.org/10.7910/DVN/CUWWYJ.
+
+\bibitem{valladares_cereceda_gpu_2013}
+Nacho Valladares~Cereceda.
+\newblock {\em {GPU} {Parallel} {Algorithms} for {Reporting} {Movement}
+  {Behaviour} {Patterns} in {Spatiotemporal} {Databases}}.
+\newblock {PhD} {Thesis}, 2013.
+
+\bibitem{vieira_-line_2009}
+M.~Vieira, P.~Bakalov, and V.~Tsotras.
+\newblock On-{Line} {Discovery} of {Flock} {Patterns} in {Spatio}-{Temporal}
+  {Data}.
+\newblock In {\em Acm {Sigspatial}}, pages 286--295, 2009.
+
+\bibitem{vieira_spatio-temporal_2013}
+M.~Vieira and V.~Tsotras.
+\newblock {\em Spatio-{Temporal} {Databases}: {Complex} {Motion} {Pattern}
+  {Queries}}.
+\newblock Springer, 2013.
+
+\bibitem{wang_efficient_2006}
+Yida Wang, Ee-Peng Lim, and San-Yih Hwang.
+\newblock Efficient {Mining} of {Group} {Patterns} from {User} {Movement}
+  {Data}.
+\newblock {\em Data \& Knowledge Engineering}, 57(3):240--282, June 2006.
+
+\bibitem{wein_advanced_2007}
+Ron Wein, Efi Fogel, Baruch Zukerman, and Dan Halperin.
+\newblock Advanced programming techniques applied to {Cgal}'s arrangement
+  package.
+\newblock {\em Computational Geometry}, 38(1-2):37--63, September 2007.
+
+\bibitem{welzl_smallest_1991}
+E.~Welzl.
+\newblock Smallest enclosing disks (balls and ellipsoids).
+\newblock In {\em New {Results} and {New} {Trends} in {Computer} {Science}},
+  pages 359--370. Springer, 1991.
+
+\bibitem{xie_simba_2016}
+D.~Xie, F.~Li, B.~Yao, G.~Li, L.~Zhou, and M.~Guo.
+\newblock Simba: {Efficient} {In}-{Memory} {Spatial} {Analytics}.
+\newblock In {\em Icmd}, pages 1071--1085, 2016.
+
+\bibitem{YZG15}
+Simin You, Jianting Zhang, and Le~Gruenwald.
+\newblock Large-scale spatial join query processing in cloud.
+\newblock In {\em Proceedings of the IEEE International Conference on Data
+  Engineering, ICDE}, 2015.
+
+\bibitem{you_large-scale_2015}
+Simin You, Jianting Zhang, and Le~Gruenwald.
+\newblock Large-scale {Spatial} {Join} {Query} {Processing} {In} {Cloud}.
+\newblock In {\em Proceedings of the {IEEE} {International} {Conference} on
+  {Data} {Engineering}, {ICDE}}, 2015.
+
+\bibitem{yu_demonstration_2016}
+J.~Yu, J.~Wu, and M.~Sarwat.
+\newblock A {Demonstration} of {GeoSpark}: {A} {Cluster} {Computing}
+  {Framework} for {Processing} {Big} {Spatial} {Data}.
+\newblock In {\em Icde}, pages 1410--1413, 2016.
+
+\bibitem{yu_geospark_2015}
+Jia Yu, Jinxuan Wu, and Mohamed Sarwat.
+\newblock {GeoSpark}: {A} {Cluster} {Computing} {Framework} for {Processing}
+  {Large}-{Scale} {Spatial} {Data}.
+\newblock pages 1--4. ACM Press, 2015.
+
+\bibitem{YZS18}
+Jia Yu, Zongsi Zhang, and Mohamed Sarwat.
+\newblock Spatial data management in {Apache Spark}: the {GeoSpark} perspective
+  and beyond.
+\newblock {\em GeoInformatica}, 2018.
+
+\bibitem{yu_spatial_2018}
+Jia Yu, Zongsi Zhang, and Mohamed Sarwat.
+\newblock Spatial {Data} {Management} in {Apache} {Spark}: the {GeoSpark}
+  {Perspective} and {Beyond}.
+\newblock {\em GeoInformatica}, 2018.
+
+\bibitem{zaharia_resilient_2012}
+Matei Zaharia, Mosharaf Chowdhury, Tathagata Das, Ankur Dave, Justin Ma, Murphy
+  McCauly, Michael~J Franklin, Scott Shenker, and Ion Stoica.
+\newblock Resilient {Distributed} {Datasets}: {A} {Fault}-{Tolerant}
+  {Abstraction} for {In}-{Memory} {Cluster} {Computing}.
+\newblock In {\em {USENIX} {Symposium} on {Networked} {Systems} {Design} and
+  {Implementation} ({NSDI})}, 2012.
+
+\bibitem{zheng_computing_2011}
+Y.~Zheng and X.~Zhou.
+\newblock {\em Computing with {Spatial} {Trajectories}}.
+\newblock Springer, 2011.
+
+\bibitem{zheng_trajectory_2015}
+Yu~Zheng.
+\newblock Trajectory {Data} {Mining}: {An} {Overview}.
+\newblock {\em ACM Transactions on Intelligent Systems and Technology},
+  6(3):1--41, May 2015.
+
+\bibitem{zheng_understanding_2008}
+Yu~Zheng, Quannan Li, Yukun Chen, Xing Xie, and Wei-Ying Ma.
+\newblock Understanding {Mobility} {Based} on {GPS} {Data}.
+\newblock In {\em Proceedings of the 10th {International} {Conference} on
+  {Ubiquitous} {Computing}}, pages 312--321. Acm, 2008.
+
+\bibitem{zheng_geolife_2010}
+Yu~Zheng, Xing Xie, and Wei-Ying Ma.
+\newblock {GeoLife}: {A} {Collaborative} {Social} {Networking} {Service} among
+  {User}, {Location} and {Trajectory}.
+\newblock {\em IEEE Data Eng. Bull.}, 33(2):32--39, 2010.
+
+\bibitem{zheng_mining_2009}
+Yu~Zheng, Lizhu Zhang, Xing Xie, and Wei-Ying Ma.
+\newblock Mining {Interesting} {Locations} and {Travel} {Sequences} from {GPS}
+  {Trajectories}.
+\newblock In {\em Proceedings of the 18th {International} {Conference} on
+  {World} {Wide} {Web}}, pages 791--800. Acm, 2009.
+
+\bibitem{zhou_parallel_2018}
+Chen Zhou, Zhenjie Chen, and Manchun Li.
+\newblock A parallel method to accelerate spatial operations involving polygon
+  intersections.
+\newblock {\em International Journal of Geographical Information Science},
+  32(12):2402--2426, December 2018.
+
+\bibitem{zufle_urban_2023}
+Andreas Züfle, Carola Wenk, Dieter Pfoser, Andrew Crooks, Joon-Seok Kim, Hamdi
+  Kavak, Umar Manzoor, and Hyunjee Jin.
+\newblock Urban life: a model of people and places.
+\newblock {\em Computational and Mathematical Organization Theory},
+  29(1):20--51, March 2023.
+
+\end{thebibliography}
