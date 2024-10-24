@@ -403,7 +403,7 @@
 %\vspace{6ex}
 %    {\@prevdegrees} \par
 \vspace{6ex}
-    A Proposal submitted in partial satisfaction \par
+    A Dissertation submitted in partial satisfaction \par
     of the requirements for the degree of \par
 \vspace{6ex}
     {\@degree} \par
@@ -481,7 +481,7 @@ Copyright by\par
 \thispagestyle{empty}
 \null\vfill
 
-\fmfont The Proposal of {\@author} is approved: \\
+\fmfont The Dissertation of {\@author} is approved: \\
 \begin{center}
 \vspace{.25in}
 \vspace{\@approvalspace}
@@ -559,7 +559,7 @@ $\:\overline{~~~~ \mbox{\rule{0in}{0.16in}\small ~\hspace{2.03in} Committee Chai
 % \setcounter{page}{1}
 \begin{center}
 {\fmfont
-{\expandafter\uppercase\expandafter{\abstractname}} OF THE PROPOSAL \par
+{\expandafter\uppercase\expandafter{\abstractname}} OF THE DISSERTATION \par
 \vspace{.5in}
 \ssp\@title\par
 \vspace{.25in}
