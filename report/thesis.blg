@@ -1,0 +1,73 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: thesis.aux
+The style file: plain.bst
+Database file #1: thesis.bib
+Warning--I didn't find a database entry for "li_swarm:_2010"
+Warning--I didn't find a database entry for "di_lorenzo_allaboard:_2016"
+Warning--I didn't find a database entry for "vieira_2009"
+Warning--I didn't find a database entry for "calderon_romero_mining_2011"
+Warning--I didn't find a database entry for "eldawy_spatialhadoop:_2014"
+Warning--I didn't find a database entry for "pellechia_geomesa:_2015-1"
+Warning--I didn't find a database entry for "xie_simba:_2016-1"
+Warning--to sort, need author or key in noauthor_dcel_2015
+Warning--to sort, need author or key in noauthor_qgis_nodate
+Warning--to sort, need author or key in noauthor_shapely_nodate
+Warning--to sort, need author or key in noauthor_postgis_nodate
+Warning--to sort, need author or key in noauthor_googlemaps_nodate
+Warning--to sort, need author or key in noauthor_openstreetmap_nodate
+Warning--to sort, need author or key in noauthor_jts_nodate
+Warning--to sort, need author or key in noauthor_geos_nodate
+Warning--to sort, need author or key in noauthor_us_nodate
+Warning--to sort, need author or key in noauthor_openstreetmap_nodate-1
+Warning--to sort, need author or key in noauthor_atc_nodate
+Warning--empty note in arimura_finding_2014
+Warning--empty booktitle in becker_algorithms_1999
+Warning--empty booktitle in becker_algorithms_1999-1
+Warning--empty journal in samudrala_graph-theoretic_nodate
+Warning--empty year in samudrala_graph-theoretic_nodate
+Warning--empty booktitle in tanaka_efficient_2015
+Warning--empty school in valladares_cereceda_gpu_2013
+Warning--empty booktitle in yu_geospark_2015
+You've used 165 entries,
+            2118 wiz_defined-function locations,
+            1311 strings with 33482 characters,
+and the built_in function-call counts, 62584 in all, are:
+= -- 6094
+> -- 3267
+< -- 58
++ -- 1309
+- -- 1116
+* -- 4483
+:= -- 10027
+add.period$ -- 510
+call.type$ -- 165
+change.case$ -- 1029
+chr.to.int$ -- 0
+cite$ -- 184
+duplicate$ -- 2384
+empty$ -- 4791
+format.name$ -- 1116
+if$ -- 13276
+int.to.chr$ -- 0
+int.to.str$ -- 165
+missing$ -- 157
+newline$ -- 803
+num.names$ -- 324
+pop$ -- 1232
+preamble$ -- 1
+purify$ -- 876
+quote$ -- 0
+skip$ -- 1757
+stack$ -- 0
+substring$ -- 3604
+swap$ -- 627
+text.length$ -- 58
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 634
+warning$ -- 19
+while$ -- 574
+width$ -- 168
+write$ -- 1776
+(There were 26 warnings)

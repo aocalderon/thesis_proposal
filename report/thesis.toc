@@ -1,0 +1,23 @@
+\contentsline {chapter}{List of Figures}{iii}{Doc-Start}%
+\contentsline {chapter}{List of Tables}{iv}{Doc-Start}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Scalable overlay operations over DCEL polygon layers}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Related Work}{6}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Preliminaries}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Scalable Overlay Construction}{11}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Partition Strategy}{12}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Labeling Orphan Cells and Holes}{17}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Answering global overlay queries}{19}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Overlay evaluation optimizations}{21}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Optimizations for faces expanding cells}{21}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Optimizing for unbalanced layers}{23}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}Experimental Evaluation}{23}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Overlay face optimizations}{24}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Unbalanced layers optimization}{26}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Varying the number of cells}{27}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Speed-up and Scale-up experiments}{31}{subsection.2.5.4}%
+\contentsline {chapter}{\numberline {3}Towards parallel discovery of movement patterns in large spatio-temporal datasets}{35}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{35}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Related work}{37}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Conclusions}{39}{chapter.4}%
+\contentsline {chapter}{Bibliography}{40}{chapter.4}%
