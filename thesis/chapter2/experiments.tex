@@ -281,10 +281,14 @@ negotiator (YARN), which allocates resources for Spark jobs based on the availab
 so executors are likely to be evenly distributed, though some variation may occur due to resource availability at runtime. Assuming an even distribution, each 
 worker node would run approximately 7 executors, as calculated by $\frac{84}{12} = 7$.
 
-As discussed in Section~\ref{sec:rem}, the Rem Phase has two different approaches depending on the input data received from the Gen Phase. The first approach is to process the remaining half-edges iteratively, denoted as \textit{DCEL-RH}. In comparison, the second approach processes the incomplete cycles generated from the first phase iteratively denoted as \textit{DCEL-IC}.
+As discussed in Section \ref{sec:rem}, the Rem Phase has two different approaches depending on the input data received from the Gen Phase. The first approach 
+is to process the remaining half-edges iteratively, denoted as \textit{DCEL-RH}. In comparison, the second approach processes the incomplete cycles generated 
+from the first phase iteratively denoted as \textit{DCEL-IC}.
 
-From Figure~\ref{fig:exp:query}, we draw three conclusions; 
-(1) first, the cardinality of the input dataset has a positive correlation with the build time; as the number of line segments increases, the build time also increases, as shown in Figure~\ref{fig:exp:query}(a). However, we see that we have close cardinality for Asia (557M) and Europe (563M) datasets, but there is a noticeable difference in the build time; moreover, the build time for the Europe dataset is less than that of the Asia dataset. 
+From Figure \ref{fig:exp:query}, we draw three conclusions; 
+(1) first, the cardinality of the input dataset has a positive correlation with the build time; as the number of line segments increases, the build time also 
+increases, as shown in Figure \ref{fig:exp:query}(a). However, we see that we have close cardinality for Asia (557M) and Europe (563M) datasets, but there is a 
+noticeable difference in the build time; moreover, the build time for the Europe dataset is less than that of the Asia dataset. 
 This drives us to the second conclusion;  
 (2)~for datasets with close or similar cardinalities, the area of the dataset has a positive correlation with the build time shown in Figure~\ref{fig:exp:query}(b). 
 Hence the build time of the Europe dataset (10.2 $Mkm^2$) is less than that of the Asia dataset (44.6 $Mkm^2$), even though Europe has a slightly larger dataset.

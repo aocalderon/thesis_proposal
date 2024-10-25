@@ -221,6 +221,7 @@ The pseudo-code of the search process can be seen in Algorithms \ref{alg:one} an
 
 To determine the worst-case performance of the search algorithm, consider that for an orphan cell, the algorithm performs three point quadtree queries to find the sibling leaves containing the centroid. It then selects one of these leaves and repeats the process, querying three points for a new centroid within the siblings of the selected leaf. This causes the algorithm to explore progressively deeper into the quadtree. In the worst case, the longest path in the quadtree could result in a time complexity of $O(N)$. However, in the average case, when the quadtree is balanced, the complexity is logarithmic.
 
+{\ssp
 \begin{algorithm}\caption{\textsc{getNextCellWithEdges} algorithm}\label{alg:one}
     \begin{algorithmic}[1]
     \Require a quadtree $\mathcal Q$ and a list of cells $\mathcal M$.
@@ -256,7 +257,9 @@ To determine the worst-case performance of the search algorithm, consider that f
     \EndFunction
     \end{algorithmic}
 \end{algorithm}
+}
 
+{\ssp
 \begin{algorithm} \caption{\textsc{getCellsAtCorner} algorithm}\label{alg:two}
     \begin{algorithmic}
     \Require a quadtree $\mathcal Q$ and a cell $c$.
@@ -283,16 +286,9 @@ To determine the worst-case performance of the search algorithm, consider that f
     \EndFunction
     \end{algorithmic}
 \end{algorithm}
-
-\vspace{4pt}
-%\noindent \textbf{Labeling with kd-tree partitioning.}
-
-%\textbf{\color{red} TODO: we should write here the case of labeling orphan cells and holes in the case of kd-tree partitioning, even if we will not experiment with it thoroughly at this point, to be ready just in case.}
+}
 
 \subsection{Answering global overlay queries} \label{sec:reduce}
-
-%\textbf{\color{red} TODO: does answering global overlay queries changes with changing partitioning strategy, either quadtree or kd-tree? I cannot asses this myself and need your help}
-
 Using the local overlay DCELs, we can easily compute the global overlay DCEL; for that, we need a reduce phase, described below, to remove artificial edges, and concatenate split edges from all the faces. Using the local overlay DCELs, we can also compute in a scalable way global operators like intersection, difference, symmetric difference, etc. For these operators, there is first a map phase that computes the specific operator on each local DCEL, followed by a reduce phase to remove artificial edges/added vertices.
 Figure \ref{fig:overlay_operator} shows how the intersection overlay operator ($A \cap B$) is computed, starting with the local DCELs for four cells in Figure \ref{fig:overlay_operator}(a). First, each cell computes the intersection using its local overlay DCEL as shown in Figure \ref{fig:overlay_operator}(b). This is a map operation to identify overlay faces that contain both labels from layer A and layer B. Each cell can then report every such face that does not include any artificial edges, like face $A_1B_1$ in Figure \ref{fig:overlay_operator}(b); note that these faces are fully included in the cell. 
 

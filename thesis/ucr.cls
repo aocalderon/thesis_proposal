@@ -240,6 +240,7 @@
 % is otherwise used.
 \def\ssp{\def\baselinestretch{1.0}\large\normalsize}
 \def\dsp{\def\baselinestretch{1.37}\large\normalsize}
+\def\msp{\def\baselinestretch{1.20}\large\normalsize}
 
 % \smallssp is used to produce tabular environments in the small font.
 % This is required because single-spacing requires a change in font size.

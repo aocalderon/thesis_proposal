@@ -118,7 +118,9 @@ To further examine the relative performance of the scalable BFE and PSI approach
 
 We experimented with different quadtree capacities ($c$ values of 100, 200, and 300), which resulted in varying numbers of partitions (as shown in Table \ref{tab:uniform_ncells}). Both BFE and PSI were tested for phase 1, where maximal disks are identified, using $\varepsilon$ values ranging from 1m to 5m. The results are presented in Figure \ref{fig:uniform_performance}.
 
-Overall, PSI demonstrated better performance than BFE, though there were cases—particularly with smaller $\varepsilon$ values—where BFE outperformed PSI. In these cases, the smaller $\varepsilon$ generates fewer pairs, and the additional ordering step required by PSI becomes an overhead. However, in the subsequent experiments focusing on temporal joins (phase 2, flock creation), we concentrate on the scalable performance of PSI.
+Overall, PSI demonstrated better performance than BFE, though there were cases (particularly with smaller $\varepsilon$ values) where BFE outperformed PSI. In 
+these cases, the smaller $\varepsilon$ generates fewer pairs, and the additional ordering step required by PSI becomes an overhead. However, in the subsequent 
+experiments focusing on temporal joins (phase 2, flock creation), we concentrate on the scalable performance of PSI.
 
 \begin{table}
     \centering

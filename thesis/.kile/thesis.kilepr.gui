@@ -166,6 +166,15 @@ Indentation Mode=normal
 Mode=LaTeX
 Mode Set By User=false
 
+[document-settings,item:ucr.cls]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
 [item:appendix.tex]
 open=false
 order=-1
@@ -220,7 +229,7 @@ order=-1
 
 [item:chapter4/experiments.tex]
 open=false
-order=-1
+order=2
 
 [item:chapter4/intro.tex]
 open=false
@@ -239,12 +248,16 @@ open=false
 order=-1
 
 [item:thesis.tex]
-open=false
+open=true
 order=0
 
+[item:ucr.cls]
+open=false
+order=1
+
 [view-settings,view=0,item:appendix.tex]
-CursorColumn=61
-CursorLine=15
+CursorColumn=1
+CursorLine=52
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]
@@ -291,8 +304,8 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:chapter2/Laila-DDCEL.tex]
-CursorColumn=55
-CursorLine=17
+CursorColumn=151
+CursorLine=4
 Dynamic Word Wrap=true
 JumpList=
 TextFolding=[]
@@ -307,8 +320,8 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:chapter2/experiments.tex]
-CursorColumn=0
-CursorLine=276
+CursorColumn=24
+CursorLine=283
 Dynamic Word Wrap=true
 JumpList=
 TextFolding=[]
@@ -331,8 +344,8 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:chapter2/methods.tex]
-CursorColumn=27
-CursorLine=264
+CursorColumn=64
+CursorLine=290
 Dynamic Word Wrap=true
 JumpList=
 TextFolding=[]
@@ -347,8 +360,8 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:chapter4/experiments.tex]
-CursorColumn=57
-CursorLine=89
+CursorColumn=127
+CursorLine=120
 Dynamic Word Wrap=true
 JumpList=
 TextFolding=[]
@@ -379,8 +392,16 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:thesis.tex]
-CursorColumn=1
-CursorLine=8
+CursorColumn=20
+CursorLine=109
+Dynamic Word Wrap=false
+JumpList=
+TextFolding=[]
+ViMarks=
+
+[view-settings,view=0,item:ucr.cls]
+CursorColumn=34
+CursorLine=242
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]
