@@ -3,7 +3,8 @@
 Our discussion so far assumed the input data is a set of clean and closed polygons in the two input layers to be overlayed. However, several real-world 
 polygons, such as city blocks formed by individual road segments represented as spatial lines, are unavailable in the polygonal form. Forming polygons in such 
 cases at a large scale is non-trivial and takes significant computing cost. This section further extends our scalable DCEL overlay operations to handle 
-scattered line segments as input through a scalable polygonization \cite{LailaMDMPaper} process. Such a feature enables spatial data scientists to seamlessly  
+scattered line segments as input through a scalable polygonization \cite{abdelhafeez_ddcel_2023} process. Such a feature enables spatial data scientists to 
+seamlessly  
 exploit a rich set of publicly available datasets, e.g., spatial road networks worldwide \cite{web:data:continents,web:data:usa}.
 
 \begin{figure}[tb]
@@ -14,7 +15,8 @@ exploit a rich set of publicly available datasets, e.g., spatial road networks w
 \end{figure}
 
 Building a DCEL data structure from an input of planar line segments extracts all closed polygons during the invocation of the \textit{polygonization} 
-procedure.  In our work in \cite{LailaMDMPaper}, we proposed a scalable distributed framework to build a DCEL and extract polygons in parallel from the input 
+procedure.  In our work in \cite{abdelhafeez_ddcel_2023}, we proposed a scalable distributed framework to build a DCEL and extract polygons in parallel from the 
+input 
 line segments. Figure \ref{fig:overview_ddcel} shows an overview of the DCEL constructor. 
 
 To create a DCEL data structure from input line segments, the \textit{DCEL constructor} undergoes a two-phase paradigm.  The \textit{Gen Phase}, detailed in 

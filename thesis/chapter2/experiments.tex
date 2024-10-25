@@ -272,8 +272,14 @@ Figure \ref{fig:k_scale_speed_us}(b) shows the scale-up performance of the kd-tr
 \label{fig:exp:query}
 \end{figure}
 
-Figure~\ref{fig:exp:query} evaluates the scalability of the polygonization approach using the different evaluation datasets summarized in Table \ref{table:polygonization:datasets}. 
-We implemented our polygonization framework on Apache Sedona \cite{YZS18}. The experiment is based on a Java 8 implementation and utilizes a Spark 2.3 cluster with two driver nodes and 12 worker nodes. All nodes run Linux CentOS 8.2 (64-bit). Each driver node is equipped with 128GB of RAM, while each worker node has 64GB of RAM. To increase parallelism, we divided the 12 worker nodes into 84 worker executors. Each executor is a separate JVM process with dedicated resources, such as memory and CPU cores. The distribution of these executors across the nodes is managed by the resource negotiator (YARN), which allocates resources for Spark jobs based on the availability of cores and memory. YARN typically balances resources across the cluster, so executors are likely to be evenly distributed, though some variation may occur due to resource availability at runtime. Assuming an even distribution, each worker node would run approximately 7 executors, as calculated by $\frac{84}{12} = 7$.
+Figure \ref{fig:exp:query} evaluates the scalability of the polygonization approach using the different evaluation datasets summarized in Table 
+\ref{table:polygonization:datasets}.  We implemented our polygonization framework on Apache Sedona \cite{yu_spatial_2018}. The experiment is based on a Java 8  
+implementation and utilizes a Spark 2.3 cluster with two driver nodes and 12 worker nodes. All nodes run Linux CentOS 8.2 (64-bit). Each driver node is equipped 
+with 128GB of RAM, while each worker node has 64GB of RAM. To increase parallelism, we divided the 12 worker nodes into 84 worker executors. Each executor is a 
+separate JVM process with dedicated resources, such as memory and CPU cores. The distribution of these executors across the nodes is managed by the resource 
+negotiator (YARN), which allocates resources for Spark jobs based on the availability of cores and memory. YARN typically balances resources across the cluster, 
+so executors are likely to be evenly distributed, though some variation may occur due to resource availability at runtime. Assuming an even distribution, each 
+worker node would run approximately 7 executors, as calculated by $\frac{84}{12} = 7$.
 
 As discussed in Section~\ref{sec:rem}, the Rem Phase has two different approaches depending on the input data received from the Gen Phase. The first approach is to process the remaining half-edges iteratively, denoted as \textit{DCEL-RH}. In comparison, the second approach processes the incomplete cycles generated from the first phase iteratively denoted as \textit{DCEL-IC}.
 
