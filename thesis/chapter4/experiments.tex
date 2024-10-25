@@ -4,12 +4,12 @@ For our experiments, we utilized a 12-node cluster, each running Linux (kernel v
 
 To evaluate the different approaches, we generated three synthetic datasets with varying characteristics, as detailed in Table \ref{tab:datasets}. These 
 datasets were created using the SUMO simulator \cite{krajzewicz_recent_2012}, by importing traffic networks of Berlin and Los Angeles from OpenStreetMap 
-\cite{haklay_openstreetmap_2008}. We configured SUMO for pedestrian traffic and generated datasets of 10K, 25K, and 50K pedestrian trajectories. The total 
+\cite{haklay2008openstreetmap}. We configured SUMO for pedestrian traffic and generated datasets of 10K, 25K, and 50K pedestrian trajectories. The total 
 duration of the trajectories was set to 10, 30, and 60 minutes, respectively, with positions of pedestrians recorded at one-minute intervals.
 
 \begin{table}
     \centering
-    \caption{Description of datasets}\label{tab:datasets}
+    \caption{Description of datasets.}\label{tab:datasets}
     \begin{tabular}{cccc}
         \hline
         Dataset & Number of Trajectories & Total number of points & Maximum Duration (min) \\
@@ -29,19 +29,19 @@ A key parameter for the quadtree is the node capacity, denoted as $c$. When the 
 The capacity parameter $c$ directly influences the number of partitions in the quadtree. A smaller value of $c$ results in a higher number of partitions, which leads to many smaller tasks that can be distributed across the cluster. However, this can increase the overhead associated with data transmission and, potentially, replication, which may become a bottleneck. Conversely, a larger value of $c$ reduces the number of partitions, resulting in fewer but larger tasks. This increases the workload of the sequential algorithm within each partition, potentially extending the response time for individual jobs.
 
 Figure \ref{fig:optimal_performance} presents the execution time (in seconds) for computing maximal disks (Phase 1) at a specific time instant, using different values of $c$ and $\varepsilon$. The experiments were conducted using the LA25K dataset.
-For the case where $\varepsilon = 20m$, we observe that there is an optimal value of $c$ that minimizes the execution time for finding maximal disks, which occurs at $c=100$ (corresponding to approximately 1300 partitions). Additionally, the optimal value of $c$ varies based on the value of $\varepsilon$. For instance, with a smaller $\varepsilon = 2m$, the execution time is minimized at a larger capacity $c=500$ (around 250 partitions).
+For the case where $\varepsilon = 20m$, we observe that there is an optimal value of $c$ that minimizes the execution time for finding maximal disks, which occurs at $c = 100$ (corresponding to approximately 1300 partitions). Additionally, the optimal value of $c$ varies based on the value of $\varepsilon$. For instance, with a smaller $\varepsilon = 2m$, the execution time is minimized at a larger capacity $c = 500$ (around 250 partitions).
 When $\varepsilon$ is large, more pairs of points need to be processed, resulting in a higher number of maximal disks to compute. In such cases, using a smaller value of $c$ creates more partitions within the same spatial area, thereby distributing the workload more evenly across partitions and reducing the amount of work per partition.
 
 \begin{figure}
     \centering
     \begin{tabular}{c c}
-         \includegraphics[width=0.45\linewidth]{figures/plots/01_optimal_performance/pflockE2_by_capacity.pdf} & 
-         \includegraphics[width=0.45\linewidth]{figures/plots/01_optimal_performance/pflockE5_by_capacity.pdf} \\
-         \includegraphics[width=0.45\linewidth]{figures/plots/01_optimal_performance/pflockE10_by_capacity.pdf} &
-         \includegraphics[width=0.45\linewidth]{figures/plots/01_optimal_performance/pflockE15_by_capacity.pdf} \\ 
-         \includegraphics[width=0.45\linewidth]{figures/plots/01_optimal_performance/pflockE20_by_capacity.pdf} & \\
+         \includegraphics[width=0.45\linewidth]{chapter4/figures/plots/01_optimal_performance/pflockE2_by_capacity.pdf} & 
+         \includegraphics[width=0.45\linewidth]{chapter4/figures/plots/01_optimal_performance/pflockE5_by_capacity.pdf} \\
+         \includegraphics[width=0.45\linewidth]{chapter4/figures/plots/01_optimal_performance/pflockE10_by_capacity.pdf} &
+         \includegraphics[width=0.45\linewidth]{chapter4/figures/plots/01_optimal_performance/pflockE15_by_capacity.pdf} \\ 
+         \includegraphics[width=0.45\linewidth]{chapter4/figures/plots/01_optimal_performance/pflockE20_by_capacity.pdf} & \\
     \end{tabular}
-    \caption{Execution time testing different values for Capacity ($c$) and Epsilon  $\varepsilon$).}\label{fig:optimal_performance}
+    \caption{Execution time testing different values for Capacity ($c$) and Epsilon  ($\varepsilon$).}\label{fig:optimal_performance}
 \end{figure}
 
 After determining the optimal value of $c$ for a given $\varepsilon$, we further analyzed the behavior of BFE and PSI on the most `demanding' partitions, those that required the longest time to complete Phase 1. Since the partitions are processed in parallel across different cores, these demanding partitions have the greatest impact on the overall performance. By focusing on these partitions, we can better understand potential bottlenecks and further optimize the system's efficiency.
@@ -51,15 +51,15 @@ We began by identifying the top 10 partitions that required the most time to exe
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{figures/plots/03_top_time_partitions/top_time_partitions.pdf}
-    \caption{Comparing the performance of PSI and BFE for time consuming  partitions.}\label{fig:top_time_partitions}
+    \includegraphics[width=\linewidth]{chapter4/figures/plots/03_top_time_partitions/top_time_partitions.pdf}
+    \caption{Comparing the performance of PSI and BFE for time consuming  partitions.} \label{fig:top_time_partitions}
 \end{figure}
 
 We further investigated the reasons behind some partitions taking longer to compute. Figure \ref{fig:pairs_performance} shows the Phase 1 execution times per partition while varying $\varepsilon$ from 10m to 20m, with partitions ordered by the number of pairs they contain. One key observation is that as $\varepsilon$ increases, the number of pairs also increases, since a larger $\varepsilon$ allows for more maximal disks. For instance, with $\varepsilon = 10m$, the maximum number of pairs in a partition is around 1800, whereas for $\varepsilon = 20m$, some partitions contain nearly 4000 pairs.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.85\linewidth]{figures/plots/04_pairs_performance/pairs_performance.pdf}
+    \includegraphics[width=0.85\linewidth]{chapter4/figures/plots/04_pairs_performance/pairs_performance.pdf}
     \caption{Execution time for pairs/disks finding in the dense partition.}
     \label{fig:pairs_performance}
 \end{figure}
@@ -74,30 +74,19 @@ This stage is particularly costly because both BFE and PSI must scan a large set
 
 \begin{figure}
     \centering
-    \begin{tabular}{c c}
-        \includegraphics[width=0.49\linewidth] {figures/plots/09_dense_stages/dense_stages_bfe.pdf} &
-        \includegraphics[width=0.49\linewidth] {figures/plots/09_dense_stages/dense_stages_psi.pdf} \\
-        (a) & (b) \\
-    \end{tabular}
-    \caption{Processing time for the stages of Phase 1, in (a) BFE, (b) PSI.}\label{fig:dense_stages}
+    \includegraphics[width=\linewidth] {chapter4/figures/plots/09_dense_stages/dense.pdf} 
+    \caption{Processing time for the stages of Phase 1, in (a) standard BFE and (b) standard  PSI.}\label{fig:dense_stages}
 \end{figure}
 
 \subsection{Can we reduce pruning time?}
 Dense areas pose challenges for pruning, as they are highly sensitive to increases in the value of $\varepsilon$, leading to an exponential growth in the number of pairs. To address this, we explored alternative strategies that could enable more effective grouping of points. It is important to note that density-based spatial clustering methods, such as DBSCAN \cite{dbscan}, are not suitable for this problem. In very dense regions, these approaches often produce a single large cluster, which does not resolve the issue. Additionally, clustering algorithms do not enforce the strict relationships required for a flock, where all points must be within a distance of $\varepsilon$ from each other.
 
-Instead, we explored graph-oriented clustering, focusing on the concept of \textit{maximal cliques}. In an undirected graph, a maximal clique is a subset of 
-vertices where each vertex is directly connected to every other vertex in the subset. Additionally, the clique is maximal in the sense that it cannot be 
-extended by adding more vertices \cite{tomita_simple_2013, bron_algorithm_1973}.
+Instead, we explored graph-oriented clustering, focusing on the concept of \textit{maximal cliques}. In an undirected graph, a maximal clique is a subset of vertices where each vertex is directly connected to every other vertex in the subset. Additionally, the clique is maximal in the sense that it cannot be extended by adding more vertices \cite{tomita_clique_2013, bron_algorithm_1973}.
 
 In this context, the points within a partition can be treated as the vertices of an undirected graph, where edges are created between pairs of points that are within a distance of $\varepsilon$. By finding the set of maximal cliques in this graph, we identify subsets of points where each point is connected to all others in the subset. This means that all points in the clique are at most $\varepsilon$ apart, and no additional points can be added to the subset.
 However, not every maximal clique qualifies as a maximal disk. A maximal clique becomes a maximal disk only if it contains at least $\mu$ points and can be enclosed by a disk with a radius of $\frac{\varepsilon}{2}$.
 
-To verify whether a maximal clique qualifies as a maximal disk, we introduce the concept of the \textit{Minimum Bounding Circle} (MBC) 
-\cite{welzl_smallest_1991}. Given a set of points in Euclidean space, the MBC is the smallest circle that can enclose all the points. For each maximal clique 
-identified within a partition, we can quickly check if all points in the clique fit within an MBC with a diameter of $\varepsilon$. If they do, we can 
-immediately report the set of points and their MBC as a maximal disk.  However, cliques that do not satisfy this condition must be evaluated using the 
-traditional method. This involves computing the potential disk centers, identifying candidate disks, and pruning them, as outlined in Figure 
-\ref{fig:MF_flowchart}.
+To verify whether a maximal clique qualifies as a maximal disk, we introduce the concept of the \textit{Minimum Bounding Circle} (MBC) \cite{welzl_mbc_1991}. Given a set of points in Euclidean space, the MBC is the smallest circle that can enclose all the points. For each maximal clique identified within a partition, we can quickly check if all points in the clique fit within an MBC with a diameter of $\varepsilon$. If they do, we can immediately report the set of points and their MBC as a maximal disk.  However, cliques that do not satisfy this condition must be evaluated using the traditional method. This involves computing the potential disk centers, identifying candidate disks, and pruning them, as outlined in Figure \ref{fig:MF_flowchart}.
 
 To evaluate the cliques that do not meet the above condition, we implemented two variants. The first variant, termed \textit{COLLECT}, gathers the points from all cliques that are not reported as maximal disks, removes duplicates (since points may appear in multiple cliques), and then applies the traditional pruning method to the entire set. In the second variant, \textit{EACH}, we apply the pruning procedure independently for each clique that does not qualify as a maximal disk.
 
@@ -105,11 +94,7 @@ Figure \ref{fig:cmbc_variants} compares the performance of these variants agains
 
 \begin{figure}
     \centering
-    \begin{tabular}{c c}
-        \includegraphics[width=0.49\linewidth] {figures/plots/10_cmbc_variants/cmbc_bfe.pdf} &
-        \includegraphics[width=0.49\linewidth] {figures/plots/10_cmbc_variants/cmbc_psi.pdf} \\
-        (a) & (b) \\
-    \end{tabular}
+    \includegraphics[width=\linewidth] {chapter4/figures/plots/10_cmbc_variants/cmbc.pdf}
     \caption{Execution time of the Cliques approach compared to (a) standard BFE and (b) standard PSI.}\label{fig:cmbc_variants}
 \end{figure}
 
@@ -118,9 +103,7 @@ To further examine the relative performance of the scalable BFE and PSI approach
 
 We experimented with different quadtree capacities ($c$ values of 100, 200, and 300), which resulted in varying numbers of partitions (as shown in Table \ref{tab:uniform_ncells}). Both BFE and PSI were tested for phase 1, where maximal disks are identified, using $\varepsilon$ values ranging from 1m to 5m. The results are presented in Figure \ref{fig:uniform_performance}.
 
-Overall, PSI demonstrated better performance than BFE, though there were cases (particularly with smaller $\varepsilon$ values) where BFE outperformed PSI. In 
-these cases, the smaller $\varepsilon$ generates fewer pairs, and the additional ordering step required by PSI becomes an overhead. However, in the subsequent 
-experiments focusing on temporal joins (phase 2, flock creation), we concentrate on the scalable performance of PSI.
+Overall, PSI demonstrated better performance than BFE, though there were cases (particularly with smaller $\varepsilon$ values) where BFE outperformed PSI. In these cases, the smaller $\varepsilon$ generates fewer pairs, and the additional ordering step required by PSI becomes an overhead. However, in the subsequent experiments focusing on temporal joins (phase 2, flock creation), we concentrate on the scalable performance of PSI.
 
 \begin{table}
     \centering
@@ -137,7 +120,7 @@ experiments focusing on temporal joins (phase 2, flock creation), we concentrate
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{figures/plots/05_uniform_performance/uniform_performance.pdf}
+    \includegraphics[width=\linewidth]{chapter4/figures/plots/05_uniform_performance/uniform_performance.pdf}
     \caption{Performance in an uniform dataset analysing density and capacity with diverse values for epsilon.}\label{fig:uniform_performance}
 \end{figure}
 
@@ -149,13 +132,13 @@ We also evaluated the optimal value for the \textit{interval} parameter in the C
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\linewidth]{figures/plots/06_step_performance/step_performance.pdf}
+    \includegraphics[width=0.8\linewidth]{chapter4/figures/plots/06_step_performance/step_performance.pdf}
     \caption{Root and step alternative for temporal join using the Berlin dataset (step=7 is root).}\label{fig:step_performance}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\linewidth]{figures/plots/07_interval_performance/interval-performance.pdf}
+    \includegraphics[width=0.8\linewidth]{chapter4/figures/plots/07_interval_performance/interval-performance.pdf}
     \caption{Interval optimization for the Cube-based alternative for temporal join using the LA25K dataset.}\label{fig:interval_performance}
 \end{figure}
 
@@ -167,18 +150,18 @@ We repeated the same experiment with the LA50K dataset, varying $\varepsilon$ fr
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.75\linewidth]{figures/plots/08_sequential_parallel/la25k_e_bfe_psi.pdf}
+    \includegraphics[width=0.75\linewidth]{chapter4/figures/plots/08_sequential_parallel/la25k_e_bfe_psi.pdf}
     \caption{Performance comparing parallel and sequential alternatives in the LA25K dataset.}\label{fig:la25k_e_bfe_psi}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.75\linewidth]{figures/plots/08_sequential_parallel/la25k_e.pdf}
+    \includegraphics[width=0.75\linewidth]{chapter4/figures/plots/08_sequential_parallel/la25k_e.pdf}
     \caption{Performance of the 4 parallel alternatives in the LA25K dataset.}\label{fig:la25k_e}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.75\linewidth]{figures/plots/08_sequential_parallel/la50k_e.pdf}
+    \includegraphics[width=0.75\linewidth]{chapter4/figures/plots/08_sequential_parallel/la50k_e.pdf}
     \caption{Performance of the 4 parallel alternatives in the LA50K dataset.}\label{fig:la50k_e}
 \end{figure}

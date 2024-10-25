@@ -1,0 +1,58 @@
+\chapter{Background \& Motivation}
+
+\section{Background}
+Spatial data structures, crucial in fields like Geographic Information Systems (GIS), computational geometry, and spatial databases, enable efficient management 
+and querying of geospatial information. Among these structures, the Doubly Connected Edge List (DCEL) stands out for its utility in topological computations on 
+planar subdivisions. The DCEL data structure is a prominent choice for spatial applications that need to represent complex geospatial information due to its 
+capacity to capture the relationships between vertices, edges, and faces. Its structure supports various geospatial operations, 
+including intersection, union, and difference, making it suitable for spatial overlays.
+
+DCEL has been widely applied in both practical and theoretical domains. Its applications span tasks in surveillance, such as the Art Gallery Problem, as well as 
+in path finding and collision avoidance in robotics. Moreover, DCEL-based overlay methods provide an efficient means for integrating and analyzing thematic 
+layers of geographic data, offering valuable insights for environmental studies, urban planning, and other geospatial analyses. Traditional implementations of 
+DCEL-based overlays, however, operate sequentially and struggle to handle large-scale datasets, as is common in today’s data-rich environments.
+
+Parallel and distributed computing offer promising avenues for enhancing the scalability of DCEL-based overlay operations, especially with frameworks like 
+Apache Spark that allow efficient partitioning and distributed processing. Leveraging these frameworks, spatial data scientists can potentially apply DCEL 
+overlays to massive datasets, such as those derived from national census data or large ecological surveys, which may contain millions of polygons and edges. 
+This scalability is crucial to ensure DCEL’s continued relevance in increasingly data-intensive applications.
+
+In a similar fashion, the last few decades have witnessed a transformative increase in the collection of spatio-temporal data, driven largely by the widespread 
+use of GPS-enabled devices, smartphones, and the Internet of Things (IoT). This data proliferation has enabled novel insights into movement patterns across 
+various domains, such as ecology, transportation, and urban planning. For instance, spatio-temporal data analysis is instrumental in identifying traffic 
+congestion patterns in urban settings, monitoring migratory behavior in wildlife, and tracking the progression of weather events like hurricanes. More advanced 
+analyses often focus on detecting not just isolated movement behaviors but group behaviors, where multiple entities move in close proximity over time.
+
+Such group movement patterns —referred to as moving flocks, swarms, convoys, and clusters— capture complex collective behaviors. Detecting these patterns 
+involves identifying groups that stay within a predefined distance over a set period, yielding insights into social dynamics, ecological phenomena, and urban 
+mobility trends. The moving flock pattern, in particular, has garnered significant interest for its relevance across a broad spectrum of applications. From 
+understanding migratory routes in animal populations to studying crowd dynamics in public spaces, the ability to detect and analyze moving flock patterns has 
+proven invaluable. However, efficiently mining these patterns at scale remains a challenge due to the computational intensity of analyzing large, dense 
+spatio-temporal datasets.
+
+\section{Motivation}
+The rise of big geospatial data demands scalable and efficient techniques to handle the complex overlay operations required for analyses in ecology, economics, 
+and urban planning. Sequential implementations of DCEL-based overlays have proved inadequate when confronted with large datasets, often leading to performance 
+bottlenecks and memory overflows. This limitation not only hampers the performance of geospatial analyses but also restricts the scope of investigations 
+possible with current data.
+
+The need for scalability in DCEL overlays is further amplified by the availability of spatial datasets that are inherently complex, such as road networks 
+represented as individual line segments or census tracts with intricate boundaries. Processing such datasets requires more than just traditional polygon overlay 
+techniques, as these often need preprocessing steps like polygonization for line-based inputs. A distributed approach to DCEL overlays that can handle both 
+large polygon layers and scattered line segment data would significantly expand the types of analyses available to spatial data scientists.
+
+This research addresses these challenges by developing a distributed and scalable approach to compute DCEL overlays, capable of supporting various overlay 
+operations and accommodating complex input data. By introducing novel partitioning strategies and optimizations tailored for DCEL overlays, this study aims to 
+extend the utility of DCEL in spatial analysis, enabling rapid and scalable processing of large-scale geospatial datasets in a parallel computing environment.
+
+Similarly, traditional approaches to identifying moving flock patterns, such as the Basic Flock Evaluation (BFE) algorithm, have established foundations for 
+detecting group movement but are limited in scalability. These methods typically involve exhaustive spatial and temporal comparisons to track group 
+cohesiveness, resulting in high computational costs. With the continued growth of data and the increasing density of spatial datasets, there is a pressing need 
+for scalable, efficient solutions that can detect moving flocks in large, complex datasets.
+
+This research is motivated by the limitations of current algorithms in processing large-scale dense datasets with high efficiency. Recognizing the potential of 
+distributed computing frameworks and advanced partitioning strategies, this work proposes a novel, partition-based approach that enables scalable processing of 
+moving flock patterns. By leveraging partitioning, replication, and parallel processing, the proposed methodology aims to overcome the bottlenecks of 
+traditional methods. Additionally, integrating temporal joining strategies —such as the Cube-based approach— ensures efficient tracking of flock continuity 
+across time while reducing computational overhead. The ultimate goal is to create a system that can handle extensive spatio-temporal datasets while maintaining 
+accuracy in flock detection, enabling applications to extend to even larger and denser data environments.

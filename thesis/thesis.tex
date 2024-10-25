@@ -36,7 +36,8 @@
 \usepackage{algorithmicx}%
 \usepackage{algpseudocode}%
 \usepackage{listings}%
-\usepackage{refcheck}
+\usepackage[toc,page]{appendix}
+%\usepackage{refcheck}
 
 %% For algorithms...
 \algnewcommand\algorithmicforeach{\textbf{for each}}
@@ -53,7 +54,7 @@
 
 % Declarations for Front Matter
 
-\title{Scalable spatial operations and pattern finding through algorithm paralellization}
+\title{Scalable Spatial Operations and Pattern Detection Using Distributed Systems}
 \author{Andres Oswaldo Calderon Romero}
 \degreemonth{November}
 \degreeyear{2024}
@@ -99,16 +100,18 @@ Dr. Vagelis Hristidis\\
 
 % \part{First Part}
 \msp
-\input{chapter1} %usually intro
+\input{chapter0} 
 \input{chapter2}
 %\input{chapter3}
 \input{chapter4}
-\input{conclusions}
-
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{thesis}
+%\input{conclusions}
 
 \input{appendix}
+
+%\nocite{*}
+\clearpage
+\phantomsection
+\bibliographystyle{plain}
+\bibliography{thesis}
 
 \end{document}

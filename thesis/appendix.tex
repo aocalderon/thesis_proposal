@@ -1,8 +1,15 @@
+\clearpage
 \appendix
 
+\renewcommand\appendixname{}
+\renewcommand\appendixpagename{}
+\renewcommand{\thechapter}{}
+\renewcommand{\thesection}{\Alph{section}}
+
+\chapter{Appendix}
 \section{Center computation.}
 {\ssp
-\begin{algorithm}
+\begin{algorithm}[h!]
     \caption{Find the centers of given radius which circumference laid on the two input points.}
     \begin{algorithmic}[1]
         \Require Radius $\frac{\varepsilon}{2}$ and points $p_1$ and $p_2$.
@@ -26,9 +33,10 @@
 \end{algorithm}
 }
 
+\clearpage
 \section{Disk pruning.}
 {\ssp
-\begin{algorithm}
+\begin{algorithm}[h!]
     \caption{Prune disks which are duplicate or subset of others.}
      \begin{algorithmic}[1]
          \Require Set of disks $D$.
@@ -52,10 +60,11 @@
 \end{algorithm}
 }
 
-\section{Clique and MBC approach.}
-\begin{figure}
+\clearpage
+\section{Clique and MBC approach.}\label{app:cmbc_flowchar}
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=0.7\linewidth]{chapter4/figures/plots/10_cmbc_variants/CMBC_flowchart2.pdf}
+    \includegraphics[width=0.65\linewidth]{chapter4/figures/plots/10_cmbc_variants/CMBC_flowchart2.pdf}
     \caption{Schematic description of the Clique and MBC approach.}
-    \label{fig:cmbc_flowchart}
 \end{figure}
+
