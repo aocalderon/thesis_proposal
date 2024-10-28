@@ -202,7 +202,7 @@ order=-1
 
 [item:chapter2/04a-gen.tex]
 open=false
-order=-1
+order=2
 
 [item:chapter2/04b-rem.tex]
 open=false
@@ -214,7 +214,7 @@ order=-1
 
 [item:chapter2/Laila-DDCEL.tex]
 open=false
-order=-1
+order=1
 
 [item:chapter2/conclusions.tex]
 open=false
@@ -301,8 +301,8 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:chapter2/04a-gen.tex]
-CursorColumn=7
-CursorLine=37
+CursorColumn=64
+CursorLine=101
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]
