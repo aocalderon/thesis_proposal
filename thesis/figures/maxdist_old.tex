@@ -1,0 +1,90 @@
+\documentclass[multi=page, svgnames, border=0.1cm]{standalone}
+\usepackage[svgnames]{xcolor}
+\usepackage{tikz}
+
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{calc}
+
+\tikzset{
+  point/.style={ draw, scale=0.25, circle, fill },
+  label/.style={ scale=1.5, Gray, opacity=0.65 },
+  letter/.style={ scale=0.55, above },
+  center/.style={ draw, thin, scale=0.3, cross out }
+}
+\definecolor{light-gray}{gray}{0.925}
+
+\begin{document}
+\def\width{6}
+\def\x{1}
+\def\y{1}
+\def\delta{0.15}
+\def\epsilon{0.6}
+\def\maxdist{0.75}
+\def\opacity{0.25}
+
+\begin{page}
+  \begin{tikzpicture}
+    %\draw[step=1, ultra thin, light-gray, dashed] (\x - \epsilon, \y - \epsilon) grid (\x + \width + \gap + \width + \epsilon, \y + \width + \epsilon);
+
+    \draw[] (\x, \y) rectangle (\x + \width, \y + \width);
+
+    \draw[dashed, blue, fill=black!20,opacity=0.5] (\x + \maxdist, \y + \maxdist) rectangle
+    (\x + \width - \maxdist, \y + \width - \maxdist);
+
+    \draw[stealth-stealth] (6.25, 2.5) -- (7, 2.5);\node[letter] at (6.625,2.1) {$maxdist$};
+    \node[point] at (2.50, 5.00) {};
+    \node[point] at (3.00, 4.00) {};
+    \node[point] at (3.00, 4.50) {};
+
+    \def\x{6.62}
+    \def\y{4.75}
+    \draw[] (\x, \y) circle (\epsilon / 2);
+    \coordinate (A1) at (\x, \y+\delta);\node[point] at (A1) {};
+    \coordinate (B1) at (\x, \y)       ;\node[point] at (B1) {};
+    \coordinate (C1) at (\x, \y-\delta);\node[point] at (C1) {};
+    \def\x{5.62}
+    \def\y{4.75}
+    \draw[] (\x, \y) circle (\epsilon / 2);
+    \coordinate (A2) at (\x, \y+\delta);\node[point] at (A2) {};\draw[-latex] (A1) -- (A2);
+    \coordinate (B2) at (\x, \y);       \node[point] at (B2) {};\draw[-latex] (B1) -- (B2);
+    \coordinate (C2) at (\x, \y-\delta);\node[point] at (C2) {};\draw[-latex] (C1) -- (C2);
+    \def\x{4.62}
+    \def\y{5.25}
+    \draw[] (\x, \y) circle (\epsilon / 2);
+    \coordinate (A3) at (\x, \y+\delta);\node[point] at (A3) {};\draw[-latex] (A2) -- (A3);
+    \coordinate (B3) at (\x, \y);       \node[point] at (B3) {};\draw[-latex] (B2) -- (B3);
+    \coordinate (C3) at (\x, \y-\delta);\node[point] at (C3) {};\draw[-latex] (C2) -- (C3);
+
+
+    \def\x{6.62}
+    \def\y{3.25}
+    \draw[] (\x, \y) circle (\epsilon / 2);
+    \coordinate (D1) at (\x, \y+\delta);\node[point] at (D1) {};
+    \coordinate (E1) at (\x, \y)       ;\node[point] at (E1) {};
+    \coordinate (F1) at (\x, \y-\delta);\node[point] at (F1) {};
+    \def\x{5.62}
+    \def\y{3.25}
+    \draw[] (\x, \y) circle (\epsilon / 2);
+    \coordinate (D2) at (\x, \y+\delta);\node[point] at (D2) {};\draw[latex-] (D1) -- (D2);
+    \coordinate (E2) at (\x, \y);       \node[point] at (E2) {};\draw[latex-] (E1) -- (E2);
+    \coordinate (F2) at (\x, \y-\delta);\node[point] at (F2) {};\draw[latex-] (F1) -- (F2);
+    \def\x{4.62}
+    \def\y{2.75}
+    \draw[] (\x, \y) circle (\epsilon / 2);
+    \coordinate (D3) at (\x, \y+\delta);\node[point] at (D3) {};\draw[latex-] (D2) -- (D3);
+    \coordinate (E3) at (\x, \y);       \node[point] at (E3) {};\draw[latex-] (E2) -- (E3);
+    \coordinate (F3) at (\x, \y-\delta);\node[point] at (F3) {};\draw[latex-] (F2) -- (F3);
+
+    \draw[] (4, 1.5) circle (\epsilon / 2);
+    \coordinate (G1) at (4.15, 1.6);\node[point] at (G1) {};
+    \coordinate (H1) at (4, 1.5);\node[point] at (H1) {};
+    \coordinate (I1) at (3.85, 1.4);\node[point] at (I1) {};
+
+    \draw[] (3, 2.5) circle (\epsilon / 2);
+    \coordinate (G2) at (3.15, 2.6);\node[point] at (G2) {};\draw[-stealth] (G1) -- (G2);
+    \coordinate (H2) at (3, 2.5);\node[point] at (H2) {};\draw[-stealth] (H1) -- (H2);
+    \coordinate (I2) at (2.85, 2.4);\node[point] at (I2) {};\draw[-stealth] (I1) -- (I2);
+    \end{tikzpicture}
+\end{page}
+
+\end{document}

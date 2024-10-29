@@ -1,0 +1,15 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Vertex records.\relax }}{9}{table.caption.2}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Face records.\relax }}{9}{table.caption.2}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Half-edge records.\relax }}{10}{table.caption.3}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces Evaluation Datasets\relax }}{39}{table.caption.21}%
+\contentsline {table}{\numberline {2.5}{\ignorespaces Percentages of edges in incomplete faces for three states\relax }}{41}{table.caption.22}%
+\contentsline {table}{\numberline {2.6}{\ignorespaces Cell size statistics.\relax }}{45}{table.caption.27}%
+\contentsline {table}{\numberline {2.7}{\ignorespaces Orphan cells and orphan holes description\relax }}{46}{table.caption.28}%
+\contentsline {table}{\numberline {2.8}{\ignorespaces Polygonization Evaluation Dataset\relax }}{51}{table.caption.36}%
+\contentsline {table}{\numberline {2.9}{\ignorespaces Overlaying Polygons with Dangle and Cut Edges Dataset\relax }}{53}{table.caption.39}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Description of datasets.\relax }}{69}{table.caption.52}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Number of partitions by capacity and number of points in synthetic uniform datasets.\relax }}{78}{table.caption.58}%
+\addvspace {10\p@ }

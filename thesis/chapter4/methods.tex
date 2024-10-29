@@ -90,7 +90,8 @@ Disks with centers in an expansion zone are created by points that exist in both
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{chapter4/figures/merge.pdf}
+    \includegraphics[width=\linewidth]
+    {chapter4/figures/merge.pdf}
     \caption{Ensuring no loss of data in safe zone and expansion area.}\label{fig:ensuring}
 \end{figure}
 
@@ -101,15 +102,19 @@ To address this issue, we introduce an additional parameter, \textit{maxdist}, w
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\linewidth]{chapter4/figures/maxdist.pdf}
+    \includegraphics[width=0.5\linewidth]{chapter4/figures/maxdist.pdf}
     \caption{Examples of CPFs that that start or end in the border area of a partition.}\label{fig:maxdist}
 \end{figure}
 
+
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\linewidth]{chapter4/figures/cubo2.pdf}
+    \includegraphics[width=\linewidth]
+    %{chapter4/figures/cubo2.pdf}
+    {chapter4/figures/plots/11_temporal_partitions/TemporalPartitioning.pdf}
     \caption{A flock that moves in different partitions along the time.}\label{fig:simple_alternative}
 \end{figure}
+
 
 In the post-processing stage, we evaluate four alternatives for collecting and checking crossing partial flocks (CPFs). The simplest approach is to gather all CPFs and process them sequentially on a single node (the master node). However, due to the large number of partitions and the \textit{maxdist} parameter, the volume of CPFs requiring post-processing can become substantial, leading to a bottleneck that negatively impacts overall performance.
 
@@ -121,6 +126,8 @@ A limitation of the previous alternatives is that each spatial partition is proc
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\linewidth]{chapter4/figures/cubo.pdf}
+    \includegraphics[width=\linewidth]
+    %{chapter4/figures/cubo.pdf}
+    {chapter4/figures/plots/11_temporal_partitions/Cube-based.pdf}
     \caption{An alternative division on the time dimension to partition the data into cubes.}\label{fig:cube_alternative}
 \end{figure}

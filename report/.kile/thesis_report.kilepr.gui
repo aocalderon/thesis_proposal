@@ -253,7 +253,7 @@ open=false
 order=2
 
 [item:thesis.tex]
-open=true
+open=false
 order=0
 
 [item:thesis.wsp]
@@ -269,7 +269,7 @@ open=false
 order=-1
 
 [item:ucr.cls]
-open=true
+open=false
 order=1
 
 [item:uct10.clo]

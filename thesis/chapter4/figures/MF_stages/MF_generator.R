@@ -15,7 +15,7 @@ mu = 3
 precision = 0.001
 size = 10
 gap = 0.35
-lim=c(4 - gap, 11 + gap)
+lim=c(4 - gap, 10.1 )
 r2 = (epsilon/2)^2
 P = readPoints("partition2.dat")
 x = P$x
@@ -23,12 +23,13 @@ y = P$y
 n = length(x)
 pointset=data.frame(x = x, y = y)
 pointset2 = data.frame(id=1:n, x=x, y=y, t=rep(0,n))
+pointset2 |> write_tsv("sample_points.tsv")
 write.table(pointset2, "sample.tsv", sep="\t", row.names = F, col.names = F)
 data = sqldf("SELECT p1.x AS x1, p1.y AS y1, p2.x AS x2, p2.y AS y2 FROM pointset p1 CROSS JOIN pointset p2 ")
-dim = 10
+dim = 6
 margin = 0
 
-pdf("pflock.pdf", width = dim, height = dim, onefile = T)
+pdf("pflock_test.pdf", width = dim, height = dim, onefile = T)
 par(mar=c(margin,margin,margin,margin))
 
 distance <- function(x1, y1, x2, y2){
@@ -52,8 +53,8 @@ computeCenters <- function(x1, y1, x2, y2){
 
 drawCanvas <- function(){
   plot(1, asp=1, axes = F, , xlab = "", ylab = "", type='n', xlim=lim, ylim=lim)
-  drawBorder(5,5,10,10,1)
-  drawBorder(4,4,11,11,5)
+  #drawBorder(5,5,10,10,1)
+  #drawBorder(4,4,11,11,5)
 }
 
 drawPoints <-function(){
