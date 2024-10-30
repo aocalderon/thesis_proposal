@@ -1,0 +1,54 @@
+\documentclass{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+
+\begin{document}
+
+\def \globalscale {1.000000}
+\begin{tikzpicture}[y=1cm, x=1cm, yscale=\globalscale,xscale=\globalscale, every node/.append style={scale=\globalscale}, inner sep=0pt, outer sep=0pt]
+
+\node[draw, circle, scale=2, fill] at (4.129, 2.040) {};
+\path[draw, dashed,line width=0.03cm] (4.129, 6.452) ellipse (1.51cm and 0.54cm);
+\path[draw, dashed,line width=0.03cm] (4.129, 2.040) ellipse (1.51cm and 0.54cm);
+\path[draw, dashed,line width=0.03cm] (4.129, 6.452) ellipse (0.73cm and 0.24cm);
+\path[draw, dashed,line width=0.03cm] (4.129, 2.040) ellipse (0.73cm and 0.24cm);
+\path[draw=black, dashed,line width=0.0265cm] (2.62, 6.44) -- (2.62, 2.00);
+\path[draw=black, dashed,line width=0.0265cm] (3.40, 6.44) -- (3.40, 2.04);
+\path[draw=black, dashed,line width=0.0265cm] (5.63, 6.44) -- (5.63, 2.04);
+\path[draw=black, dashed,line width=0.0265cm] (4.85, 6.44) -- (4.85, 2.04);
+
+\draw[color=white,fill=black!20] (3.77, 4.62) rectangle (4.43, 5.35);
+\path[draw,fill=black!20,line width=0.03cm] (4.109, 5.3664) ellipse (0.33cm and 0.12cm);
+\path[draw=black,line width=0.0265cm] (3.77, 5.35) -- (3.77, 4.62);
+\path[draw=black,line width=0.0265cm] (4.43, 5.35) -- (4.43, 4.62);
+\path[draw,fill=black!20,line width=0.03cm] (4.111, 4.6316) ellipse (0.33cm and 0.12cm);
+
+\draw[color=white,fill=black!20] (3.75, 2.77) rectangle (4.41, 3.50);
+\path[draw,fill=black!20,line width=0.03cm] (4.087, 3.5082) ellipse (0.33cm and 0.12cm);
+\path[draw=black,line width=0.0265cm] (3.75, 3.50) -- (3.75, 2.77);
+\path[draw=black,line width=0.0265cm] (4.41, 3.50) -- (4.41, 2.77);
+\path[draw,fill=black!20,line width=0.03cm] (4.088, 2.7733) ellipse (0.33cm and 0.12cm);
+
+\draw[color=white,fill=black!20] (4.91, 3.65) rectangle (5.57, 4.38);
+\path[draw,fill=black!20,line width=0.03cm] (5.24, 4.39) ellipse (0.33cm and 0.12cm);
+\path[draw=black,line width=0.0265cm] (4.91, 4.38) -- (4.91, 3.65);
+\path[draw=black,line width=0.0265cm] (5.57, 4.38) -- (5.57, 3.65);
+\path[draw,fill=black!20,line width=0.03cm] (5.247, 3.6554) ellipse (0.33cm and 0.12cm);
+
+%% axis...
+\path[draw=black,line width=0.02cm] (0.5, 0.5) -- (5.5, 0.5) -- node[right=2mm] {Space}(7.5, 3.0) -- (3.0, 3.0) -- cycle;
+\path[draw=black,line width=0.0265cm, -latex] (0.5, 0.5) -- node[left=2mm, rotate=90] {Time} (0.5, 7.6);
+
+%% trajs...
+\node[draw, circle, scale=2.2, fill] at (5.96, 1.41) {};
+\path[draw=black,line width=0.02cm, -latex] (5.96, 1.41) -- (5.96, 3.40) -- (5.37, 3.67) -- (5.37, 4.40) -- (6.06, 
+4.64) -- (6.06, 7.37);
+\node[draw, circle, scale=2.2, fill] at (4.85, 0.75) {};
+\path[draw=black,line width=0.02cm,-latex] (4.85, 0.75) -- (4.85, 1.65) -- (4.20, 2.78) -- (4.20, 5.34) -- (5.15, 
+5.84) -- (5.15, 7.38);
+\node[draw, circle, scale=2.2, fill] at (3.11, 1.75) {};
+\path[draw=black,line width=0.02cm,-latex] (3.11, 1.75) -- (3.11, 2.14) -- (3.94, 2.77) -- (3.94, 3.45) -- (5.17, 
+3.72) -- (5.17, 4.39) -- (4.00, 4.65) -- (4.00, 5.36) -- (3.17, 6.24) -- (3.17, 7.39);
+
+\end{tikzpicture}
+\end{document}
