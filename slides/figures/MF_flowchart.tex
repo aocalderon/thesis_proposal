@@ -22,7 +22,7 @@
         \node [block, below of=pairs] (centers) {Compute centers};
         \node [block, below of=centers] (disks) {Find disks};
         \node [block, below of=disks] (maximals) {Prune duplicate and subset disks};
-        \node [cloud, node distance=4cm, left of=maximals] (output) {$disks$};
+        \node [cloud, node distance=4cm, left of=maximals] (output) {$maximal\_disks$};
         % Info nodes
          \node [info, right of=pairs] (pairs_info) {
             \textbullet \hspace{0.1em} Query: $points\;p_1 \bowtie_{\varepsilon} points\;p_2$ \\

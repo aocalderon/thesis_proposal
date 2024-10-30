@@ -1,0 +1,313 @@
+
+    \begin{frame}{What is a DCEL?}
+        \begin{minipage}{0.65\textwidth}
+        \begin{itemize}
+            \item \textbf{Doubly Connected Edge List} - DCEL.
+            \item A spatial data structure to \textbf{represent planar subdivisions} of surfaces.
+            \item Represent topological and geometric information as vertices, edges, and faces.
+            \item \textbf{Applications}: polygon overlays, polygon triangulation and their applications in surveillance, robot motion planing, circuit board printing, etc.
+        \end{itemize}
+        \end{minipage}\hfill % maximize the horizontal separation
+        \begin{minipage}{0.34\textwidth}
+            \centering
+            \includegraphics[width=0.85\textwidth]{figures/planar_subdivision}
+            \tiny{Planar subdivision} \\
+            \vspace{0.25cm}
+            \includegraphics[width=\textwidth]{figures/dcel_representation1}
+            \tiny{DCEL representation}
+        \end{minipage}
+    \end{frame}
+
+    \begin{frame}{DCEL description}
+        \begin{itemize}
+                \item DCEL uses three tables: Vertices, Faces and Half-edges.
+        \end{itemize}
+        \vspace{0.25cm}
+        \begin{minipage}{0.79\textwidth}
+            \centering
+            \includegraphics[width=0.8\textwidth]{figures/dcel_representation2}
+        \end{minipage}\hfill % maximize the horizontal separation
+    \end{frame}
+
+   \begin{frame}{DCEL description}
+        \begin{itemize}
+                \item DCEL uses three tables: Vertices, Faces and Half-edges.
+        \end{itemize}
+        \vspace{0.25cm}
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=0.8\textwidth]{figures/dcel_representation2}
+        \end{minipage}\hfill % maximize the horizontal separation
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=0.7\textwidth]{figures/dcel_records}
+        \end{minipage}
+    \end{frame}
+
+    \begin{frame}{DCEL Advantages}
+        \begin{itemize}
+            \item \textbf{Efficiency}: very efficient for computation of  \textit{overlay operators}.
+            \item \textbf{Re-usability}: allows multiple operations over the same DCEL.
+            \item \textbf{Pipelining}: the output of a DCEL operator can be input to another DCEL operator.
+        \end{itemize}
+        \vspace{0.25cm}
+
+        \centering
+
+        \begin{tikzpicture}
+        \node (A) {\includegraphics[width=0.4\textwidth]{figures/A}};
+        \pause
+        \node (X) {\includegraphics[width=0.5\textwidth]{figures/blank}};
+        \node (B) {\includegraphics[width=0.4\textwidth]{figures/B}};
+        \pause
+        \node (X) {\includegraphics[width=0.5\textwidth]{figures/blank}};
+        \node (AB) {\includegraphics[width=0.4\textwidth]{figures/AB}};
+        \pause
+        \node (X) {\includegraphics[width=0.5\textwidth]{figures/blank}};
+        \node (O) {\includegraphics[width=\textwidth]{figures/dcel_operators}};
+        \end{tikzpicture}
+
+        %\includegraphics[width=0.9\textwidth]{figures/dcel_operators}
+    \end{frame}
+
+    \begin{frame}{Challenges and Contributions}
+        \begin{itemize}
+            \item Currently only sequential DCEL implementations exist.
+            \item Unable to deal with large datasets (i.e. US Census tracks at national level).
+            \item We propose a \textit{scalable} \textit{distributed} approach to compute the overlay of two polygon layers using DCELs.
+            \item Distribution enables scalability, but introduces challenges: the \textbf{\textit{orphan-cell}} problem and the \textbf{\textit{orphan-hole}} problem.
+            % \item We also present \textit{optimizations} that improve the overlay computation performance.
+        \end{itemize}
+
+    \end{frame}
+
+    \begin{frame}{Sequential implementation}
+        \begin{itemize}
+                \item Consider two (simple) input DCELs $A_1$ and $B_1$.  The sequential algorithm first finds the intersections of half-edges.
+                \item Then, new vertices (e.g. $c_1, c_2$) are created,  half-edges are updated, new faces are added and labeled (e.g. $A_1B_1$).
+        \end{itemize}
+        \vspace{0.5cm}
+
+        \centering
+        \includegraphics[width=\textwidth]{figures/dcel_seq}
+    \end{frame}
+
+    \begin{frame}{Scalable Implementation}
+        \begin{itemize}
+            \small
+            \item Two phases: (1) Distributed DCEL construction, and (2) Distributed overlay evaluation.
+            \item Distribution is based on a spatial index (e.g. quadtree)
+            \item Each input DCEL layer (e.g. A, B) is partitioned using the same index
+        \end{itemize}
+        \vspace{0.25cm}
+
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/partition_strategy}
+    \end{frame}
+
+    \begin{frame}{Scalable Implementation}
+        \begin{itemize}
+            \small
+            \item Each index cell should contain all information needed so that it can compute the overlay DCEL locally
+            \item For each cell to be independent, we need to create "artificial" edges and vertices
+        \end{itemize}
+        \vspace{0.25cm}
+
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/partition_strategy}
+    \end{frame}
+
+    \begin{frame}{Distributed DCEL construction}
+        \centering
+        \includegraphics[width=0.55\textwidth]{figures/overlay_partition} \\
+        \vspace{0.5cm}
+        \includegraphics[width=0.35\textwidth]{figures/distributed_dcel}
+    \end{frame}
+
+   \begin{frame}{Overlay evaluation}
+        \begin{itemize}
+            \item Answering global overlay queries...
+            \begin{itemize}
+                \item To compute a particular overlay operator, we query local DCELs.
+                \item This work is done independently at each cell (node).
+                \item SDCEL then collects back all local DCEL answers and computes the final answer (by removing artificial edges and concatenating the resulting faces).
+            \end{itemize}
+        \end{itemize}
+        \vspace{0.5cm}
+
+        \centering
+        \includegraphics[width=\textwidth]{figures/overlay_operator}
+    \end{frame}
+
+
+    \begin{frame}{Labeling orphan cells and orphan holes}
+        \begin{minipage}{0.59\textwidth}
+            \begin{itemize}
+                \item We next discuss the \textbf{orphan cell} problem (orphan holes are handled similarly).
+                \item A large face (e.g. the red polygon in the figure) can contain cells that do not intersect with any of the face's boundary edges (called \textit{regular edges}).
+                \item Such cells do not contain any label and thus we do not know which face they belong to.
+            \end{itemize}
+        \end{minipage}\hfill % maximize the horizontal separation
+        \begin{minipage}{0.4\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figures/holes1}
+            \end{minipage}
+    \end{frame}
+
+    \begin{frame}{Labeling orphan cells and orphan holes}
+        \begin{itemize}
+            \item We provide an algorithm to efficiently solve the orphan cell problem.
+        \end{itemize}
+        \vspace{0.5cm}
+
+        \centering
+        \includegraphics[width=\textwidth]{figures/holes2}
+    \end{frame}
+
+    \begin{frame}{Labeling orphan cells and orphan holes}
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=0.8\textwidth]{figures/holes3}
+        \end{minipage}\hfill % maximize the horizontal separation
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=0.8\textwidth]{figures/holes4}
+        \end{minipage}
+    \end{frame}
+
+
+    \begin{frame}{Overlay optimizations}
+        \begin{itemize}
+            \item Optimizing for faces overlapping many cells...
+                \begin{itemize}
+                    \item Naive approach sends all faces that overlap a cell to a master node (that will combine them).
+                    \item We propose an intermediate reduce processing step.
+                    \begin{itemize}
+                    \item The user provides a level in the quadtree structure and faces are evaluated at those intermediate reducers.
+                   \end{itemize}
+                   \item We also consider another approach that re-partitions such faces using their labels as the key.
+                    \begin{itemize}
+                    \item It avoids the reduce phase but implies an additional shuffle.
+                    \item However, as we show in the experiments this overhead is minimal.
+                    \end{itemize}
+                \end{itemize}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Overlay optimizations}
+        \begin{itemize}
+            \item Optimizing for unbalanced layers...
+                \begin{itemize}
+                    \item Finding intersections is the most critical part of the overlay computation.
+                    \item However, in many cases one of the layers has much more half-edges than the other.
+                    \item Sweep-line algorithms to detect intersections run over all the edges.
+                    \item Instead we scan the larger dataset only for the x-intervals where there are half-edges from the smaller dataset.
+                \end{itemize}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Experimental evaluation}
+        \begin{itemize}
+            \item Datasets.
+        \end{itemize}
+        \vspace{1cm}
+        \centering
+        \includegraphics[width=0.75\textwidth]{figures/datasets}
+    \end{frame}
+
+    \begin{frame}{Experimental evaluation}
+        \begin{itemize}
+            \item Evaluation of the overlapping faces optimization.
+        \end{itemize}
+        \vspace{1cm}
+        \centering
+        \includegraphics[width=0.75\textwidth]{figures/overlay_tester}
+    \end{frame}
+
+    \begin{frame}{Experimental evaluation}
+        \begin{itemize}
+            \item Evaluation of the unbalanced layers optimization.
+        \end{itemize}
+        \vspace{1cm}
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figures/unbalance1}
+        \end{minipage}\hfill % maximize the horizontal separation
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figures/unbalance2}
+        \end{minipage}
+    \end{frame}
+
+    \begin{frame}{Experimental evaluation}
+        \begin{itemize}
+            \item Performance varying number of partition cells (CCT dataset).
+        \end{itemize}
+        \vspace{1cm}
+
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figures/ca}
+        \end{minipage}\hfill % maximize the horizontal separation
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figures/ca_sample}
+        \end{minipage}
+    \end{frame}
+
+    \begin{frame}{Experimental evaluation}
+        \begin{itemize}
+            \item Performance with MainUS and GADM datasets.
+        \end{itemize}
+        \vspace{1cm}
+
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figures/mainus}
+        \end{minipage}\hfill % maximize the horizontal separation
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figures/gadm}
+        \end{minipage}
+    \end{frame}
+
+    \begin{frame}{Experimental evaluation}
+        \begin{itemize}
+            \item MainUS scale-up and speed-up.
+        \end{itemize}
+        \vspace{1cm}
+
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figures/MainUS_scaleup}
+        \end{minipage}\hfill % maximize the horizontal separation
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figures/MainUS_speedup}
+        \end{minipage}
+    \end{frame}
+
+    \begin{frame}{Experimental evaluation}
+        \begin{itemize}
+            \item GADM scale-up and speed-up.
+        \end{itemize}
+        \vspace{1cm}
+
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figures/GADM_scaleup}
+        \end{minipage}\hfill % maximize the horizontal separation
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figures/GADM_speedup}
+        \end{minipage}
+    \end{frame}
+
+    \begin{frame}{Conclusions}
+        \begin{itemize}
+            \item We introduced SDCEL, a scalable approach to compute the overlay operation among two layers that represent polygons from a planar subdivision of a surface.
+            \item We use a partition strategy which guarantees that each partition (cell) has the data needed to work independently.
+            \item We also proposed several optimizations to improve performance.
+            \item Our experiments using real datasets show very good performance; we are able to compute overlays over very large layers (each with >35M edges) in few minutes.
+        \end{itemize}
+    \end{frame}
