@@ -261,7 +261,7 @@ open=false
 order=-1
 
 [item:thesis.tex]
-open=false
+open=true
 order=0
 
 [item:ucr.cls]
@@ -381,8 +381,8 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:chapter4/experiments.tex]
-CursorColumn=75
-CursorLine=5
+CursorColumn=83
+CursorLine=71
 Dynamic Word Wrap=true
 JumpList=
 TextFolding=[]
@@ -397,8 +397,8 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:chapter4/methods.tex]
-CursorColumn=30
-CursorLine=104
+CursorColumn=71
+CursorLine=86
 Dynamic Word Wrap=true
 JumpList=
 TextFolding=[]

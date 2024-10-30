@@ -1,4 +1,4 @@
-\documentclass[svgnames, border=5mm]{standalone}
+\documentclass[border=2]{standalone}
 \usepackage[svgnames]{xcolor}
 \usepackage{tikz}
 
@@ -7,98 +7,116 @@
 
 \tikzset{
   point/.style={ draw, scale=0.4, circle, fill },
-  label/.style={ scale=1.5, Gray, opacity=0.65 },
-  letter/.style={ scale=1.5, above },
+  label/.style={ scale=1.5 },
+  letter/.style={ scale=1, above },
   center/.style={ draw, thin, scale=0.3, cross out }
 }
 \definecolor{light-gray}{gray}{0.925}
 
 \begin{document}
-\def\width{8}
-\def\x{1}
-\def\y{1}
+\def\width{6}
+\def\x{0}
+\def\y{0}
 \def\delta{0.075}
 \def\epsilon{1}
 \def\opacity{0.25}
-\def\gap{3.1}
+\def\gap{3.00}
+\def\xprime{\x + \width + \gap + 1}
 
   \begin{tikzpicture}
-    %\draw[step=1, ultra thin, light-gray, dashed] (\x - \epsilon, \y - \epsilon) grid (\x + \width + \gap + \width + \epsilon, \y + \width + \epsilon);
 
-    \draw[stealth-stealth] (2, 0) -- (2, 1);\node[letter] at (2.25,0.25) {$\varepsilon$};
-    \draw[stealth-stealth] (8, 2.25) -- (9, 2.25);\node[letter] at (8.5,1.5) {$\varepsilon$};
+    \draw[latex-latex] (\x, \y - \epsilon) -- (\x, \y) node[midway, right] {$\varepsilon$};
 
-    \draw[dashed, red]  (\x - \epsilon, \y - \epsilon) rectangle (\x + \width + \epsilon, \y + \width + \epsilon);
     \draw[] (\x, \y) rectangle (\x + \width, \y + \width);
+    \draw[dashed, red]  (\x - \epsilon, \y - \epsilon) rectangle (\x + \width + \epsilon, \y + \width + \epsilon);
+    \draw[] (\xprime, \y) rectangle (\xprime + \width, \y + \width);
+    \draw[dashed, red]  (\xprime - \epsilon, \y - \epsilon) rectangle (\xprime + \width + \epsilon, \y + \width + \epsilon);
 
-  %\draw[dashed, blue, fill=black!20,opacity=0.5] (\x + \epsilon, \y + \epsilon) rectangle (\x + \width - \epsilon, \y + \width - \epsilon);
-    \node[point] at (\x + 2, \y + 5) {};
-    \node[point, Green] at (\x + \width - \epsilon + 0.2, \y + 1.76) {};
-    \node[point, Green] at (\x + \width + 0.7, \y + 4) {};
+    \node[letter] at (\x + \width, \y + \width) {A};
+    \node[letter, below] at (\x + \width, \y) {B};
+    \node[letter] at (\xprime, \y + \width) {A};
+    \node[letter, below] at (\xprime, \y) {B};
 
-    \draw[Olive] (10 + \epsilon / 2, 7) circle (\epsilon / 2);   \node[center] at (10 + \epsilon / 2, 7) {};
-    \draw[Olive] (10 - \epsilon / 2, 7) circle (\epsilon / 2);   \node[center] at (10 - \epsilon / 2, 7) {};
-    \draw[Orange] (9 + \epsilon / 2, 5) circle (\epsilon / 2); \node[center] at  (9 + \epsilon / 2 , 5) {};
-    \draw[Orange] (9 - \epsilon / 2, 5) circle (\epsilon / 2); \node[center] at  (9 - \epsilon / 2 , 5) {};
-    \draw[Purple] (8 + \epsilon / 2, 3) circle (\epsilon / 2); \node[center] at  (8 + \epsilon / 2 , 3) {};
-    \draw[Purple] (8 - \epsilon / 2, 3) circle (\epsilon / 2); \node[center] at  (8 - \epsilon / 2 , 3) {};
+    \node[label] at (\x          + \width / 2, \y  + \width / 2) {1};
+    \node[label] at (\xprime + \width / 2, \y  + \width / 2) {2};
 
-    \def\ax{\x + \width + \gap + 1};
-    \draw[dashed, red]  (\ax - \epsilon, \y - \epsilon) rectangle (\ax + \width + \epsilon, \y + \width + \epsilon);
-    \draw[] (\ax, \y) rectangle (\ax + \width, \y + \width);
+    \node[point] at (2, 5) {};
+    \node[point] at (\xprime + 4, \y + 2) {};
+    \node[point] at (\xprime + 5.5, \y + 5) {};
 
-    %\draw[dashed, blue, fill=black!20,opacity=0.5] (\ax + \epsilon, \y + \epsilon) rectangle (\ax + \width - \epsilon, \y + \width - \epsilon);
+    \def\G{1}
+    \draw[Olive] (\x + \width + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);   
+    \node[center] at (\x + \width + \epsilon / 2, \y + \width - \G) {};
+    \draw[Olive] (\x + \width + \epsilon + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);   
+    \node[center] at (\x + \width + \epsilon + \epsilon / 2, \y + \width - \G) {};
+    
+    \draw[Olive] (\xprime + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);  
+    \node[center] at (\xprime + \epsilon / 2, \y + \width - \G) {};
+    \draw[Olive] (\xprime + \epsilon + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2); 
+    \node[center] at (\xprime + \epsilon + \epsilon / 2, \y + \width - \G) {};
 
-    \node[point] at (\ax + 5, \y + 3) {};
-    \node[point] at (\ax + 6.5, \y + 6) {};
-    \node[point, Green] at (\x + \width + \gap - \epsilon + 1.2, \y + 1.76) {};
-    \node[point, Green] at (\ax + 1.75, \y + 5.8) {};
-    \node[point, Green] at (\ax + 0.7, \y + 4) {};
+    \def\G{3}
+    \draw[Orange] (\x + \width + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);   
+    \node[center] at (\x + \width + \epsilon / 2, \y + \width - \G) {};
+    \draw[Orange] (\x + \width - \epsilon + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);   
+    \node[center] at (\x + \width - \epsilon + \epsilon / 2, \y + \width - \G) {};
+    
+    \draw[Orange] (\xprime + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);  
+    \node[center] at (\xprime + \epsilon / 2, \y + \width - \G) {};
+    \draw[Orange] (\xprime - \epsilon + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2); 
+    \node[center] at (\xprime - \epsilon + \epsilon / 2, \y + \width - \G) {};
 
-    \node[point, Green] at (\x + \width + \epsilon, \y + 6 + \delta) {};
-    \node[point, Green] at (\x + \width + \epsilon, \y + 6 - \delta) {};
-    \node[point, Green] at (\x + \width, \y + 4 + \delta) {};
-    \node[point, Green] at (\x + \width, \y + 4 - \delta) {};
-    \node[point, Green] at (\x + \width - \epsilon, \y + 2 + \delta) {};
-    \node[point, Green] at (\x + \width - \epsilon, \y + 2 - \delta) {};
+    \def\G{5}
+    \draw[Purple] (\x + \width - \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);   
+    \node[center] at (\x + \width - \epsilon / 2, \y + \width - \G) {};
+    \draw[Purple] (\x + \width - 2*\epsilon + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);   
+    \node[center] at (\x + \width - 2*\epsilon + \epsilon / 2, \y + \width - \G) {};
+    
+    \draw[Purple] (\xprime - \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);  
+    \node[center] at (\xprime - \epsilon / 2, \y + \width - \G) {};
+    \draw[Purple] (\xprime - 2*\epsilon + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2); 
+    \node[center] at (\xprime - 2*\epsilon + \epsilon / 2, \y + \width - \G) {};
 
+    \def\G{1}
+    \node[letter] at (\x + \width + \epsilon / 2, \y + \width - \G) {$a^{\prime}$};
+    \node[letter] at (\x + \width + \epsilon + \epsilon / 2, \y + \width - \G) {$a^{\prime \prime}$};
+    \node[letter] at (\xprime + \epsilon / 2, \y + \width - \G) {$a^{\prime}$};
+    \node[letter] at (\xprime + \epsilon + \epsilon / 2, \y + \width - \G) {$a^{\prime \prime}$};
 
-    \draw[Olive] (\ax + \epsilon + \epsilon / 2, 7) circle (\epsilon / 2);   \node[center] at (\ax + \epsilon + \epsilon / 2, 7) {};
-    \draw[Olive] (\ax + \epsilon - \epsilon / 2, 7) circle (\epsilon / 2);   \node[center] at (\ax + \epsilon - \epsilon / 2, 7) {};
-    \draw[Orange] (\ax + \epsilon / 2, 5) circle (\epsilon / 2);            \node[center] at (\ax + \epsilon / 2, 5) {};
-    \draw[Orange] (\ax - \epsilon / 2, 5) circle (\epsilon / 2);            \node[center] at (\ax - \epsilon / 2, 5) {};
-    \draw[Purple] (\ax - \epsilon + \epsilon / 2, 3) circle (\epsilon / 2); \node[center] at (\ax - \epsilon + \epsilon / 2, 3) {};
-    \draw[Purple] (\ax - \epsilon - \epsilon / 2, 3) circle (\epsilon / 2); \node[center] at (\ax - \epsilon - \epsilon / 2, 3) {};
+    \def\G{3}
+    \node[letter] at (\x + \width + \epsilon / 2, \y + \width - \G) {$b^{\prime \prime}$};
+    \node[letter] at (\x + \width - \epsilon + \epsilon / 2, \y + \width - \G) {$b^{\prime}$};
+    \node[letter] at (\xprime + \epsilon / 2, \y + \width - \G) {$b^{\prime  \prime}$};
+    \node[letter] at (\xprime - \epsilon + \epsilon / 2, \y + \width - \G) {$b^{\prime}$};
 
-    \node[point, Green] at (\ax + \epsilon, \y + 6 + \delta) {};
-    \node[point, Green] at (\ax + \epsilon, \y + 6 - \delta) {};
-    \node[point, Green] at (\ax, \y + 4 + \delta) {};
-    \node[point, Green] at (\ax, \y + 4 - \delta) {};
-    \node[point, Green] at (\ax - \epsilon, \y + 2 + \delta) {};
-    \node[point, Green] at (\ax - \epsilon, \y + 2 - \delta) {};
+    \def\G{5}
+    \node[letter] at (\x + \width - \epsilon / 2, \y + \width - \G) {$c^{\prime \prime}$};
+    \node[letter] at (\x + \width - 2*\epsilon + \epsilon / 2, \y + \width - \G) {$c^{\prime}$};
+    \node[letter] at (\xprime - \epsilon / 2, \y + \width - \G) {$c^{\prime \prime}$};
+    \node[letter] at (\xprime - 2*\epsilon + \epsilon / 2, \y + \width - \G) {$c^{\prime}$};
 
-    \node[letter] at (  9.6, 7.4) {$a^{\prime}$};
-    \node[letter] at (10.7, 7.4) {$a^{\prime \prime}$};
-    \node[letter] at (13.7, 7.4) {$a^{\prime}$};
-    \node[letter] at (14.7, 7.4) {$a^{\prime \prime}$};
+    \node[point, Green] at (\x + \width + \epsilon, \y + \width - 1 + \delta) {};
+    \node[point, Green] at (\x + \width + \epsilon, \y + \width - 1 - \delta) {};
+    \node[point, Green] at (\x + \width,                  \y + \width - 3  + \delta) {};
+    \node[point, Green] at (\x + \width,                  \y + \width - 3  - \delta) {};
+    \node[point, Green] at (\x + \width - \epsilon,   \y + \width - 5  + \delta) {};
+    \node[point, Green] at (\x + \width - \epsilon,   \y + \width - 5  - \delta) {};
+    
+    \draw[latex-latex] (\x + \width - \epsilon,   \y + \width - 4.25) -- (\x + \width,   \y + \width - 4.25) node[midway, above] {$\varepsilon$};
 
-    \node[letter] at (  8.6, 5.4) {$b^{\prime}$};
-    \node[letter] at (  9.7, 5.4) {$b^{\prime \prime}$};
-    \node[letter] at (12.7, 5.4) {$b^{\prime }$};
-    \node[letter] at (13.7, 5.4) {$b^{\prime \prime}$};
+    \node[point, Green] at (\xprime + \epsilon, \y + \width - 1 + \delta) {};
+    \node[point, Green] at (\xprime + \epsilon, \y + \width - 1 - \delta) {};
+    \node[point, Green] at (\xprime ,                  \y + \width - 3  + \delta) {};
+    \node[point, Green] at (\xprime ,                  \y + \width - 3  - \delta) {};
+    \node[point, Green] at (\xprime - \epsilon,   \y + \width - 5  + \delta) {};
+    \node[point, Green] at (\xprime - \epsilon,   \y + \width - 5  - \delta) {};
 
-    \node[letter] at ( 7.6, 3.4) {$c^{\prime}$};
-    \node[letter] at ( 8.7, 3.4) {$c^{\prime \prime}$};
-    \node[letter] at (11.6, 3.4) {$c^{\prime}$};
-    \node[letter] at (12.7, 3.4) {$c^{\prime \prime}$};
+%     \node[point, Green] at (\x + \width - \epsilon + 0.2, \y + 1.76) {};
+%     \node[point, Green] at (\x + \width + 0.7, \y + 4) {};
+%     \node[point, Green] at (\x + \width + \gap - \epsilon + 1.2, \y + 1.76) {};
+%     \node[point, Green] at (\xprime + 1.75, \y + 5.8) {};
+%     \node[point, Green] at (\xprime + 0.7, \y + 4) {};
 
-    \node[letter] at (9,9) {A};
-    \node[letter] at (9,0.25) {B};
-    \node[letter] at (13.1,9) {A};
-    \node[letter] at (13.1,0.25) {B};
-
-    \node[label] at (\x  + \width / 2, \y  + \width / 2) {1};
-    \node[label] at (\ax + \width / 2, \y  + \width / 2) {2};
-  \end{tikzpicture}
+\end{tikzpicture}
 
 \end{document}

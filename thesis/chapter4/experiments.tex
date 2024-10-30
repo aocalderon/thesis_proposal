@@ -68,7 +68,10 @@ Another notable observation is that BFE is more sensitive to the density of pair
 
 A final observation is that a few partitions take significantly more time than others, particularly those with a higher density of pairs. This is directly related to the number of maximal disks that need to be computed and subsequently pruned. For example, the partition that takes the longest time when $\varepsilon = 20m$ is the one with the highest number of pairs, which corresponds to partition 187 in Figure \ref{fig:top_time_partitions}.
 
-We further analyzed how Phase 1 processing is distributed within the most demanding partition. Figure \ref{fig:dense_stages}.a (for BFE) and Figure \ref{fig:dense_stages}.b (for PSI) display the time taken by each Phase 1 stage (refer to Figure \ref{fig:example}) for partition 187. The most resource-intensive stage in both cases is the final step of filtering the disks, where disks whose points are contained within others are removed—this stage identifies the \textit{maximal} disks (labeled as `Maximals' in the figure).
+We further analyzed how Phase 1 processing is distributed within the most demanding partition. Figure \ref{fig:dense_stages}.a (for BFE) and Figure 
+\ref{fig:dense_stages}.b (for PSI) display the time taken by each Phase 1 stage (refer to Figure \ref{fig:MF_stages}) for partition 187. The most 
+resource-intensive stage in both cases is the final step of filtering the disks, where disks whose points are contained within others are removed—this stage 
+identifies the \textit{maximal} disks (labeled as `Maximals' in the figure).
 
 This stage is particularly costly because both BFE and PSI must scan a large set of candidate disks, identifying and removing those that are redundant. As $\varepsilon$ increases, this processing becomes even more time-consuming, as the number of pairs and candidate disks grows along with $\varepsilon$.
 
