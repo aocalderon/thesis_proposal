@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.10.17)  30 OCT 2024 13:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.10.17)  30 OCT 2024 19:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1220,93 +1220,90 @@ nput line 153.
  [9
 
  <../thesis/chapter4/figures/FF_flowchart.pdf>]
-<figures/FF_stages.pdf, id=248, 392.06776pt x 169.32559pt>
-File: figures/FF_stages.pdf Graphic file (type pdf)
-<use figures/FF_stages.pdf>
-Package pdftex.def Info: figures/FF_stages.pdf  used on input line 160.
-(pdftex.def)             Requested size: 327.50404pt x 141.43222pt.
+<../thesis/chapter4/figures/Temporal/f_stages.pdf, id=248, 413.9756pt x 236.116
+12pt>
+File: ../thesis/chapter4/figures/Temporal/f_stages.pdf Graphic file (type pdf)
+<use ../thesis/chapter4/figures/Temporal/f_stages.pdf>
+Package pdftex.def Info: ../thesis/chapter4/figures/Temporal/f_stages.pdf  used
+ on input line 160.
+(pdftex.def)             Requested size: 321.51625pt x 183.3808pt.
+ [10
 
-Overfull \hbox (5.9878pt too wide) in paragraph at lines 160--160
- [][] 
- []
-
-[10
-
- <./figures/FF_stages.pdf>]
-<../thesis/chapter4/figures/grid_prime.pdf, id=295, 95.3713pt x 95.06015pt>
+ <../thesis/chapter4/figures/Temporal/f_stages.pdf>]
+<../thesis/chapter4/figures/grid_prime.pdf, id=315, 95.3713pt x 95.06015pt>
 File: ../thesis/chapter4/figures/grid_prime.pdf Graphic file (type pdf)
 <use ../thesis/chapter4/figures/grid_prime.pdf>
 Package pdftex.def Info: ../thesis/chapter4/figures/grid_prime.pdf  used on inp
-ut line 169.
+ut line 172.
 (pdftex.def)             Requested size: 160.75812pt x 160.25258pt.
-<../thesis/chapter4/figures/square.pdf, id=296, 147.75903pt x 147.51913pt>
+<../thesis/chapter4/figures/square.pdf, id=316, 116.21819pt x 127.24237pt>
 File: ../thesis/chapter4/figures/square.pdf Graphic file (type pdf)
 <use ../thesis/chapter4/figures/square.pdf>
 Package pdftex.def Info: ../thesis/chapter4/figures/square.pdf  used on input l
-ine 169.
-(pdftex.def)             Requested size: 160.75812pt x 160.50452pt.
+ine 172.
+(pdftex.def)             Requested size: 125.39113pt x 137.2935pt.
  [11
 
  <../thesis/chapter4/figures/grid_prime.pdf> <../thesis/chapter4/figures/square
 .pdf>] [12
 
 ]
-<../thesis/chapter4/figures/PartReplication/P123.pdf, id=335, 420.73587pt x 163
+<../thesis/chapter4/figures/PartReplication/P123.pdf, id=354, 420.73587pt x 163
 .01001pt>
 File: ../thesis/chapter4/figures/PartReplication/P123.pdf Graphic file (type pd
 f)
 <use ../thesis/chapter4/figures/PartReplication/P123.pdf>
 Package pdftex.def Info: ../thesis/chapter4/figures/PartReplication/P123.pdf  u
-sed on input line 186.
+sed on input line 189.
 (pdftex.def)             Requested size: 321.51625pt x 124.57289pt.
  [13
 
  <../thesis/chapter4/figures/PartReplication/P123.pdf>]
-<../thesis/chapter4/figures/merge.pdf, id=367, 543.2305pt x 232.03688pt>
+<../thesis/chapter4/figures/merge.pdf, id=385, 543.2305pt x 232.03688pt>
 File: ../thesis/chapter4/figures/merge.pdf Graphic file (type pdf)
 <use ../thesis/chapter4/figures/merge.pdf>
 Package pdftex.def Info: ../thesis/chapter4/figures/merge.pdf  used on input li
-ne 193.
+ne 196.
 (pdftex.def)             Requested size: 321.51625pt x 137.33252pt.
  [14
 
  <../thesis/chapter4/figures/merge.pdf>]
-<../thesis/chapter4/figures/maxdist.pdf, id=386, 186.80992pt x 173.1238pt>
+<../thesis/chapter4/figures/maxdist.pdf, id=404, 186.80992pt x 173.1238pt>
 File: ../thesis/chapter4/figures/maxdist.pdf Graphic file (type pdf)
 <use ../thesis/chapter4/figures/maxdist.pdf>
 Package pdftex.def Info: ../thesis/chapter4/figures/maxdist.pdf  used on input 
-line 198.
+line 201.
 (pdftex.def)             Requested size: 208.12253pt x 192.86105pt.
  [15
 
  <../thesis/chapter4/figures/maxdist.pdf>]
 <../thesis/chapter4/figures/plots/11_temporal_partitions/TemporalPartitioning.p
-df, id=397, 251.69432pt x 313.22823pt>
+df, id=415, 251.69432pt x 313.22823pt>
 File: ../thesis/chapter4/figures/plots/11_temporal_partitions/TemporalPartition
 ing.pdf Graphic file (type pdf)
 <use ../thesis/chapter4/figures/plots/11_temporal_partitions/TemporalPartitioni
 ng.pdf>
 Package pdftex.def Info: ../thesis/chapter4/figures/plots/11_temporal_partition
-s/TemporalPartitioning.pdf  used on input line 203.
+s/TemporalPartitioning.pdf  used on input line 206.
 (pdftex.def)             Requested size: 185.9705pt x 231.4317pt.
 
-Overfull \vbox (7.40202pt too high) detected at line 203
+Overfull \vbox (7.40202pt too high) detected at line 206
  []
 
 [16
 
  <../thesis/chapter4/figures/plots/11_temporal_partitions/TemporalPartitioning.
 pdf>]
-<../thesis/chapter4/figures/plots/11_temporal_partitions/Cube-based.pdf, id=416
+<../thesis/chapter4/figures/plots/11_temporal_partitions/Cube-based.pdf, id=434
 , 232.36812pt x 254.99063pt>
 File: ../thesis/chapter4/figures/plots/11_temporal_partitions/Cube-based.pdf Gr
 aphic file (type pdf)
 <use ../thesis/chapter4/figures/plots/11_temporal_partitions/Cube-based.pdf>
 Package pdftex.def Info: ../thesis/chapter4/figures/plots/11_temporal_partition
-s/Cube-based.pdf  used on input line 208.
+s/Cube-based.pdf  used on input line 211.
 (pdftex.def)             Requested size: 210.90218pt x 231.4317pt.
 
-Overfull \vbox (7.40202pt too high) detected at line 208
+Overfull \vbox (7.40202pt too high) detected at line 211
  []
 
 [17
@@ -1315,58 +1312,58 @@ Overfull \vbox (7.40202pt too high) detected at line 208
 [18
 
 ]
-<figures/LA_T320_N50K.png, id=440, 1238.37656pt x 752.0597pt>
+<figures/LA_T320_N50K.png, id=458, 1238.37656pt x 752.0597pt>
 File: figures/LA_T320_N50K.png Graphic file (type png)
 <use figures/LA_T320_N50K.png>
-Package pdftex.def Info: figures/LA_T320_N50K.png  used on input line 229.
+Package pdftex.def Info: figures/LA_T320_N50K.png  used on input line 232.
 (pdftex.def)             Requested size: 321.51625pt x 195.2555pt.
  [19
 
  <./figures/LA_T320_N50K.png>]
 <../thesis/chapter4/figures/plots/01_optimal_performance/pflockE2_by_capacity.p
-df, id=448, 433.62pt x 289.08pt>
+df, id=466, 433.62pt x 289.08pt>
 File: ../thesis/chapter4/figures/plots/01_optimal_performance/pflockE2_by_capac
 ity.pdf Graphic file (type pdf)
 <use ../thesis/chapter4/figures/plots/01_optimal_performance/pflockE2_by_capaci
 ty.pdf>
 Package pdftex.def Info: ../thesis/chapter4/figures/plots/01_optimal_performanc
-e/pflockE2_by_capacity.pdf  used on input line 261.
+e/pflockE2_by_capacity.pdf  used on input line 264.
 (pdftex.def)             Requested size: 102.88754pt x 68.59103pt.
 <../thesis/chapter4/figures/plots/01_optimal_performance/pflockE5_by_capacity.p
-df, id=449, 433.62pt x 289.08pt>
+df, id=467, 433.62pt x 289.08pt>
 File: ../thesis/chapter4/figures/plots/01_optimal_performance/pflockE5_by_capac
 ity.pdf Graphic file (type pdf)
 <use ../thesis/chapter4/figures/plots/01_optimal_performance/pflockE5_by_capaci
 ty.pdf>
 Package pdftex.def Info: ../thesis/chapter4/figures/plots/01_optimal_performanc
-e/pflockE5_by_capacity.pdf  used on input line 261.
+e/pflockE5_by_capacity.pdf  used on input line 264.
 (pdftex.def)             Requested size: 102.88754pt x 68.59103pt.
 <../thesis/chapter4/figures/plots/01_optimal_performance/pflockE10_by_capacity.
-pdf, id=450, 433.62pt x 289.08pt>
+pdf, id=468, 433.62pt x 289.08pt>
 File: ../thesis/chapter4/figures/plots/01_optimal_performance/pflockE10_by_capa
 city.pdf Graphic file (type pdf)
 <use ../thesis/chapter4/figures/plots/01_optimal_performance/pflockE10_by_capac
 ity.pdf>
 Package pdftex.def Info: ../thesis/chapter4/figures/plots/01_optimal_performanc
-e/pflockE10_by_capacity.pdf  used on input line 261.
+e/pflockE10_by_capacity.pdf  used on input line 264.
 (pdftex.def)             Requested size: 102.88754pt x 68.59103pt.
 <../thesis/chapter4/figures/plots/01_optimal_performance/pflockE15_by_capacity.
-pdf, id=451, 433.62pt x 289.08pt>
+pdf, id=469, 433.62pt x 289.08pt>
 File: ../thesis/chapter4/figures/plots/01_optimal_performance/pflockE15_by_capa
 city.pdf Graphic file (type pdf)
 <use ../thesis/chapter4/figures/plots/01_optimal_performance/pflockE15_by_capac
 ity.pdf>
 Package pdftex.def Info: ../thesis/chapter4/figures/plots/01_optimal_performanc
-e/pflockE15_by_capacity.pdf  used on input line 261.
+e/pflockE15_by_capacity.pdf  used on input line 264.
 (pdftex.def)             Requested size: 102.88754pt x 68.59103pt.
 <../thesis/chapter4/figures/plots/01_optimal_performance/pflockE20_by_capacity.
-pdf, id=452, 433.62pt x 289.08pt>
+pdf, id=470, 433.62pt x 289.08pt>
 File: ../thesis/chapter4/figures/plots/01_optimal_performance/pflockE20_by_capa
 city.pdf Graphic file (type pdf)
 <use ../thesis/chapter4/figures/plots/01_optimal_performance/pflockE20_by_capac
 ity.pdf>
 Package pdftex.def Info: ../thesis/chapter4/figures/plots/01_optimal_performanc
-e/pflockE20_by_capacity.pdf  used on input line 261.
+e/pflockE20_by_capacity.pdf  used on input line 264.
 (pdftex.def)             Requested size: 102.88754pt x 68.59103pt.
  [20
 
@@ -1377,122 +1374,122 @@ capacity.pdf> <../thesis/chapter4/figures/plots/01_optimal_performance/pflockE1
 5_by_capacity.pdf> <../thesis/chapter4/figures/plots/01_optimal_performance/pfl
 ockE20_by_capacity.pdf>]
 <../thesis/chapter4/figures/plots/03_top_time_partitions/top_time_partitions.pd
-f, id=483, 650.43pt x 361.35pt>
+f, id=502, 650.43pt x 361.35pt>
 File: ../thesis/chapter4/figures/plots/03_top_time_partitions/top_time_partitio
 ns.pdf Graphic file (type pdf)
 <use ../thesis/chapter4/figures/plots/03_top_time_partitions/top_time_partition
 s.pdf>
 Package pdftex.def Info: ../thesis/chapter4/figures/plots/03_top_time_partition
-s/top_time_partitions.pdf  used on input line 268.
+s/top_time_partitions.pdf  used on input line 271.
 (pdftex.def)             Requested size: 321.51625pt x 178.62344pt.
  [21
 
  <../thesis/chapter4/figures/plots/03_top_time_partitions/top_time_partitions.p
 df>]
 <../thesis/chapter4/figures/plots/04_pairs_performance/pairs_performance.pdf, i
-d=496, 578.16pt x 433.62pt>
+d=514, 578.16pt x 433.62pt>
 File: ../thesis/chapter4/figures/plots/04_pairs_performance/pairs_performance.p
 df Graphic file (type pdf)
 <use ../thesis/chapter4/figures/plots/04_pairs_performance/pairs_performance.pd
 f>
 Package pdftex.def Info: ../thesis/chapter4/figures/plots/04_pairs_performance/
-pairs_performance.pdf  used on input line 274.
+pairs_performance.pdf  used on input line 277.
 (pdftex.def)             Requested size: 289.36266pt x 217.0212pt.
 
 [22
 
  <../thesis/chapter4/figures/plots/04_pairs_performance/pairs_performance.pdf>]
-<../thesis/chapter4/figures/plots/09_dense_stages/dense.pdf, id=507, 578.16pt x
+<../thesis/chapter4/figures/plots/09_dense_stages/dense.pdf, id=525, 578.16pt x
  289.08pt>
 File: ../thesis/chapter4/figures/plots/09_dense_stages/dense.pdf Graphic file (
 type pdf)
 <use ../thesis/chapter4/figures/plots/09_dense_stages/dense.pdf>
 Package pdftex.def Info: ../thesis/chapter4/figures/plots/09_dense_stages/dense
-.pdf  used on input line 280.
+.pdf  used on input line 283.
 (pdftex.def)             Requested size: 321.51625pt x 160.75447pt.
  [23
 
  <../thesis/chapter4/figures/plots/09_dense_stages/dense.pdf>]
-<../thesis/chapter4/figures/plots/10_cmbc_variants/cmbc.pdf, id=519, 578.16pt x
+<../thesis/chapter4/figures/plots/10_cmbc_variants/cmbc.pdf, id=537, 578.16pt x
  289.08pt>
 File: ../thesis/chapter4/figures/plots/10_cmbc_variants/cmbc.pdf Graphic file (
 type pdf)
 <use ../thesis/chapter4/figures/plots/10_cmbc_variants/cmbc.pdf>
 Package pdftex.def Info: ../thesis/chapter4/figures/plots/10_cmbc_variants/cmbc
-.pdf  used on input line 286.
+.pdf  used on input line 289.
 (pdftex.def)             Requested size: 321.51625pt x 160.75447pt.
  [24
 
  <../thesis/chapter4/figures/plots/10_cmbc_variants/cmbc.pdf>]
 <../thesis/chapter4/figures/plots/05_uniform_performance/uniform_performance.pd
-f, id=530, 578.16pt x 433.62pt>
+f, id=548, 578.16pt x 433.62pt>
 File: ../thesis/chapter4/figures/plots/05_uniform_performance/uniform_performan
 ce.pdf Graphic file (type pdf)
 <use ../thesis/chapter4/figures/plots/05_uniform_performance/uniform_performanc
 e.pdf>
 Package pdftex.def Info: ../thesis/chapter4/figures/plots/05_uniform_performanc
-e/uniform_performance.pdf  used on input line 292.
+e/uniform_performance.pdf  used on input line 295.
 (pdftex.def)             Requested size: 289.36266pt x 217.0212pt.
  [25
 
  <../thesis/chapter4/figures/plots/05_uniform_performance/uniform_performance.p
 df>]
 <../thesis/chapter4/figures/plots/06_step_performance/step_performance.pdf, id=
-543, 433.62pt x 289.08pt>
+561, 433.62pt x 289.08pt>
 File: ../thesis/chapter4/figures/plots/06_step_performance/step_performance.pdf
  Graphic file (type pdf)
 <use ../thesis/chapter4/figures/plots/06_step_performance/step_performance.pdf>
 
 Package pdftex.def Info: ../thesis/chapter4/figures/plots/06_step_performance/s
-tep_performance.pdf  used on input line 298.
+tep_performance.pdf  used on input line 301.
 (pdftex.def)             Requested size: 289.36266pt x 192.91948pt.
  [26
 
  <../thesis/chapter4/figures/plots/06_step_performance/step_performance.pdf>]
 <../thesis/chapter4/figures/plots/07_interval_performance/interval-performance.
-pdf, id=555, 433.62pt x 289.08pt>
+pdf, id=573, 433.62pt x 289.08pt>
 File: ../thesis/chapter4/figures/plots/07_interval_performance/interval-perform
 ance.pdf Graphic file (type pdf)
 <use ../thesis/chapter4/figures/plots/07_interval_performance/interval-performa
 nce.pdf>
 Package pdftex.def Info: ../thesis/chapter4/figures/plots/07_interval_performan
-ce/interval-performance.pdf  used on input line 304.
+ce/interval-performance.pdf  used on input line 307.
 (pdftex.def)             Requested size: 289.36266pt x 192.91948pt.
  [27
 
  <../thesis/chapter4/figures/plots/07_interval_performance/interval-performance
 .pdf>]
 <../thesis/chapter4/figures/plots/08_sequential_parallel/la25k_e_bfe_psi.pdf, i
-d=566, 433.62pt x 289.08pt>
+d=584, 433.62pt x 289.08pt>
 File: ../thesis/chapter4/figures/plots/08_sequential_parallel/la25k_e_bfe_psi.p
 df Graphic file (type pdf)
 <use ../thesis/chapter4/figures/plots/08_sequential_parallel/la25k_e_bfe_psi.pd
 f>
 Package pdftex.def Info: ../thesis/chapter4/figures/plots/08_sequential_paralle
-l/la25k_e_bfe_psi.pdf  used on input line 310.
+l/la25k_e_bfe_psi.pdf  used on input line 313.
 (pdftex.def)             Requested size: 289.36266pt x 192.91948pt.
 
 [28
 
  <../thesis/chapter4/figures/plots/08_sequential_parallel/la25k_e_bfe_psi.pdf>]
-<../thesis/chapter4/figures/plots/08_sequential_parallel/la25k_e.pdf, id=578, 4
+<../thesis/chapter4/figures/plots/08_sequential_parallel/la25k_e.pdf, id=596, 4
 33.62pt x 289.08pt>
 File: ../thesis/chapter4/figures/plots/08_sequential_parallel/la25k_e.pdf Graph
 ic file (type pdf)
 <use ../thesis/chapter4/figures/plots/08_sequential_parallel/la25k_e.pdf>
 Package pdftex.def Info: ../thesis/chapter4/figures/plots/08_sequential_paralle
-l/la25k_e.pdf  used on input line 316.
+l/la25k_e.pdf  used on input line 319.
 (pdftex.def)             Requested size: 289.36266pt x 192.91948pt.
  [29
 
  <../thesis/chapter4/figures/plots/08_sequential_parallel/la25k_e.pdf>]
-<../thesis/chapter4/figures/plots/08_sequential_parallel/la50k_e.pdf, id=590, 4
+<../thesis/chapter4/figures/plots/08_sequential_parallel/la50k_e.pdf, id=608, 4
 33.62pt x 289.08pt>
 File: ../thesis/chapter4/figures/plots/08_sequential_parallel/la50k_e.pdf Graph
 ic file (type pdf)
 <use ../thesis/chapter4/figures/plots/08_sequential_parallel/la50k_e.pdf>
 Package pdftex.def Info: ../thesis/chapter4/figures/plots/08_sequential_paralle
-l/la50k_e.pdf  used on input line 322.
+l/la50k_e.pdf  used on input line 325.
 (pdftex.def)             Requested size: 289.36266pt x 192.91948pt.
 
 [30
@@ -1501,9 +1498,9 @@ l/la50k_e.pdf  used on input line 322.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' in size <17.28> not availa
 ble
 (Font)              Font shape `T1/FiraSans-OsF/regular/n' tried instead on inp
-ut line 326.
+ut line 329.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/n' will be
-(Font)              scaled to size 17.28pt on input line 326.
+(Font)              scaled to size 17.28pt on input line 329.
 
 [31
 
@@ -1522,8 +1519,8 @@ Package rerunfilecheck Info: File `dissertation.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27782 strings out of 478287
- 569855 string characters out of 5849288
+ 27783 strings out of 478287
+ 570133 string characters out of 5849288
  776344 words of memory out of 5000000
  45294 multiletter control sequences out of 15000+600000
  755896 words of font info for 97 fonts, out of 8000000 for 9000
@@ -1534,42 +1531,37 @@ e/texmf-dist/fonts/enc/dvips/fira/fir_iln36p.enc}{/usr/share/texmf/fonts/enc/dv
 ips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public
 /fira/FiraSans-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fira/
 FiraSans-Italic.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fira/Fira
-Sans-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cme
-xtra/cmbsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cme
-xtra/cmmib8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/la
-sy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
-10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc0800.pfb></usr/share/t
-exmf/fonts/type1/public/cm-super/sfcc1440.pfb></usr/share/texmf/fonts/type1/pub
-lic/cm-super/sfcc2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm100
-0.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/te
-xmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/publ
-ic/cm-super/sfxc1440.pfb>
-Output written on dissertation.pdf (31 pages, 4081411 bytes).
+Sans-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/latxfont/lasy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/symbols/msam10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc08
+00.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1440.pfb></usr/share/t
+exmf/fonts/type1/public/cm-super/sfcc2074.pfb></usr/share/texmf/fonts/type1/pub
+lic/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm109
+5.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/te
+xmf/fonts/type1/public/cm-super/sfxc1440.pfb>
+Output written on dissertation.pdf (31 pages, 4100476 bytes).
 PDF statistics:
- 713 PDF objects out of 1000 (max. 8388607)
- 515 compressed objects within 6 object streams
+ 727 PDF objects out of 1000 (max. 8388607)
+ 516 compressed objects within 6 object streams
  63 named destinations out of 1000 (max. 500000)
  198 words of extra memory for PDF output out of 10000 (max. 10000000)
 
