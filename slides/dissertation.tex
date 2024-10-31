@@ -88,7 +88,7 @@
 
     \begin{frame}{Movement patterns}
         \centering
-        \includegraphics[width=0.55\textwidth]{figures/patterns}
+        \includegraphics[width=0.75\textwidth]{../thesis/chapter4/figures/Patterns/patterns}
         \begin{flushright}
             {\tiny (Gudmundsson, et al. 2008)}
         \end{flushright}
@@ -117,7 +117,7 @@
         \vspace{0.25cm}
 
         \centering
-        \includegraphics[width=0.4\textwidth]{figures/theorem}
+        \includegraphics[width=0.5\textwidth]{figures/theorem}
 
     \end{frame}
 
@@ -180,35 +180,54 @@
 
     \begin{frame}{Challenges and contributions}
         \begin{itemize}
-            \item Due to high complexity it does not scale well.
-            \item In databases with a large number of moving entities per time stamp it has a direct impact.
-            \item Just sequential implementation yet.
-            \item We propose a parallel solution in both domains.
+            \item High complexity limits scalability.
+            \item Large datasets with dense clusters of moving entities per time instant significantly impact performance.
+            \item Specifically,
+            \begin{itemize}
+                \item identifying maximal disks is hindered by the extensive number of candidates requiring pruning.
+                \item when parallelizing, we must address moving flocks that traverse contiguous partitions.
+            \end{itemize}
+            \item We propose a parallel and scalable solution for both spatial and temporal domains.
         \end{itemize}
     \end{frame}
 
-    \begin{frame}{On the spatial domain}{}
-        \begin{itemize} \item Parallel overview... \end{itemize} \vspace{0.5cm}
+    \begin{frame}{On the spatial domain}
+        \begin{itemize} \item Partitioning strategy... \end{itemize} \vspace{0.5cm}
 
          \centering
-         \includegraphics[width=\textwidth]{../thesis/chapter4/figures/PartReplication/P123}
+         \includegraphics[trim={0 25 0 0}, clip, width=\textwidth]{../thesis/chapter4/figures/PartReplication/P123}
      \end{frame}
 
      \begin{frame}{On the spatial domain}
-        \begin{itemize} \item Parallel overview... \end{itemize} \vspace{0.5cm}
+        \begin{itemize} \item Handling duplication... \end{itemize} \vspace{0.5cm}
 
          \centering
          \includegraphics[width=\textwidth]{../thesis/chapter4/figures/merge}
      \end{frame}
 
     \begin{frame}{On the temporal domain}
+            \begin{itemize} \item We introduce the \textit{maxdist} parameter to define an area were we have to track \textbf{crossing partial flocks} 
+(CPFs)... \end{itemize} \vspace{0.5cm}
         \centering
-        \includegraphics[height=0.75\textheight]{../thesis/chapter4/figures/maxdist}
+        \includegraphics[height=0.6\textheight]{../thesis/chapter4/figures/maxdist}
     \end{frame}
 
     \begin{frame}{On the temporal domain}
         \centering
         \includegraphics[height=0.9\textheight]{../thesis/chapter4/figures/plots/11_temporal_partitions/TemporalPartitioning}
+    \end{frame}
+
+    \begin{frame}{On the tempora domain}
+        \begin{itemize}
+            \item Discovered flocks inside the safe area are ready to be reported.
+            \item CPFs require post-processing.  We propose four alternative:
+            \begin{itemize}
+                \item Master
+                \item By-Level
+                \item Least Common Ancestor (LCA)
+                \item Cube-based
+            \end{itemize}
+        \end{itemize}
     \end{frame}
 
     \begin{frame}{On the temporal domain}
@@ -231,7 +250,7 @@
      \end{frame}
 
      \begin{frame}{Datasets}
-        \begin{itemize} \item Synthetic dataset [LA: 50K objects]\end{itemize} \vspace{0.25cm}
+        \begin{itemize} \item Synthetic datasets [LA50K] \end{itemize} \vspace{0.25cm}
 
          \centering
          \includegraphics[width=\textwidth]{figures/LA_T320_N50K.png}
@@ -270,61 +289,122 @@
     \end{frame}
 
     \begin{frame}{Experiments}
-        \begin{itemize} \item Analyzing most costly partitions. \end{itemize} \vspace{0.5cm}
+        \begin{itemize} \item Analyzing most costly partitions. 
+            \begin{itemize}
+                \item Top 10 most costly partitions.
+            \end{itemize}
+        \end{itemize} \vspace{0.25cm}
+
+        \centering
         \includegraphics[width=\textwidth]
                 {../thesis/chapter4/figures/plots/03_top_time_partitions/top_time_partitions}
 
     \end{frame}
 
     \begin{frame}{Experiments}
+        \begin{itemize} \item Analyzing most costly partitions. 
+            \begin{itemize}
+                \item By Pairs density..
+            \end{itemize}
+        \end{itemize} \vspace{0.25cm}
+
         \centering
-        \includegraphics[width=0.9\textwidth]
+        \includegraphics[width=0.8\textwidth]
                 {../thesis/chapter4/figures/plots/04_pairs_performance/pairs_performance}
     \end{frame}
 
     \begin{frame}{Experiments}
+        \begin{itemize} \item Analyzing most costly partitions. 
+            \begin{itemize}
+                \item By Stages in the most costly partition [(a) BFE (b) PSI].
+            \end{itemize}
+        \end{itemize} \vspace{0.25cm}
+
         \centering
         \includegraphics[width=\textwidth]
                 {../thesis/chapter4/figures/plots/09_dense_stages/dense}
     \end{frame}
+    
+    \begin{frame}{Can we reduce pruning time?}
+        \begin{itemize}
+            \item \textbf{Maximal clique (MC)}: Given an undirected graph, a MC is a subset of vertices, each directly connected to every other in the subset, 
+that cannot be expanded by adding additional vertices.
+            \item \textbf{Minimum Bounding Circle (MBC)}: Given a set of points in Euclidean space, the MBC is the smallest circle that can enclose all the 
+points. 
+        \end{itemize}
+    \end{frame}
 
-    \begin{frame}{Experiments}
+    \begin{frame}{Can we reduce pruning time?}
+        \centering
+        \includegraphics[height=0.85\textheight]
+                {../thesis/chapter4/figures/plots/10_cmbc_variants/CMBC_flowchart2}
+    \end{frame}
+
+    \begin{frame}{Can we reduce pruning time?}
+        \begin{itemize}
+            \item Phase 1 variants performance [(a) vs BFE (b) vs PSI].
+        \end{itemize} \vspace{0.25cm}
+
         \centering
         \includegraphics[width=\textwidth]
                 {../thesis/chapter4/figures/plots/10_cmbc_variants/cmbc}
     \end{frame}
-
+    
     \begin{frame}{Experiments}
+        \begin{itemize}
+            \item Relative performance of Phase 1 using synthetic datasets.
+        \end{itemize} \vspace{0.25cm}
+
         \centering
-        \includegraphics[width=0.9\textwidth]
+        \includegraphics[width=0.8\textwidth]
                 {../thesis/chapter4/figures/plots/05_uniform_performance/uniform_performance}
     \end{frame}
 
     \begin{frame}{Experiments}
+        \begin{itemize}
+            \item Finding best \textit{step} value for By-Level alternative.
+        \end{itemize} \vspace{0.25cm}
+        
         \centering
         \includegraphics[width=0.9\textwidth]
                 {../thesis/chapter4/figures/plots/06_step_performance/step_performance}
     \end{frame}
 
     \begin{frame}{Experiments}
+        \begin{itemize}
+            \item Finding best \textit{interval} value for Cube-based alternative.
+        \end{itemize} \vspace{0.25cm}
+
         \centering
         \includegraphics[width=0.9\textwidth]
                 {../thesis/chapter4/figures/plots/07_interval_performance/interval-performance}
     \end{frame}
 
     \begin{frame}{Experiments}
+        \begin{itemize}
+            \item Scalable alternatives vs standard PSI.
+        \end{itemize} \vspace{0.25cm}
+
         \centering
         \includegraphics[width=0.9\textwidth]
                 {../thesis/chapter4/figures/plots/08_sequential_parallel/la25k_e_bfe_psi}
     \end{frame}
 
     \begin{frame}{Experiments}
+        \begin{itemize}
+            \item Scalable alternatives in LA25K dataset.
+        \end{itemize} \vspace{0.25cm}
+
         \centering
         \includegraphics[width=0.9\textwidth]
                 {../thesis/chapter4/figures/plots/08_sequential_parallel/la25k_e}
     \end{frame}
 
     \begin{frame}{Experiments}
+        \begin{itemize}
+            \item Scalable alternatives in LA50K dataset.
+        \end{itemize} \vspace{0.25cm}
+
         \centering
         \includegraphics[width=0.9\textwidth]
                 {../thesis/chapter4/figures/plots/08_sequential_parallel/la50k_e}

@@ -2,9 +2,10 @@ library(tidyverse)
 
 data <- read_tsv("interval-performance.tsv") 
 
-p = ggplot(data, aes(x = factor(interval), y = time)) + 
+p = ggplot(data, aes(x = factor(interval), y = time, fill="blue")) + 
   geom_col(width = 0.5, position="dodge") + 
-  labs(x=TeX("$\\Interval$"), y="Time (s)") +
+  labs(x="Interval", y="Time (s)") +
+  guides(fill="none") +
   theme_bw() 
 plot(p)  
 

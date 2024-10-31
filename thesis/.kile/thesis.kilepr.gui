@@ -261,7 +261,7 @@ open=false
 order=-1
 
 [item:thesis.tex]
-open=true
+open=false
 order=0
 
 [item:ucr.cls]
@@ -413,8 +413,8 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:thesis.tex]
-CursorColumn=0
-CursorLine=111
+CursorColumn=7
+CursorLine=56
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]

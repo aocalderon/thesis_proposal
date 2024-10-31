@@ -1,0 +1,25 @@
+\documentclass[border=1]{standalone}
+\usepackage{tikz}
+
+\usetikzlibrary{decorations.markings, arrows}
+
+\tikzset{
+    point/.style={ draw, scale=0.15, color=black!50, circle, fill },
+    line/.style={ draw, -latex, decoration={
+    markings,
+    mark=at position 0.1 with {\arrow{{stealth}}}} },
+    polygon/.style={ white, solid, fill=black!08 }
+}
+
+\begin{document}
+    \begin{tikzpicture}
+        \input{polygons_prime}
+        \input{lines_prime}
+        \input{points_prime}
+        
+        \node[scale=0.5, text width=3cm] at (3.00,3.25){Flock with three entities};
+        \node[scale=0.5, text width=1cm] at (5.30,2.95){Meeting place};
+        \node[scale=0.5, text width=1.5cm] at (5.40,1.20){Frequent location};
+        \node[scale=0.5, text width=1.5cm] at (1.45,0.75){Periodic pattern};
+    \end{tikzpicture}
+\end{document}
