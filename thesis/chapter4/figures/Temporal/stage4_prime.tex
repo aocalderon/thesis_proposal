@@ -49,51 +49,28 @@
 
 \begin{tikzpicture}
     %\draw[white] (0,0) rectangle (4.4,4.2);
-    \def\t{0}
+
+    \def\t{2}
     \begin{scope}[
         xshift=\gap*\t,every node/.append style={        yslant=\yslant,xslant=\xslant},yslant=\yslant,xslant=\xslant]
 
-        \node[scale=0.75, left=3mm] at (2.25,3.0) {$t_{1}$};
-        \coordinate (A\t) at (1.00, 1.50);
-        \coordinate (C\t) at (1.75, 2.50);
-        \coordinate (D\t) at (0.70, 2.25);
+        \node[scale=0.75, left=3mm] at (2.25,3.0) {$t_{3}$};
+        \coordinate (A\t) at (0.75, 0.60);
+        \coordinate (C\t) at (1.75, 2.40);
+        \coordinate (D\t) at (1.40, 1.60);
+        \coordinate (E\t) at (1.75, 0.55);
 
-        \drawTraj{A0}{A\t}
-        \drawTrajF{C0}{C\t}
         \fill[white, thick, fill opacity=\oPacity] (0,0) rectangle (2.25,3.0);
         \draw[black, thick] (0,0) rectangle (2.25,3.0);
 
-        \drawFlock{1.00}{1.50}{lime};
-        \drawFlock{1.75}{2.50}{red};
-        \drawFlock{0.70}{2.25}{orange};
+        \drawFlock{0.75}{0.60}{lime};
+        \drawFlock{1.75}{0.55}{cyan};
+        \drawFlock{1.75}{2.40}{red};
+        \drawFlock{1.40}{1.60}{orange};
 
         \drawLabel{A\t}{a};
         \drawLabel{C\t}{c};
         \drawLabel{D\t}{d};
-    \end{scope}
-
-    \def\t{1}
-    \begin{scope}[
-        xshift=\gap*\t,every node/.append style={        yslant=\yslant,xslant=\xslant},yslant=\yslant,xslant=\xslant]
-
-        \node[scale=0.75, left=3mm] at (2.25,3.0) {$t_{2}$};
-        \coordinate (A\t) at (0.50, 1.00);
-        \coordinate (C\t) at (1.75, 2.40);
-        \coordinate (D\t) at (1.60, 1.60);
-        \coordinate (E\t) at (1.55, 0.65);
-
-        \drawTraj{A0}{A\t}
-        \drawTraj{C0}{C\t}
-        \drawTraj{D0}{D\t}
-
-        \fill[white, thick, fill opacity=\oPacity] (0,0) rectangle (2.25,3.0);
-        \draw[black, thick] (0,0) rectangle (2.25,3.0);
-
-        \drawFlock{0.50}{1.00}{lime};
-        \drawFlock{1.55}{0.65}{cyan};
-        \drawFlock{1.75}{2.40}{red};
-        \drawFlock{1.60}{1.60}{orange};
-
         \drawLabel{E\t}{e};
     \end{scope}
 

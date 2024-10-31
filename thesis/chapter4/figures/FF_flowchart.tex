@@ -17,7 +17,7 @@
 \begin{document}
     \begin{tikzpicture}[node distance = 2cm, auto]
         % Place nodes
-        \node [block] (combine) {Combine current disks with previous flocks};
+        \node [block] (combine) {Join current disks with previous flocks};
         \node [cloud, left of=combine] (input) {$\mathcal{D}_t$, $\mathcal{F}_{t-1}$, $\mu$, $\delta$};
         \node [block, below of=combine] (extend) {Extend duration of matched flocks};
         \node [decision, below of=extend] (decide) {Flock duration equal to $\delta$?};

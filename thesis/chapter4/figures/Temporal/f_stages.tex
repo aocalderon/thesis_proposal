@@ -7,10 +7,9 @@
 \tikzset{
     auto, node distance = 1.1cm,
     stage/.style = { draw, thick, rectangle, align=center,
-        text width = \defaultwidth, 
+        %text width = \defaultwidth, 
         font=\bfseries,
-        rounded corners=2mm, 
-        minimum width = \defaultwidth
+        rounded corners=2mm
     },
     note/.style = { draw, very thin, rectangle, dashed, align=center,
         node distance = 0.5cm,
@@ -28,25 +27,36 @@
 \begin{document}
     \begin{tikzpicture}
         \node[stage] (0) at (0,0)
-            {Initial\\conditions\\
-            \includegraphics[width=\defaultwidth]{stage0}};
-        \node[stage] (1) [below = 5mm of 0]
-            {Getting\\ new disks\\
-            \includegraphics[width=\defaultwidth]{stage1}};
+            {$\mathcal{F}_1$\\
+            \includegraphics[height=3cm]{stage0}};
+        \node[stage] (1)  [below = 5mm of 0]
+            {$\mathcal{D}_2$\\
+            \includegraphics[height=3cm]{stage0_prime}};
         \node[stage] (2) [right = 5mm of 1]
-            {Joining disks \\
+            {Joining \\
             \includegraphics[width=\defaultwidth]{stage2}};
         \node[stage] (3) [right = 5mm of 2]
-            {Reporting\\flocks \\
+            {Extending \\
             \includegraphics[width=\defaultwidth]{stage3}};
         \node[stage] (4) [right = 5mm of 3]
-            {Updating\\flocks \\
-            \includegraphics[width=\defaultwidth]{stage4}};
-
-        \draw[arrow] (0) -- (1);
+            {$\mathcal{D}_3$ \\
+            \includegraphics[height=3cm]{stage4_prime}};
+        \node[stage] (5) [above = 5mm of 4]
+            {$\mathcal{F}_2$ \\
+            \includegraphics[height=3cm]{stage4}};
+        \node[note] (6) [above = 5mm of 3] 
+        {Reporting:\\ \textbf{a} from $t_0$ to $t_2$\\ \textbf{c} from $t_0$ to $t_2$};
+        
+        \node[stage, minimum height=3.6cm] (7) [right = 5mm of 4]
+            {$\cdots$};
+            
+        \draw[arrow] (0) -- (2);
         \draw[arrow] (1) -- (2);
         \draw[arrow] (2) -- (3);
-        \draw[arrow] (3) -- (4);
+        \draw[arrow] (3) -- (5);
+        \draw[arrow_text] (3) -- (6);
+        \draw[arrow] (4) -- (7);
+        \draw[arrow] (5) -- (7.north);
 
     \end{tikzpicture}
 \end{document}
