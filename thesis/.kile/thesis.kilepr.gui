@@ -2,7 +2,7 @@
 kile_livePreviewEnabled=true
 kile_livePreviewStatusUserSpecified=false
 kile_livePreviewTool=LivePreview-PDFLaTeX
-lastDocument=pflocks_paper/methods.tex
+lastDocument=thesis.tex
 
 [document-settings,item:appendix.tex]
 Bookmarks=
@@ -166,6 +166,105 @@ Indentation Mode=normal
 Mode=LaTeX
 Mode Set By User=false
 
+[document-settings,item:chapterPFlocks/experiments.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:chapterPFlocks/methods.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:chapterSDCEL.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:chapterSDCEL/04a-gen.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:chapterSDCEL/04b-rem.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:chapterSDCEL/05-partitioning.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:chapterSDCEL/Laila-DDCEL.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:chapterSDCEL/experiments.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:chapterSDCEL/introduction.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:chapterSDCEL/literature.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:chapterSDCEL/methods.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
 [document-settings,item:pflocks_paper/intro.tex]
 Bookmarks=
 Encoding=UTF-8
@@ -283,12 +382,64 @@ order=-1
 open=true
 order=1
 
-[item:pflocks_paper/intro.tex]
+[item:chapterPFlocks/experiments.tex]
 open=true
 order=2
 
+[item:chapterPFlocks/intro.tex]
+open=false
+order=-1
+
+[item:chapterPFlocks/methods.tex]
+open=false
+order=-1
+
+[item:chapterSDCEL.tex]
+open=false
+order=1
+
+[item:chapterSDCEL/04a-gen.tex]
+open=false
+order=-1
+
+[item:chapterSDCEL/04b-rem.tex]
+open=false
+order=-1
+
+[item:chapterSDCEL/05-partitioning.tex]
+open=false
+order=-1
+
+[item:chapterSDCEL/Laila-DDCEL.tex]
+open=false
+order=-1
+
+[item:chapterSDCEL/experiments.tex]
+open=false
+order=-1
+
+[item:chapterSDCEL/introduction.tex]
+open=false
+order=-1
+
+[item:chapterSDCEL/literature.tex]
+open=false
+order=-1
+
+[item:chapterSDCEL/methods.tex]
+open=false
+order=-1
+
+[item:pflocks_paper/experiments.tex]
+open=false
+order=-1
+
+[item:pflocks_paper/intro.tex]
+open=false
+order=2
+
 [item:pflocks_paper/methods.tex]
-open=true
+open=false
 order=3
 
 [item:thesis.bib]
@@ -308,8 +459,8 @@ open=false
 order=1
 
 [view-settings,view=0,item:appendix.tex]
-CursorColumn=10
-CursorLine=8
+CursorColumn=57
+CursorLine=66
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]
@@ -332,8 +483,8 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:chapter2.tex]
-CursorColumn=1
-CursorLine=7
+CursorColumn=0
+CursorLine=0
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]
@@ -436,17 +587,105 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:chapter4/methods.tex]
-CursorColumn=71
-CursorLine=86
+CursorColumn=0
+CursorLine=0
 Dynamic Word Wrap=true
 JumpList=
 TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:chapterPFlocks.tex]
-CursorColumn=7
-CursorLine=3
+CursorColumn=0
+CursorLine=4
 Dynamic Word Wrap=false
+JumpList=
+TextFolding=[]
+ViMarks=
+
+[view-settings,view=0,item:chapterPFlocks/experiments.tex]
+CursorColumn=62
+CursorLine=34
+Dynamic Word Wrap=false
+JumpList=
+TextFolding=[]
+ViMarks=
+
+[view-settings,view=0,item:chapterPFlocks/methods.tex]
+CursorColumn=57
+CursorLine=11
+Dynamic Word Wrap=false
+JumpList=
+TextFolding=[]
+ViMarks=
+
+[view-settings,view=0,item:chapterSDCEL.tex]
+CursorColumn=0
+CursorLine=6
+Dynamic Word Wrap=false
+JumpList=
+TextFolding=[]
+ViMarks=
+
+[view-settings,view=0,item:chapterSDCEL/04a-gen.tex]
+CursorColumn=54
+CursorLine=9
+Dynamic Word Wrap=false
+JumpList=
+TextFolding=[]
+ViMarks=
+
+[view-settings,view=0,item:chapterSDCEL/04b-rem.tex]
+CursorColumn=10
+CursorLine=38
+Dynamic Word Wrap=true
+JumpList=
+TextFolding=[]
+ViMarks=
+
+[view-settings,view=0,item:chapterSDCEL/05-partitioning.tex]
+CursorColumn=0
+CursorLine=0
+Dynamic Word Wrap=true
+JumpList=
+TextFolding=[]
+ViMarks=
+
+[view-settings,view=0,item:chapterSDCEL/Laila-DDCEL.tex]
+CursorColumn=54
+CursorLine=11
+Dynamic Word Wrap=false
+JumpList=
+TextFolding=[]
+ViMarks=
+
+[view-settings,view=0,item:chapterSDCEL/experiments.tex]
+CursorColumn=51
+CursorLine=60
+Dynamic Word Wrap=false
+JumpList=
+TextFolding=[]
+ViMarks=
+
+[view-settings,view=0,item:chapterSDCEL/introduction.tex]
+CursorColumn=54
+CursorLine=13
+Dynamic Word Wrap=false
+JumpList=
+TextFolding=[]
+ViMarks=
+
+[view-settings,view=0,item:chapterSDCEL/literature.tex]
+CursorColumn=0
+CursorLine=8
+Dynamic Word Wrap=true
+JumpList=
+TextFolding=[]
+ViMarks=
+
+[view-settings,view=0,item:chapterSDCEL/methods.tex]
+CursorColumn=0
+CursorLine=401
+Dynamic Word Wrap=true
 JumpList=
 TextFolding=[]
 ViMarks=
@@ -461,7 +700,7 @@ ViMarks=
 
 [view-settings,view=0,item:pflocks_paper/methods.tex]
 CursorColumn=0
-CursorLine=11
+CursorLine=0
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]
@@ -476,8 +715,8 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:thesis.tex]
-CursorColumn=1
-CursorLine=105
+CursorColumn=0
+CursorLine=104
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]
