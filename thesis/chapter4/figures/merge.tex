@@ -3,13 +3,13 @@
 \usepackage{tikz}
 
 \usetikzlibrary{shapes.misc}
-\usetikzlibrary{calc}
 
 \tikzset{
   point/.style={ draw, scale=0.4, circle, fill },
   label/.style={ scale=1.5 },
   letter/.style={ scale=1, above },
-  center/.style={ draw, thin, scale=0.3, cross out }
+  center/.style={ draw, thin, scale=0.3, cross out },
+  disk/.style={ thick }
 }
 \definecolor{light-gray}{gray}{0.925}
 
@@ -25,12 +25,12 @@
 
   \begin{tikzpicture}
 
-    \draw[latex-latex] (\x, \y - \epsilon) -- (\x, \y) node[midway, right] {$\varepsilon$};
+    \draw[latex-latex] (\x + \delta, \y - \epsilon) -- (\x + \delta, \y) node[midway, right] {$\varepsilon$};
 
-    \draw[] (\x, \y) rectangle (\x + \width, \y + \width);
-    \draw[dashed, red]  (\x - \epsilon, \y - \epsilon) rectangle (\x + \width + \epsilon, \y + \width + \epsilon);
-    \draw[] (\xprime, \y) rectangle (\xprime + \width, \y + \width);
-    \draw[dashed, red]  (\xprime - \epsilon, \y - \epsilon) rectangle (\xprime + \width + \epsilon, \y + \width + \epsilon);
+    \draw[very thick] (\x, \y) rectangle (\x + \width, \y + \width);
+    \draw[very thick, dashed, red]  (\x - \epsilon, \y - \epsilon) rectangle (\x + \width + \epsilon, \y + \width + \epsilon);
+    \draw[very thick] (\xprime, \y) rectangle (\xprime + \width, \y + \width);
+    \draw[very thick, dashed, red]  (\xprime - \epsilon, \y - \epsilon) rectangle (\xprime + \width + \epsilon, \y + \width + \epsilon);
 
     \node[letter] at (\x + \width, \y + \width) {A};
     \node[letter, below] at (\x + \width, \y) {B};
@@ -45,36 +45,36 @@
     \node[point] at (\xprime + 5.5, \y + 5) {};
 
     \def\G{1}
-    \draw[Olive] (\x + \width + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);   
+    \draw[disk, Olive] (\x + \width + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);   
     \node[center] at (\x + \width + \epsilon / 2, \y + \width - \G) {};
-    \draw[Olive] (\x + \width + \epsilon + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);   
+    \draw[disk, Olive] (\x + \width + \epsilon + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);   
     \node[center] at (\x + \width + \epsilon + \epsilon / 2, \y + \width - \G) {};
     
-    \draw[Olive] (\xprime + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);  
+    \draw[disk, Olive] (\xprime + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);  
     \node[center] at (\xprime + \epsilon / 2, \y + \width - \G) {};
-    \draw[Olive] (\xprime + \epsilon + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2); 
+    \draw[disk, Olive] (\xprime + \epsilon + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2); 
     \node[center] at (\xprime + \epsilon + \epsilon / 2, \y + \width - \G) {};
 
     \def\G{3}
-    \draw[Orange] (\x + \width + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);   
+    \draw[disk, Orange] (\x + \width + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);   
     \node[center] at (\x + \width + \epsilon / 2, \y + \width - \G) {};
-    \draw[Orange] (\x + \width - \epsilon + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);   
+    \draw[disk, Orange] (\x + \width - \epsilon + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);   
     \node[center] at (\x + \width - \epsilon + \epsilon / 2, \y + \width - \G) {};
     
-    \draw[Orange] (\xprime + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);  
+    \draw[disk, Orange] (\xprime + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);  
     \node[center] at (\xprime + \epsilon / 2, \y + \width - \G) {};
-    \draw[Orange] (\xprime - \epsilon + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2); 
+    \draw[disk, Orange] (\xprime - \epsilon + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2); 
     \node[center] at (\xprime - \epsilon + \epsilon / 2, \y + \width - \G) {};
 
     \def\G{5}
-    \draw[Purple] (\x + \width - \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);   
+    \draw[disk, Purple] (\x + \width - \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);   
     \node[center] at (\x + \width - \epsilon / 2, \y + \width - \G) {};
-    \draw[Purple] (\x + \width - 2*\epsilon + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);   
+    \draw[disk, Purple] (\x + \width - 2*\epsilon + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);   
     \node[center] at (\x + \width - 2*\epsilon + \epsilon / 2, \y + \width - \G) {};
     
-    \draw[Purple] (\xprime - \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);  
+    \draw[disk, Purple] (\xprime - \epsilon / 2, \y + \width - \G) circle (\epsilon / 2);  
     \node[center] at (\xprime - \epsilon / 2, \y + \width - \G) {};
-    \draw[Purple] (\xprime - 2*\epsilon + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2); 
+    \draw[disk, Purple] (\xprime - 2*\epsilon + \epsilon / 2, \y + \width - \G) circle (\epsilon / 2); 
     \node[center] at (\xprime - 2*\epsilon + \epsilon / 2, \y + \width - \G) {};
 
     \def\G{1}

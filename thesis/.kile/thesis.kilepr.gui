@@ -2,7 +2,7 @@
 kile_livePreviewEnabled=true
 kile_livePreviewStatusUserSpecified=false
 kile_livePreviewTool=LivePreview-PDFLaTeX
-lastDocument=thesis.tex
+lastDocument=chapter4.tex
 
 [document-settings,item:appendix.tex]
 Bookmarks=
@@ -237,8 +237,8 @@ open=false
 order=-1
 
 [item:chapter4.tex]
-open=false
-order=-1
+open=true
+order=0
 
 [item:chapter4/experiments.tex]
 open=false

@@ -1,0 +1,122 @@
+\documentclass[article,screen]{acmart}
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
+
+\setcopyright{acmcopyright}
+\copyrightyear{2024}
+\acmYear{2024}
+\acmDOI{XXXXXXX.XXXXXXX}
+
+%\acmConference[Conf '24]{
+  %International Symposium on Spatial and Temporal Data
+%}{
+  %August 23--25, 2023
+%}{
+  %Calgary, Canada
+%}
+%  Uncomment \acmBooktitle if th title of the proceedings is different
+%  from ``Proceedings of ...''!
+%\acmBooktitle{
+%SSTD '23: International Symposium on Spatial and Temporal Data, August 23--25, 2023, Calgary, Canada
+%}
+%\acmPrice{15.00}
+%\acmISBN{978-1-4503-XXXX-X/18/06}
+
+\usepackage{subcaption}
+%% For algorithms...
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\algnewcommand\algorithmicforeach{\textbf{for each}}
+\algdef{S}[FOR]{ForEach}[1]{\algorithmicforeach\ #1\ \algorithmicdo}
+\algnewcommand\algorithmicswitch{\textbf{switch}}
+\algnewcommand\algorithmiccase{\textbf{case}}
+\algdef{SE}[SWITCH]{Switch}{EndSwitch}[1]{\algorithmicswitch\ #1\ \algorithmicdo}{\algorithmicend\ \algorithmicswitch}
+\algdef{SE}[CASE]{Case}{EndCase}[1]{\algorithmiccase\ #1}{\algorithmicend\ \algorithmiccase}
+\algtext*{EndSwitch}
+\algtext*{EndCase}
+
+\setlength{\textfloatsep}{2pt plus 1.0pt minus 2.0pt}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes, arrows}
+
+\begin{document}
+
+\title{Scalable Processing of Moving Flock Patterns}
+\author{Andres Calderon-Romero}
+\email{acald013@ucr.edu}
+\affiliation{
+  \institution{University of California}
+  \country{USA}
+  \city{Riverside}
+}
+
+\author{Petko Balakov}
+\email{petko@esri.com}
+\affiliation{
+  \institution{Esri}
+  \country{USA}
+  \city{Redlands}
+}
+
+\author{Marcos Vieira}
+\email{marcos@gmail.com}
+\affiliation{
+  \institution{Google}
+  \country{USA}
+  \city{San Francisco}
+}
+
+\author{Vassilis J. Tsotras}
+\email{tsotras@cs.ucr.edu}
+\affiliation{
+  \institution{University of California}
+  \country{USA}
+  \city{Riverside}
+}
+
+\renewcommand{\shortauthors}{Calderon, et al.}
+
+\begin{abstract}
+This work presents a scalable approach for identifying moving flock patterns in large trajectory databases, addressing the inefficiencies in current techniques for handling large spatio-temporal datasets. A moving flock pattern refers to a group of entities that move closely together within a defined spatial radius for a minimum time interval. We focus on improving the state-of-the-art sequential algorithms, which is capable of detecting such patterns but suffers from high computational costs, particularly with large datasets. By leveraging distributed frameworks and utilizing spatial partitioning, the proposed solution aims to significantly reduce the time required for detecting flock patterns. We highlight the challenges of spatial and temporal joins in massive datasets and offer optimizations like partition-based parallelism and strategies for managing flock patterns that span multiple partitions. The paper presents an experimental evaluation using synthetic trajectory datasets, demonstrating that the proposed methods substantially improve scalability and performance compared to existing sequential algorithms.
+
+\end{abstract}
+
+\begin{CCSXML}
+<ccs2012>
+   <concept>
+       <concept_id>10010147.10010169.10010170</concept_id>
+       <concept_desc>Computing methodologies~Parallel algorithms</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+   <concept>
+       <concept_id>10002951.10002952.10002971</concept_id>
+       <concept_desc>Information systems~Data structures</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+   <concept>
+       <concept_id>10010147.10010919.10010172.10003817</concept_id>
+       <concept_desc>Computing methodologies~MapReduce algorithms</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+ </ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Computing methodologies~Parallel algorithms}
+\ccsdesc[500]{Information systems~Data structures}
+\ccsdesc[500]{Computing methodologies~MapReduce algorithms}
+
+\keywords{Mobile patterns}
+\maketitle
+
+\input{intro}
+\input{methods}
+\input{experiments}
+\input{conclusion}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{pflocks, pflock}
+\input{appendices}
+
+\end{document}
