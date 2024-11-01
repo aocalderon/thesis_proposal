@@ -9,7 +9,7 @@ The input for the BFE algorithm consists of a set of points, a minimum distance 
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.85\linewidth]{figures/MF_flowchart}
+    \includegraphics[width=0.85\linewidth]{pflocks_paper/figures/MF_flowchart}
     \caption{General steps in phase 1 of the sequential algorithm.}\label{fig:MF_flowchart}
 \end{figure}
 
@@ -25,13 +25,13 @@ It is important to note that BFE also employs a grid structure in this phase to 
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\linewidth]{figures/grid_prime}
+    \includegraphics[width=0.5\linewidth]{pflocks_paper/figures/grid_prime}
     \caption{The grid-based structure proposed in \cite{vieira_2009}.}\label{fig:grid}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{figures/MF_stages2/flow}
+    \includegraphics[width=\linewidth]{pflocks_paper/figures/MF_stages2/flow}
     \caption{BFE Phase 1 example execution on a sample dataset.}\label{fig:MF_stages}
 \end{figure}
 
@@ -39,7 +39,7 @@ Figure \ref{fig:FF_flowchart} explains schematically phase 2. This phase perform
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.85\linewidth]{figures/FF_flowchart}
+    \includegraphics[width=0.85\linewidth]{pflocks_paper/figures/FF_flowchart}
     \caption{Steps in BFE phase two. Combination, extension and reporting of flocks.}\label{fig:FF_flowchart}
 \end{figure}
 
@@ -47,7 +47,7 @@ Similarly, Figure \ref{fig:FF_stages} illustrates the recursive process and how 
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{figures/Temporal/f_stages}
+    \includegraphics[width=\linewidth]{pflocks_paper/figures/Temporal/f_stages}
     \caption{BFE Phase 2 example explaining the stages along time instants and the initial conditions.}\label{fig:FF_stages}
 \end{figure}
 
@@ -58,7 +58,7 @@ While BFE processes points inside a grid cell of side length $\varepsilon$ along
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\linewidth]{figures/square.pdf}
+    \includegraphics[width=0.5\linewidth]{pflocks_paper/figures/square.pdf}
     \caption{An example of the two half squares used in PSI algorithm.}\label{fig:square}
 \end{figure}
 
@@ -80,7 +80,7 @@ To address this issue, we propose a partition-based strategy that divides the st
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{figures/PartReplication/P123}
+    \includegraphics[width=\linewidth]{pflocks_paper/figures/PartReplication/P123}
     \caption{An example of partitioning and replication on a sample dataset.}\label{fig:partrep}
 \end{figure}
 
@@ -88,7 +88,7 @@ Disks with centers in an expansion zone are created by points that exist in both
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{figures/merge.pdf}
+    \includegraphics[width=\linewidth]{pflocks_paper/figures/merge.pdf}
     \caption{Ensuring no loss of data in safe zone and expansion area.}\label{fig:ensuring}
 \end{figure}
 
@@ -98,7 +98,7 @@ At the end of Phase 1, we have computed a set of maximal disks for a given time 
 \begin{figure}
     \centering
     \includegraphics[width=0.8\linewidth]
-    {figures/plots/11_temporal_partitions/TemporalPartitioning.pdf}
+    {pflocks_paper/figures/plots/11_temporal_partitions/TemporalPartitioning.pdf}
     \caption{A flock that moves in different partitions along the time.}\label{fig:simple_alternative}
 \end{figure}
 
@@ -108,7 +108,7 @@ To address this issue, we introduce an additional parameter, \textit{maxdist}, w
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\linewidth]{figures/maxdist.pdf}
+    \includegraphics[width=0.7\linewidth]{pflocks_paper/figures/maxdist.pdf}
     \caption{Examples of CPFs that that start or end in the border area of a partition.}\label{fig:maxdist}
 \end{figure}
 
@@ -125,8 +125,8 @@ A limitation of the previous alternatives is that each spatial partition is proc
 \begin{figure}
     \centering
     \includegraphics[width=0.8\linewidth]
-    %{figures/cubo.pdf}
-    {figures/plots/11_temporal_partitions/Cube-based}
+    %{pflocks_paper/figures/cubo.pdf}
+    {pflocks_paper/figures/plots/11_temporal_partitions/Cube-based}
     
     \caption{An alternative division on the time dimension to partition the data into cubes.}\label{fig:cube_alternative}
 \end{figure}

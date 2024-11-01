@@ -32,11 +32,11 @@ When $\varepsilon$ is large, more pairs of points need to be processed, resultin
 \begin{figure}
     \centering
     \begin{tabular}{c c}
-         \includegraphics[width=0.45\linewidth]{figures/plots/01_optimal_performance/pflockE2_by_capacity.pdf} & 
-         \includegraphics[width=0.45\linewidth]{figures/plots/01_optimal_performance/pflockE5_by_capacity.pdf} \\
-         \includegraphics[width=0.45\linewidth]{figures/plots/01_optimal_performance/pflockE10_by_capacity.pdf} &
-         \includegraphics[width=0.45\linewidth]{figures/plots/01_optimal_performance/pflockE15_by_capacity.pdf} \\ 
-         \includegraphics[width=0.45\linewidth]{figures/plots/01_optimal_performance/pflockE20_by_capacity.pdf} & \\
+         \includegraphics[width=0.45\linewidth]{pflocks_paper/figures/plots/01_optimal_performance/pflockE2_by_capacity.pdf} & 
+         \includegraphics[width=0.45\linewidth]{pflocks_paper/figures/plots/01_optimal_performance/pflockE5_by_capacity.pdf} \\
+         \includegraphics[width=0.45\linewidth]{pflocks_paper/figures/plots/01_optimal_performance/pflockE10_by_capacity.pdf} &
+         \includegraphics[width=0.45\linewidth]{pflocks_paper/figures/plots/01_optimal_performance/pflockE15_by_capacity.pdf} \\ 
+         \includegraphics[width=0.45\linewidth]{pflocks_paper/figures/plots/01_optimal_performance/pflockE20_by_capacity.pdf} & \\
     \end{tabular}
     \caption{Execution time testing different values for Capacity ($c$) and Epsilon  ($\varepsilon$).}\label{fig:optimal_performance}
 \end{figure}
@@ -48,7 +48,7 @@ We began by identifying the top 10 partitions that required the most time to exe
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{figures/plots/03_top_time_partitions/top_time_partitions.pdf}
+    \includegraphics[width=\linewidth]{pflocks_paper/figures/plots/03_top_time_partitions/top_time_partitions.pdf}
     \caption{Comparing the performance of PSI and BFE for time consuming  partitions.} \label{fig:top_time_partitions}
 \end{figure}
 
@@ -71,7 +71,7 @@ This stage is particularly costly because both BFE and PSI must scan a large set
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{figures/plots/09_dense_stages/dense.pdf} 
+    \includegraphics[width=\linewidth]{pflocks_paper/figures/plots/09_dense_stages/dense.pdf} 
     \caption{Processing time for the stages of Phase 1, in (a) standard BFE and (b) standard  PSI.}\label{fig:dense_stages}
 \end{figure}
 
@@ -91,7 +91,7 @@ Figure \ref{fig:cmbc_variants} compares the performance of these variants agains
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth] {figures/plots/10_cmbc_variants/cmbc.pdf}
+    \includegraphics[width=\linewidth] {pflocks_paper/figures/plots/10_cmbc_variants/cmbc.pdf}
     \caption{Execution time of the Cliques approach compared to (a) standard BFE and (b) standard PSI.}\label{fig:cmbc_variants}
 \end{figure}
 
@@ -117,7 +117,7 @@ Overall, PSI demonstrated better performance than BFE, though there were cases (
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{figures/plots/05_uniform_performance/uniform_performance.pdf}
+    \includegraphics[width=\linewidth]{pflocks_paper/figures/plots/05_uniform_performance/uniform_performance.pdf}
     \caption{Performance in an uniform dataset analysing density and capacity with diverse values for epsilon.}\label{fig:uniform_performance}
 \end{figure}
 
@@ -129,13 +129,13 @@ We also evaluated the optimal value for the \textit{interval} parameter in the C
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\linewidth]{figures/plots/06_step_performance/step_performance.pdf}
+    \includegraphics[width=0.8\linewidth]{pflocks_paper/figures/plots/06_step_performance/step_performance.pdf}
     \caption{Root and step alternative for temporal join using the Berlin dataset.}\label{fig:step_performance}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\linewidth]{figures/plots/07_interval_performance/interval-performance.pdf}
+    \includegraphics[width=0.8\linewidth]{pflocks_paper/figures/plots/07_interval_performance/interval-performance.pdf}
     \caption{Interval optimization for the Cube-based alternative for temporal join using the LA25K dataset.}\label{fig:interval_performance}
 \end{figure}
 
@@ -147,18 +147,18 @@ We repeated the same experiment with the LA50K dataset, varying $\varepsilon$ fr
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.75\linewidth]{figures/plots/08_sequential_parallel/la25k_e_bfe_psi.pdf}
+    \includegraphics[width=0.75\linewidth]{pflocks_paper/figures/plots/08_sequential_parallel/la25k_e_bfe_psi.pdf}
     \caption{Performance comparing parallel and sequential alternatives in the LA25K dataset.}\label{fig:la25k_e_bfe_psi}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.75\linewidth]{figures/plots/08_sequential_parallel/la25k_e.pdf}
+    \includegraphics[width=0.75\linewidth]{pflocks_paper/figures/plots/08_sequential_parallel/la25k_e.pdf}
     \caption{Performance of the 4 parallel alternatives in the LA25K dataset.}\label{fig:la25k_e}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.75\linewidth]{figures/plots/08_sequential_parallel/la50k_e.pdf}
+    \includegraphics[width=0.75\linewidth]{pflocks_paper/figures/plots/08_sequential_parallel/la50k_e.pdf}
     \caption{Performance of the 4 parallel alternatives in the LA50K dataset.}\label{fig:la50k_e}
 \end{figure}
