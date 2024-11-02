@@ -2,7 +2,7 @@
 kile_livePreviewEnabled=true
 kile_livePreviewStatusUserSpecified=false
 kile_livePreviewTool=LivePreview-PDFLaTeX
-lastDocument=chapterSDCEL/methods.tex
+lastDocument=chapterSDCEL/experiments.tex
 
 [document-settings,item:abstract.tex]
 Bookmarks=
@@ -502,8 +502,8 @@ open=false
 order=-1
 
 [item:chapterSDCEL/experiments.tex]
-open=false
-order=-1
+open=true
+order=1
 
 [item:chapterSDCEL/introduction.tex]
 open=false
@@ -514,7 +514,7 @@ open=false
 order=-1
 
 [item:chapterSDCEL/methods.tex]
-open=true
+open=false
 order=1
 
 [item:introduction.tex]
@@ -798,8 +798,8 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:chapterSDCEL/experiments.tex]
-CursorColumn=82
-CursorLine=29
+CursorColumn=71
+CursorLine=145
 Dynamic Word Wrap=true
 JumpList=
 TextFolding=[]
