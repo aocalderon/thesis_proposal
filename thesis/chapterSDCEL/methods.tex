@@ -59,9 +59,6 @@ An edge corresponds to a straight line segment shared by two adjacent faces (pol
 
 Figure \ref{fig:dcel_example} shows half-edge $\overrightarrow{fe}$, its \textit{twin($\overrightarrow{fe}$)} (which is half-edge $\overrightarrow{ef}$), the \textit{next($\overrightarrow{fe}$)} (half-edge $\overrightarrow{ec}$) and the \textit{prev($\overrightarrow{fe}$)} (half-edge $\overrightarrow{df}$). Note the counter-clockwise direction used by the half-edges comprising face $f_2$. The \textit{incidentFace} of a half-edge corresponds to the face that this edge belongs to (for example, \textit{incidentFace}($\overrightarrow{fe}$) is face $f_2$).
 
-%% Extension
-% In addition, we note a couple of special half-edges. \textit{Dangles} are the half-edges with one or both ends not incident on another half-edge endpoint. Half-edge \textit{$\overrightarrow{fj}$} and its twin are both considered dangle edges.  \textit{Cut-Edges} are the half-edges connected at both ends but do not form part of a polygon. The half-edge \textit{$\overrightarrow{dg}$} and its twin are considered cut-edges.
-
 Each vertex corresponds to a record in the vertex table (see Table \ref{tab:vertices}) that contains its coordinates as well as one of its incident half-edges.  An incident half-edge is one whose target is this vertex. Any of the incident edges can be used; the rest of a vertex's incident half-edges can be found easily following the next and twin half-edges.
 
 Finally, each record in the faces table contains one of the face's half edges to describe the polygon's outer boundary (following this face's orientation); see Table \ref{tab:faces}. All other half-edges for this face's boundary can be easily retrieved following the next half-edges in orientation order. In addition to regular faces, there is one face that covers the area outside all faces; it is called the  \textit{unbounded} face (face $f_3$ in Figure \ref{fig:dcel_example}). Since $f_3$ has no boundary, its boundary edge is set to \textit{nil} in Table \ref{tab:faces}.
@@ -72,19 +69,28 @@ An important advantage of the DCEL structure is that a user can combine two DCEL
 
 The sequential algorithm \cite{fogel_cgal_2012} to construct the overlay between two DCELs first extracts the half-edge segments from the half-edge tables and then finds intersection points between half-edges from the two layers (using a sweep line approach) \cite{berg_computational_2008}. The intersection points found will become new vertices of the resulting overlay. If an existing half-edge contains an intersection point, it is split into two new half-edges. Using the list of outgoing and incoming half-edges for the newly added vertices (intersection points), the algorithm can compute the attributes for the records of the new half-edges. For example, the list of outgoing and incoming half-edges at each new vertex will be used to update the next, previous, and twin pointers. Finally, the records of the faces and the vertices tables are updated with the new information. 
 
+Figure \ref{fig:dcel_seq} illustrates an example of computing the overlay between two DCEL layers with one face each ($A_1$ and $B_1$ respectively) overlapping 
+the same area. First, intersection points are identified, and new vertices are created in the overlay (red vertices $c_1$ and $c_2$). Then, new half-edges are 
+created around these new vertices. As a result, face $A_1$ is modified (to an L-shaped boundary), as does face $B_1$, while a new face $A_1B_1$ is created. 
+Since this new face is the intersection of the boundaries of $A_1$ and $B_1$, its label contains the concatenation of both face labels. By convention 
+\cite{berg_computational_2008}, even though $A_1$ changes its shape, it does not change its label since its new shape is created by its intersection with the 
+unbounded face of $B_1$; similarly, the new shape of $B_1$ maintains its original label. These labels are crucial for creating the overlay (and the operators it 
+supports) as they are used to identify which polygons overlap an existing face.
+
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{chapterSDCEL/dcel2}
+    \includegraphics[width=\textwidth]{chapterSDCEL/dcel2}
     \caption{Sequential computations of an overlay of two DCEL layers.}\label{fig:dcel_seq}
 \end{figure}
 
-Figure \ref{fig:dcel_seq} illustrates an example of computing the overlay between two DCEL layers with one face each ($A_1$ and $B_1$ respectively) overlapping the same area. First, intersection points are identified, and new vertices are created in the overlay (red vertices $c_1$ and $c_2$). Then, new half-edges are created around these new vertices. As a result, face $A_1$ is modified (to an L-shaped boundary), as does face $B_1$, while a new face $A_1B_1$ is created. Since this new face is the intersection of the boundaries of $A_1$ and $B_1$, its label contains the concatenation of both face labels. By convention \cite{berg_computational_2008}, even though $A_1$ changes its shape, it does not change its label since its new shape is created by its intersection with the unbounded face of $B_1$; similarly, the new shape of $B_1$ maintains its original label. These labels are crucial for creating the overlay (and the operators it supports) as they are used to identify which polygons overlap an existing face.
-
-Once the overlay structure of two DCELs is computed, queries like their intersection, union, difference, etc. (Figure \ref{fig:dcel_operators}) can be performed in linear time to the number of faces in the overlay. The space requirement for the overlay structure remains linear to the number of vertices, edges, and faces. Since an overlay is itself a DCEL, it can support the traditional DCEL operations (e.g., find the boundary of a face, access a face from an adjacent one, visit all the edges around a vertex, etc).
+Once the overlay structure of two DCELs is computed, queries like their intersection, union, difference, etc. (Figure \ref{fig:dcel_operators}) can 
+be performed in linear time to the number of faces in the overlay. The space requirement for the overlay structure remains linear to the number of vertices, 
+edges, and faces. Since an overlay is itself a DCEL, it can support the traditional DCEL operations (e.g., find the boundary of a face, access a face from an 
+adjacent one, visit all the edges around a vertex, etc).
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\textwidth]{chapterSDCEL/dcel_operators.pdf}
+    \includegraphics[width=\textwidth]{chapterSDCEL/dcel_operators.pdf}
     \caption{Examples of overlay operators supported by DCEL; results are shown in gray.}
     \label{fig:dcel_operators}
 \end{figure}
@@ -99,16 +105,9 @@ Nevertheless, the overlay computation can take advantage of \textit{\textbf{part
 \subsection{Partition Strategy} \label{sec:pstrategies}
 The main idea of the quadtree partition strategy is to split the area covered by the input layers into non-overlapping cells, which can then be processed independently.  While a simple grid could be used to divide the spatial area, our early experiments demonstrated that this approach leads to unbalanced cells, with some containing significantly more edges than others, negatively impacting overall performance.  In the rest we assume that the partitioning is performed using a quadtree index wich adapts to skewed spatial distributions and helps to assign a similiar number of edges to each cell.
 
-%% Extension
-%In particular, we used two partitioning strategies, one based on the quadtree (i.e. space-oriented) and one on the kd-tree (i.e. data-oriented) indexes.
-
-%Note that such tree-based data partitioning involves shuffling all edges; this however, happens only once. Our experimental evaluation (see Section \ref{sec:comparison}) shows that the data-oriented approach leads to better performance. Nevertheless, in describing the various challenges (orphan cells and holes, overlay evaluation, and optimizations) we use the quadtree-based partition since its well-defined space-oriented partitioning makes the presentation easier.
-
-%\subsubsection{Quadtree Partition Strategy}\label{sec:strategy}
-
-%A quadtree data structure follows a space-oriented approach, given that it does not  consider each cell's content at the moment of a possible split.
-
-The overall approach can be summarized in the following steps: (i) Partition the input layers into the index cells and build local DCEL representations of them at each cell, and (ii) Compute the overlay of the DCELs at each cell. Overlay operators and other functions can be run over the local overlays, and local results are collected to generate the final answer.
+The overall approach can be summarized in the following steps: (i) Partition the input layers into the index cells and build local DCEL representations of them 
+at each cell, and (ii) Compute the overlay of the DCELs at each cell. Overlay operators and other functions can be run over the local overlays, and local 
+results are collected to generate the final answer.
 
 Note that each input layer is given as a sequence of polygon edges, where each edge record contains the coordinates of the edge's vertices (origin and target vertex) as well as the polygon id and a hole id in the case that an edge belongs to a hole inside of a polygon. We assume there are no overlapping or stacked polygons in the dataset.
 
@@ -118,19 +117,22 @@ To support the creation of the quadtree we use the sampling functionalities prov
 
 After creating the quadtree from the sample, we use its leaf nodes as the partitioning cells for each layer. Each input layer file is then read from the disk, and \textit{all} its edges are inserted into the appropriate cells of the partitioning structure. Note that the partitioning structure created from the sample is now fixed; no more cells are created when the layer edges are assigned to cells. In the rest, we use the term cell and partition interchangeably.
 
-For this approach to work, it is important that each cell can compute its two DCELs independently. An edge can be fully contained in a cell, or it can intersect the cell's boundary. In the second case, we copy this edge to all cells where it intersects, but within each cell, we use the part of the edge that lies fully inside the cell. Figure \ref{fig:partition_strategy} shows an example where four cells and two edges of the upper polygon from layer A cross the cell borders.
-Such edges are clipped at the cell borders, introducing new edges (e.g., edges $\alpha^{\prime}$ and $\alpha^{\prime \prime}$ in the Figure \ref{fig:partition_strategy}).
+For this approach to work, it is important that each cell can compute its two DCELs independently. An edge can be fully contained in a cell, or it can intersect 
+ the cell's boundary. In the second case, we copy this edge to all cells where it intersects, but within each cell, we use the part of the edge that lies fully 
+inside the cell. Figure \ref{fig:partition_strategy} shows an example where four cells and two edges of the upper polygon from layer A cross the cell borders.  
+Such edges are clipped at the cell borders, introducing new edges (e.g., edges $\alpha^{\prime}$ and $\alpha^{\prime \prime}$ in the Figure 
+\ref{fig:partition_strategy}).
 Similarly, a polygon that crosses over a cell is clipped to the cell by introducing \textit{\textbf{artificial}} edges on the cell's border (see face $A_2$ in cell 3 of Figure \ref{fig:partition_strategy}). Such artificial edges are shown in red in the figure. This allows for the creation of a smaller polygon that is contained within each cell.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{chapterSDCEL/partition_schema/PolygonsParted}
+    \caption{Partitioning example using input layers A and B over four cells.} \label{fig:partition_strategy}
+\end{figure}
 
 For example, polygon $A_2$ is clipped into four smaller polygons as it overlaps all four cells. The clipping of edges and polygons ensures that each cell has 
 all the needed information to complete its DCEL computations. As such computations can be performed independently, they are sent to different worker nodes to be 
 processed in parallel. The assignment is delegated to the distributed framework (i.e., Apache Spark). 
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{chapterSDCEL/polygons_parted}
-    \caption{Partitioning example using input layers A and B over four cells.} \label{fig:partition_strategy}
-\end{figure}
 
 Once a cell is assigned to a worker node, the sequential algorithm is used to create a DCEL for each layer (using the cell edges from that layer and any 
 artificial edges, vertices, and faces created by the clipping procedures above) and then compute the corresponding (local) overlay for this cell. Using the 
@@ -139,13 +141,14 @@ cell 2. Similarly, Figure \ref{fig:distributed_dcel} shows all local overlay DCE
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.9\linewidth]{chapterSDCEL/overlay_partition.pdf}
+    \includegraphics[width=\linewidth]
+    {chapterSDCEL/overlay_partition/overlay_partition}
     \caption{Local overlay DCEL for cell 2.}\label{fig:overlay_partition}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.6\linewidth]{chapterSDCEL/distributed_dcel.pdf}    
+    \includegraphics[width=0.75\linewidth]{chapterSDCEL/distributed_dcel.pdf}    
     \caption{Result of the local overlay DCEL computations.}\label{fig:distributed_dcel}
 \end{figure}
 
@@ -167,18 +170,6 @@ a hole can split among many such cells.
 The issue with both `orphan' problems is the missing labels. In section \ref{sec:anomalies}, we propose an algorithm that correctly labels an orphan cell. If 
 this cell contains a hole, the new label is also used to update the hole edges. 
 
-\begin{figure}
-    \centering
-    \includegraphics[width=\linewidth]{chapterSDCEL/orphan_cells.pdf}    
-    \caption{(a) Empty cell and hole examples; (b)-(c)-(d) show three iterations of the proposed solution.} \label{fig:orphan_cells}
-\end{figure}
-
-%% Extension
-%\subsubsection{Kd-tree Partition Strategy} \label{sec:kdtreestrategy}
-%The kd-tree based partitioning is a data-oriented approach because it sorts and picks the middle point inside a cell to locate the split of the future children.
-
-%Building and populating the kd-tree partitioning follows a procedure similar to that of the quadtree, by first building a kd-tree from a sample of the input data.  1\% of the input data is used to build a kd-tree and extract the tree's structure.  The leaves of this structure are the partition's cells.  We feed the input data into the generated kd-tree structure to assign each edge to the leaf cell that has the edge within its boundaries.  After the partitioning is done, the construction of the local DCELs for each layer and the overlay operation is performed in each local cell in the same fashion as described in section \ref{sec:pstrategies}.
-
 \subsection{Labeling Orphan Cells and Holes} \label{sec:anomalies}
 Assuming a quadtree-based partitioning, to find the label of an orphan cell, we propose an algorithm that recursively searches the space around the orphan cell
 until it identifies a nearby cell that contains an edge(s) of the face that includes the orphan cell and thus acquire the appropriate label information. The 
@@ -189,6 +180,12 @@ Recall that the root has four possible children (typically numbered as 0,1,2,3 c
 sequence of these numbers in the path to the leaf. For example, the lineage for the shaded orphan cell in Figure \ref{fig:orphan_cells}(a) is 03. Further, note 
 that the quadtree is an unbalanced structure, having more deep leaves where there are more edges. Thus, higher leaves correspond to larger areas, and deeper 
 leaves correspond to smaller areas (since a cell split is created when a cell has more edges than a threshold).
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{chapterSDCEL/orphan_cells/orphan_cells}    
+    \caption{(a) Empty cell and hole examples; (b)-(c)-(d) show three iterations of the proposed solution.} \label{fig:orphan_cells}
+\end{figure}
 
 After identifying an orphan cell, the question
 is where to search for a cell containing an edge. The following Lemma applies:

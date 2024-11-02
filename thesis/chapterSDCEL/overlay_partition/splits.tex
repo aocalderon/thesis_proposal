@@ -1,0 +1,77 @@
+\documentclass[border=2]{standalone}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows, arrows.meta}
+\tikzset{    
+    barbarrow/.style={ % style that just defines the arrow tip
+        %>={Straight Barb[left,length=5pt,width=5pt]},
+        >={Triangle[left,length=5pt,width=5pt]},
+        double,
+        semithick,
+        <->
+    },
+    whites/.style={
+        thick, 
+        color=white
+    }
+}
+\definecolor{light-gray}{gray}{0.975}
+\definecolor{pcolor}{rgb}{0.21, 0.27, 0.31}
+\definecolor{purple}{rgb}{1.0, 0.0 1.0}
+\definecolor{pgreen}{rgb}{0.0, 0.5 0.0}
+\begin{document}
+\begin{tikzpicture}
+    \tikzstyle{node1}=[draw,scale=0.3,shape=circle,color=black,fill=black]
+    \tikzstyle{node2}=[draw,scale=0.3,shape=circle,color=red,fill=red]
+    \tikzstyle{nodePurple}=[draw,scale=0.3,shape=circle,color=red,fill=red]
+    \tikzstyle{text}=[draw,scale=0.5,color=black]
+    \draw[color=pcolor, style=dashed, step=2] (2,2) grid (4,4);
+    \node[scale=0.85, color = pcolor] at (3.75, 3.75) {$2$};
+    
+    \node[node1] (M) at (2,3) {};
+    \node[node1] (R) at (3,2) {};
+    \node[node1] (Z) at (2,2) {};
+    \node[node1] (N) at (2,4) {};
+    \node[node1] (S) at (3,3) {};
+    \node[node1] (T) at (4,2) {};
+    \node[node1] (U) at (2.5,2.5) {};
+
+    \draw[barbarrow, color=blue] (Z) -- (U); 
+    \draw[barbarrow, color=blue] (U) -- (S); 
+    \draw[barbarrow, color=blue] (N) -- (S); 
+    \draw[barbarrow, color=blue] (S) -- (T);
+    \draw[barbarrow, color=blue] (R) -- (T);
+    \draw[barbarrow, color=blue] (M) -- (N);
+
+    \draw[whites] (Z) -- (U); 
+    \draw[whites] (U) -- (S); 
+    \draw[whites] (N) -- (S); 
+    \draw[whites] (S) -- (T);
+    \draw[whites] (R) -- (T);
+    \draw[whites] (M) -- (N);
+    
+    \draw[barbarrow, color=pgreen] (M) -- (U);
+    \draw[barbarrow, color=pgreen] (U) -- (R);
+    \draw[whites] (M) -- (U);
+    \draw[whites] (U) -- (R);
+
+    \draw[barbarrow, color=pgreen](Z) -- (M);
+    \draw[barbarrow, color=pgreen] (Z) -- (R);
+    \draw[whites](Z) -- (M);
+    \draw[whites] (Z) -- (R);
+
+    \node[node1] (N) at (2,4) {};
+    \node[node1] (S) at (3,3) {};
+    \node[node1] (T) at (4,2) {};
+    \node[nodePurple] (M2) at (2,3) {};
+    \node[nodePurple] (R2) at (3,2) {};
+    \node[nodePurple] (U2) at (2.5,2.5) {};
+    \node[nodePurple] (Z2) at (2,2) {};
+
+    \node[scale=0.35] at (2.25,2.50) {$A_2B_3$};
+    \node[scale=0.35] at (2.50,2.20) {$A_2B_2$};
+    \node[scale=0.5] at (3.15,2.40) {$B_2$};
+    \node[scale=0.5] at (2.40,3.15) {$B_3$};
+    
+\end{tikzpicture}
+\end{document}
