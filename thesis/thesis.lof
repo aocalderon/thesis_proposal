@@ -1,0 +1,49 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Components of the DCEL structure.\relax }}{5}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Sequential computations of an overlay of two DCEL layers.\relax }}{10}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Examples of overlay operators supported by DCEL; results are shown in gray.\relax }}{11}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Partitioning example using input layers A and B over four cells.\relax }}{14}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Local overlay DCEL for cell 2.\relax }}{15}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Result of the local overlay DCEL computations.\relax }}{15}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces (a) Empty cell and hole examples; (b)-(c)-(d) show three iterations of the proposed solution.\relax }}{17}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Example of an overlay operator querying the distributed DCEL.\relax }}{21}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Overlay methods evaluation.\relax }}{26}{figure.caption.32}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Evaluation of the unbalanced layers optimization.\relax }}{27}{figure.caption.35}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces SDCEL performance while varying the number of cells in the CCT dataset.\relax }}{29}{figure.caption.37}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Performance with (a) MainUS and (b) GADM datasets.\relax }}{29}{figure.caption.38}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Speed-up and Scale-up experiments for the MainUS dataset.\relax }}{31}{figure.caption.42}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Speed-up and Scale-up experiments for the GADM dataset.\relax }}{32}{figure.caption.43}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Components of the DCEL structure with dangle and cut edges.\relax }}{34}{figure.caption.46}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Construction time for the spatial data structure in the (a) MainUS and (b) GADM datasets.\relax }}{37}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Number of cells created by each spatial data structure in the (a) MainUS and (b) GADM datasets.\relax }}{37}{figure.caption.54}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Data partitioning time using a spatial data structure (a) in the MainUS dataset and (b) in the GADM dataset.\relax }}{38}{figure.caption.55}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Execution time for the overlay operation using a spatial data structure in the MainUS (a)and GADM (b) dataset.\relax }}{39}{figure.caption.56}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces (a)Speed Up and (b) Scale Up performance of the Kdtree partitioning using the MainUS dataset.\relax }}{40}{figure.caption.57}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Overlaying State polygons with dangle and cut edges.\relax }}{41}{figure.caption.60}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces General steps in phase 1 of the sequential algorithm.\relax }}{45}{figure.caption.66}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces The grid-based structure proposed in \cite {vieira_2009}.\relax }}{47}{figure.caption.71}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces BFE Phase 1 example execution on a sample dataset.\relax }}{47}{figure.caption.72}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Steps in BFE phase two. Combination, extension and reporting of flocks.\relax }}{48}{figure.caption.73}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces BFE Phase 2 example explaining the stages along time instants and the initial conditions.\relax }}{49}{figure.caption.74}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces An example of the two half squares used in PSI algorithm.\relax }}{50}{figure.caption.76}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces An example of partitioning and replication on a sample dataset.\relax }}{51}{figure.caption.79}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Ensuring no loss of data in safe zone and expansion area.\relax }}{52}{figure.caption.80}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces A flock that moves in different partitions along the time.\relax }}{53}{figure.caption.82}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Examples of CPFs that that start or end in the border area of a partition.\relax }}{54}{figure.caption.83}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces An alternative division on the time dimension to partition the data into cubes.\relax }}{56}{figure.caption.84}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Execution time testing different values for Capacity ($c$) and Epsilon ($\varepsilon $).\relax }}{59}{figure.caption.89}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Comparing the performance of PSI and BFE for time consuming partitions.\relax }}{60}{figure.caption.91}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Execution time for pairs/disks finding in the dense partition.\relax }}{61}{figure.caption.92}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Processing time for the stages of Phase 1, in (a) standard BFE and (b) standard PSI.\relax }}{62}{figure.caption.93}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Execution time of the Cliques approach compared to (a) standard BFE and (b) standard PSI.\relax }}{64}{figure.caption.95}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Performance in an uniform dataset analysing density and capacity with diverse values for epsilon.\relax }}{66}{figure.caption.98}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Root and step alternative for temporal join using the Berlin dataset.\relax }}{67}{figure.caption.100}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Interval optimization for the Cube-based alternative for temporal join using the LA25K dataset.\relax }}{68}{figure.caption.101}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Performance comparing parallel and sequential alternatives in the LA25K dataset.\relax }}{69}{figure.caption.102}%
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Performance of the 4 parallel alternatives in the LA25K dataset.\relax }}{69}{figure.caption.103}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Performance of the 4 parallel alternatives in the LA50K dataset.\relax }}{70}{figure.caption.104}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {.1}{\ignorespaces Schematic description of the Clique and MBC approach.\relax }}{73}{figure.caption.111}%

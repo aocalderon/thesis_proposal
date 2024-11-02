@@ -1,0 +1,19 @@
+\section{Preliminaries} %\label{sec:extension_prelim}
+
+%% Extension
+In addition, we note a couple of special half-edges. \textit{Dangles} are the half-edges with one or both ends not incident on another half-edge endpoint. Half-edge \textit{$\overrightarrow{fj}$} and its twin are both considered dangle edges.  \textit{Cut-Edges} are the half-edges connected at both ends but do not form part of a polygon. The half-edge \textit{$\overrightarrow{dg}$} and its twin are considered cut-edges.
+
+%% Extension
+In particular, we used two partitioning strategies, one based on the quadtree (i.e. space-oriented) and one on the kd-tree (i.e. data-oriented) indexes.
+
+Note that such tree-based data partitioning involves shuffling all edges; this however, happens only once. Our experimental evaluation (see Section \ref{sec:comparison}) shows that the data-oriented approach leads to better performance. Nevertheless, in describing the various challenges (orphan cells and holes, overlay evaluation, and optimizations) we use the quadtree-based partition since its well-defined space-oriented partitioning makes the presentation easier.
+
+\subsubsection{Quadtree Partition Strategy} %\label{sec:strategy}
+
+A quadtree data structure follows a space-oriented approach, given that it does not  consider each cell's content at the moment of a possible split.
+
+%% Extension
+\subsubsection{Kd-tree Partition Strategy} \label{sec:kdtreestrategy}
+The kd-tree based partitioning is a data-oriented approach because it sorts and picks the middle point inside a cell to locate the split of the future children.
+
+Building and populating the kd-tree partitioning follows a procedure similar to that of the quadtree, by first building a kd-tree from a sample of the input data.  1\% of the input data is used to build a kd-tree and extract the tree's structure.  The leaves of this structure are the partition's cells.  We feed the input data into the generated kd-tree structure to assign each edge to the leaf cell that has the edge within its boundaries.  After the partitioning is done, the construction of the local DCELs for each layer and the overlay operation is performed in each local cell in the same fashion as described in section \ref{sec:pstrategies}.

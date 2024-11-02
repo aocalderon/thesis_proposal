@@ -110,7 +110,7 @@
 %%% ====================================================================
 \usepackage{anysize}
 \usepackage[left=1.5in,top=1.5in,right=1in,bottom=1in]{geometry}
-\usepackage[hidelinks,colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+\usepackage[hidelinks,colorlinks=true,linkcolor=blue,citecolor=blue,hypertexnames=false]{hyperref}
 
 \usepackage{xspace}
 \usepackage{graphicx}

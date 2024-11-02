@@ -1,0 +1,52 @@
+\contentsline {chapter}{List of Figures}{v}{Doc-Start}%
+\contentsline {chapter}{List of Tables}{vii}{Doc-Start}%
+\contentsline {chapter}{\numberline {1}Background \& Motivation}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Background}{1}{section.2}%
+\contentsline {section}{\numberline {1.2}Motivation}{2}{section.3}%
+\contentsline {chapter}{\numberline {2}Scalable Overlay Operations over DCEL Polygon Layers}{4}{chapter.4}%
+\contentsline {section}{\numberline {2.1}Introduction}{4}{section.5}%
+\contentsline {section}{\numberline {2.2}Related Work}{7}{section.7}%
+\contentsline {section}{\numberline {2.3}Preliminaries}{7}{section.8}%
+\contentsline {section}{\numberline {2.4}Scalable Overlay Construction}{11}{section.13}%
+\contentsline {subsection}{\numberline {2.4.1}Partition Strategy}{12}{subsection.14}%
+\contentsline {subsection}{\numberline {2.4.2}Labeling Orphan Cells and Holes}{16}{subsection.19}%
+\contentsline {subsection}{\numberline {2.4.3}Answering global overlay queries}{20}{subsection.23}%
+\contentsline {section}{\numberline {2.5}Overlay evaluation optimizations}{21}{section.25}%
+\contentsline {subsection}{\numberline {2.5.1}Optimizations for faces spanning multiple cells}{22}{subsection.26}%
+\contentsline {subsection}{\numberline {2.5.2}Optimizing for unbalanced layers}{23}{subsection.27}%
+\contentsline {section}{\numberline {2.6}Experimental Evaluation}{24}{section.28}%
+\contentsline {subsection}{\numberline {2.6.1}Evaluation datasets}{24}{subsection.29}%
+\contentsline {subsection}{\numberline {2.6.2}Overlay face optimizations}{25}{subsection.31}%
+\contentsline {subsection}{\numberline {2.6.3}Unbalanced layers optimization}{27}{subsection.34}%
+\contentsline {subsection}{\numberline {2.6.4}Varying the number of cells}{28}{subsection.36}%
+\contentsline {subsection}{\numberline {2.6.5}Speed-up and Scale-up experiments}{31}{subsection.41}%
+\contentsline {chapter}{\numberline {3}On Scalable DCEL Overlay Operations}{33}{chapter.44}%
+\contentsline {section}{\numberline {3.1}Introduction}{33}{section.45}%
+\contentsline {section}{\numberline {3.2}Related Work}{34}{section.47}%
+\contentsline {section}{\numberline {3.3}Preliminaries}{35}{section.48}%
+\contentsline {subsubsection}{Quadtree Partition Strategy}{36}{section*.49}%
+\contentsline {subsubsection}{Kd-tree Partition Strategy}{36}{section*.50}%
+\contentsline {section}{\numberline {3.4}Experimental Evaluation}{36}{section.51}%
+\contentsline {subsection}{\numberline {3.4.1}Kd-tree versus quadtree performance}{36}{subsection.52}%
+\contentsline {subsection}{\numberline {3.4.2}Overlaying Polygons with Dangle and Cut Edges}{39}{subsection.58}%
+\contentsline {chapter}{\numberline {4}Scalable Processing of Moving Flock Patterns}{42}{chapter.61}%
+\contentsline {section}{\numberline {4.1}Introduction}{42}{section.62}%
+\contentsline {section}{\numberline {4.2}Related work}{43}{section.63}%
+\contentsline {section}{\numberline {4.3}Background}{44}{section.64}%
+\contentsline {subsection}{\numberline {4.3.1}The BFE sequential algorithm}{44}{subsection.65}%
+\contentsline {subsection}{\numberline {4.3.2}The PSI sequential algorithm}{48}{subsection.75}%
+\contentsline {section}{\numberline {4.4}Bottlenecks in the sequential approach and proposed solutions}{49}{section.77}%
+\contentsline {subsection}{\numberline {4.4.1}Phase 1: Spatial finding of maximal disks.}{50}{subsection.78}%
+\contentsline {subsection}{\numberline {4.4.2}Phase 2: Temporal join}{52}{subsection.81}%
+\contentsline {section}{\numberline {4.5}Experimental Evaluation}{57}{section.85}%
+\contentsline {subsection}{\numberline {4.5.1}Experimental Setup}{57}{subsection.86}%
+\contentsline {subsection}{\numberline {4.5.2}Optimizing the number of partitions for Phase 1.}{58}{subsection.88}%
+\contentsline {subsection}{\numberline {4.5.3}Analyzing most costly partitions.}{58}{subsection.90}%
+\contentsline {subsection}{\numberline {4.5.4}Can we reduce pruning time?}{62}{subsection.94}%
+\contentsline {subsection}{\numberline {4.5.5}Relative performance of BFE and PSI Phase 1 using synthetic datasets.}{64}{subsection.96}%
+\contentsline {subsection}{\numberline {4.5.6}Evaluation of Phase 2: Temporal join.}{65}{subsection.99}%
+\contentsline {chapter}{\numberline {}Appendix}{71}{chapter.105}%
+\contentsline {section}{\numberline {A}Center computation.}{71}{section.106}%
+\contentsline {section}{\numberline {B}Disk pruning.}{72}{section.108}%
+\contentsline {section}{\numberline {C}Clique and MBC approach.}{73}{section.110}%
+\contentsline {chapter}{Bibliography}{74}{section*.112}%

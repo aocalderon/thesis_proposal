@@ -1,0 +1,15 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Vertex records.\relax }}{8}{table.caption.9}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Face records.\relax }}{8}{table.caption.9}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Half-edge records.\relax }}{8}{table.caption.10}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces Evaluation Datasets\relax }}{25}{table.caption.30}%
+\contentsline {table}{\numberline {2.5}{\ignorespaces Percentages of edges in incomplete faces for three states\relax }}{27}{table.caption.33}%
+\contentsline {table}{\numberline {2.6}{\ignorespaces Cell size statistics.\relax }}{30}{table.caption.39}%
+\contentsline {table}{\numberline {2.7}{\ignorespaces Orphan cells and orphan holes description\relax }}{31}{table.caption.40}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Overlaying Polygons with Dangle and Cut Edges Dataset\relax }}{40}{table.caption.59}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Description of datasets.\relax }}{57}{table.caption.87}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Number of partitions by capacity and number of points in synthetic uniform datasets.\relax }}{65}{table.caption.97}%
+\addvspace {10\p@ }
