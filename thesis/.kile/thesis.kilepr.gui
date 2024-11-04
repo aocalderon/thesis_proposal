@@ -2,7 +2,7 @@
 kile_livePreviewEnabled=true
 kile_livePreviewStatusUserSpecified=false
 kile_livePreviewTool=LivePreview-PDFLaTeX
-lastDocument=chapterSDCEL/experiments.tex
+lastDocument=thesis.tex
 
 [document-settings,item:abstract.tex]
 Bookmarks=
@@ -542,7 +542,7 @@ open=false
 order=-1
 
 [item:thesis.tex]
-open=false
+open=true
 order=0
 
 [item:ucr.cls]
