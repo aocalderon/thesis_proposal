@@ -2,7 +2,7 @@
 kile_livePreviewEnabled=true
 kile_livePreviewStatusUserSpecified=false
 kile_livePreviewTool=LivePreview-PDFLaTeX
-lastDocument=thesis.tex
+lastDocument=appendix.tex
 
 [document-settings,item:abstract.tex]
 Bookmarks=
@@ -378,8 +378,8 @@ open=false
 order=-1
 
 [item:appendix.tex]
-open=false
-order=-1
+open=true
+order=3
 
 [item:chapter0.tex]
 open=false
@@ -450,8 +450,8 @@ open=false
 order=-1
 
 [item:chapterExtension/experiments.tex]
-open=false
-order=-1
+open=true
+order=2
 
 [item:chapterExtension/introduction.tex]
 open=false
@@ -462,8 +462,8 @@ open=false
 order=-1
 
 [item:chapterExtension/methods.tex]
-open=false
-order=-1
+open=true
+order=1
 
 [item:chapterPFlocks.tex]
 open=false
@@ -558,8 +558,8 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:appendix.tex]
-CursorColumn=0
-CursorLine=2
+CursorColumn=14
+CursorLine=67
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]
@@ -702,16 +702,16 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:chapterExtension/experiments.tex]
-CursorColumn=0
-CursorLine=69
+CursorColumn=602
+CursorLine=76
 Dynamic Word Wrap=true
 JumpList=
 TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:chapterExtension/introduction.tex]
-CursorColumn=71
-CursorLine=5
+CursorColumn=508
+CursorLine=14
 Dynamic Word Wrap=true
 JumpList=
 TextFolding=[]
@@ -726,8 +726,8 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:chapterExtension/methods.tex]
-CursorColumn=45
-CursorLine=10
+CursorColumn=44
+CursorLine=2
 Dynamic Word Wrap=true
 JumpList=
 TextFolding=[]
@@ -863,7 +863,7 @@ ViMarks=
 
 [view-settings,view=0,item:thesis.tex]
 CursorColumn=1
-CursorLine=39
+CursorLine=111
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]

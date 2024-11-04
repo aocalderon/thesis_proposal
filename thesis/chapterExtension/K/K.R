@@ -100,7 +100,8 @@ p = ggplot(dataSpaceMainUS, aes(x = as.factor(partitions), y = nodes, group = tr
   scale_color_discrete("Tree") +
   scale_shape_discrete("Tree") +
   guides(linetype = "none") +
-  theme_bw()
+  theme_bw() +
+  theme(legend.position="top", plot.caption = element_text(hjust = 0.5, size = 12))
 
 dataSpaceGADM <- read_tsv("gadm_overlay_space.tsv")
 
@@ -111,7 +112,8 @@ q = ggplot(dataSpaceGADM, aes(x = as.factor(partitions), y = nodes, group = tree
   scale_color_discrete("Tree") +
   scale_shape_discrete("Tree") +
   guides(linetype = "none") +
-  theme_bw()
+  theme_bw() +
+  theme(legend.position="top", plot.caption = element_text(hjust = 0.5, size = 12))
 
 ggarrange(p, q, ncol=2, nrow=1, common.legend = TRUE, legend="top")
 ggsave(paste0("K_Space.pdf"), width = W, height = H)
