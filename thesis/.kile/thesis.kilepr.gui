@@ -542,7 +542,7 @@ open=false
 order=-1
 
 [item:thesis.tex]
-open=true
+open=false
 order=0
 
 [item:ucr.cls]
