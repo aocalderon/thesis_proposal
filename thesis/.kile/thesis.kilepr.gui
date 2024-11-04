@@ -502,7 +502,7 @@ open=false
 order=-1
 
 [item:chapterSDCEL/experiments.tex]
-open=true
+open=false
 order=1
 
 [item:chapterSDCEL/introduction.tex]
@@ -542,7 +542,7 @@ open=false
 order=-1
 
 [item:thesis.tex]
-open=true
+open=false
 order=0
 
 [item:ucr.cls]
@@ -702,8 +702,8 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:chapterExtension/experiments.tex]
-CursorColumn=1
-CursorLine=92
+CursorColumn=0
+CursorLine=69
 Dynamic Word Wrap=true
 JumpList=
 TextFolding=[]
@@ -734,8 +734,8 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:chapterPFlocks.tex]
-CursorColumn=0
-CursorLine=4
+CursorColumn=26
+CursorLine=3
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]

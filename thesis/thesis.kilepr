@@ -48,12 +48,6 @@ encoding=UTF-8
 highlight=LaTeX
 mode=LaTeX
 
-[item:chapterExtension/literature.tex]
-archive=true
-encoding=UTF-8
-highlight=LaTeX
-mode=LaTeX
-
 [item:chapterExtension/methods.tex]
 archive=true
 encoding=UTF-8

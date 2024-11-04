@@ -105,9 +105,7 @@ Nevertheless, the overlay computation can take advantage of \textit{\textbf{part
 \subsection{Partition Strategy} \label{sec:pstrategies}
 The main idea of the quadtree partition strategy is to split the area covered by the input layers into non-overlapping cells, which can then be processed independently.  While a simple grid could be used to divide the spatial area, our early experiments demonstrated that this approach leads to unbalanced cells, with some containing significantly more edges than others, negatively impacting overall performance.  In the rest we assume that the partitioning is performed using a quadtree index wich adapts to skewed spatial distributions and helps to assign a similiar number of edges to each cell.
 
-The overall approach can be summarized in the following steps: (i) Partition the input layers into the index cells and build local DCEL representations of them 
-at each cell, and (ii) Compute the overlay of the DCELs at each cell. Overlay operators and other functions can be run over the local overlays, and local 
-results are collected to generate the final answer.
+The overall approach can be summarized in the following steps: (i) Partition the input layers into the index cells and build local DCEL representations of them at each cell, and (ii) Compute the overlay of the DCELs at each cell. Overlay operators and other functions can be run over the local overlays, and local results are collected to generate the final answer.
 
 Note that each input layer is given as a sequence of polygon edges, where each edge record contains the coordinates of the edge's vertices (origin and target vertex) as well as the polygon id and a hole id in the case that an edge belongs to a hole inside of a polygon. We assume there are no overlapping or stacked polygons in the dataset.
 
@@ -117,12 +115,7 @@ To support the creation of the quadtree we use the sampling functionalities prov
 
 After creating the quadtree from the sample, we use its leaf nodes as the partitioning cells for each layer. Each input layer file is then read from the disk, and \textit{all} its edges are inserted into the appropriate cells of the partitioning structure. Note that the partitioning structure created from the sample is now fixed; no more cells are created when the layer edges are assigned to cells. In the rest, we use the term cell and partition interchangeably.
 
-For this approach to work, it is important that each cell can compute its two DCELs independently. An edge can be fully contained in a cell, or it can intersect 
- the cell's boundary. In the second case, we copy this edge to all cells where it intersects, but within each cell, we use the part of the edge that lies fully 
-inside the cell. Figure \ref{fig:partition_strategy} shows an example where four cells and two edges of the upper polygon from layer A cross the cell borders.  
-Such edges are clipped at the cell borders, introducing new edges (e.g., edges $\alpha^{\prime}$ and $\alpha^{\prime \prime}$ in the Figure 
-\ref{fig:partition_strategy}).
-Similarly, a polygon that crosses over a cell is clipped to the cell by introducing \textit{\textbf{artificial}} edges on the cell's border (see face $A_2$ in cell 3 of Figure \ref{fig:partition_strategy}). Such artificial edges are shown in red in the figure. This allows for the creation of a smaller polygon that is contained within each cell.
+For this approach to work, it is important that each cell can compute its two DCELs independently. An edge can be fully contained in a cell, or it can intersect  the cell's boundary. In the second case, we copy this edge to all cells where it intersects, but within each cell, we use the part of the edge that lies fully inside the cell. Figure \ref{fig:partition_strategy} shows an example where four cells and two edges of the upper polygon from layer A cross the cell borders.  Such edges are clipped at the cell borders, introducing new edges (e.g., edges $\alpha^{\prime}$ and $\alpha^{\prime \prime}$ in the Figure \ref{fig:partition_strategy}). Similarly, a polygon that crosses over a cell is clipped to the cell by introducing \textit{\textbf{artificial}} edges on the cell's border (see face $A_2$ in cell 3 of Figure \ref{fig:partition_strategy}). Such artificial edges are shown in red in the figure. This allows for the creation of a smaller polygon that is contained within each cell.
 
 \begin{figure}
     \centering
@@ -285,12 +278,7 @@ Figure \ref{fig:overlay_operator} shows how the intersection overlay operator ($
 a map operation to identify overlay faces that contain both labels from layer A and layer B. Each cell can then report every such face that does not include any 
 artificial edges, like face $A_1B_1$ in Figure \ref{fig:overlay_operator}(b); note that these faces are fully included in the cell. 
 
-Using a reduce phase, the remaining faces are sent to a master node; in our implementation, it would be the driver node of the spark application that will (i) 
-remove the artificial edges, shown in red in the figure and (ii) concatenate edges that were split because they were crossing cell borders. This is done by 
-pairing faces with the same label and concatenating their geometries by removing the artificial edges and vertices added during the partition stage, for 
-example, the two faces with label $A_2B_1$ from two different cells in Figure \ref{fig:overlay_operator}(b) were combined into one face in Figure 
-\ref{fig:overlay_operator}(c). While the extra vertex was also removed. In section ~\ref{sec:optimizing}, we discuss techniques to optimize the reduce process 
-of combining faces.
+Using a reduce phase, the remaining faces are sent to a master node; in our implementation, it would be the driver node of the spark application that will (i) remove the artificial edges, shown in red in the figure and (ii) concatenate edges that were split because they were crossing cell borders. This is done by pairing faces with the same label and concatenating their geometries by removing the artificial edges and vertices added during the partition stage, for example, the two faces with label $A_2B_1$ from two different cells in Figure \ref{fig:overlay_operator}(b) were combined into one face in Figure \ref{fig:overlay_operator}(c). While the extra vertex was also removed. In section \ref{sec:optimizing}, we discuss techniques to optimize the reduce process of combining faces.
 
 For symmetric difference, $A \bigtriangleup B$, the map phase filters faces whose label is a single layer (A or B). For the difference, $A \setminus B$, it 
 filters faces with label A. For union $A \cup B$, all faces in the overlay structure are retrieved. 

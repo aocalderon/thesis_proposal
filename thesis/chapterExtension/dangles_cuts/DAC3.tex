@@ -1,0 +1,32 @@
+\documentclass[border=2]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows, arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}
+    \tikzstyle{node1}=[draw,scale=0.2,shape=circle,color=black,fill=black]
+    
+    \draw[color=black!25, style=dashed, step=4] (0,0) grid (4,4);
+
+    \node[node1] (M) at (2,3) {};
+    \node[node1] (R) at (3,2) {};
+    \node[node1] (B)  at (0.75,1.75) {};
+    \node[node1] (D)  at (1.75,0.75) {};
+    
+    \draw[] (B) -- (M);
+    \draw[] (B) -- (D);
+    \draw[] (D) -- (R); 
+    \draw[] (M) -- (R);
+    
+    \node[node1] (B2) at (2.25, 2.50) {};
+    \node[node1] (I1) at (2.5,2.5) {};
+    \node[node1] (I2) at (2.56,1.56) {};
+    
+    \draw[] (B2) -- (I1);
+    \draw[] (I2) -- (B2);
+    
+    \node[scale=0.55] at (1.75, 1.75){$A_01$};
+    \node[scale=0.55] at (2.65, 2.05){$A_02$};
+
+\end{tikzpicture}
+\end{document}
