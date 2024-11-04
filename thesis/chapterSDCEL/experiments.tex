@@ -40,7 +40,7 @@ As expected, there is a trade-off between parallelism and how much work is left 
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{chapterSDCEL/Overlay_Tester}
+    \includegraphics[width=\linewidth]{chapterSDCEL/OverlayTester/Overlay_Tester}
     \caption{Overlay methods evaluation.}\label{fig:overlay_tester}
 \end{figure}
 
@@ -68,10 +68,7 @@ Since this optimization occurs per cell, we used a single node to perform the ov
 
 \begin{figure}
     \centering
-    \begin{tabular}{cc}
-       \includegraphics[width=0.49\linewidth]{chapterSDCEL/Unbalance_Tester01}  & \includegraphics[width=0.49\linewidth]{chapterSDCEL/Unbalance_Tester02} \\
-       (a) & (b)
-    \end{tabular}
+    \includegraphics[width=\linewidth]{chapterSDCEL/UnbalanceTester/Unbalance_Tester}
     \caption{Evaluation of the unbalanced layers optimization.}\label{fig:unbalance_tests}
 \end{figure}
 
@@ -91,8 +88,8 @@ In addition, Figure \ref{fig:ca}(a) shows the performance of the sequential solu
 \begin{figure}
     \centering
     \begin{tabular}{cc}
-        \includegraphics[width=0.50\linewidth]{chapterSDCEL/CA} & 
-        \includegraphics[width=0.45\linewidth]{chapterSDCEL/CA_sample} \\
+        \includegraphics[width=0.50\linewidth]{chapterSDCEL/CA/CA} & 
+        \includegraphics[width=0.45\linewidth]{chapterSDCEL/CA/CA_sample} \\
         (a) & (b)
     \end{tabular}
     \caption{SDCEL performance while varying the number of cells in the CCT dataset.} \label{fig:ca}
@@ -100,11 +97,7 @@ In addition, Figure \ref{fig:ca}(a) shows the performance of the sequential solu
 
 \begin{figure}
     \centering
-    \begin{tabular}{cc}
-        \includegraphics[width=0.49\linewidth]{chapterSDCEL/MainUS} &
-        \includegraphics[width=0.49\linewidth]{chapterSDCEL/GADM}   \\
-        (a) & (b)
-    \end{tabular}
+    \includegraphics[width=\textwidth]{chapterSDCEL/Performance/Performance} 
     \caption{Performance with (a) MainUS and (b) GADM datasets.} \label{fig:mainus}
 \end{figure}
 
@@ -150,19 +143,14 @@ The speed-up behavior of SDCEL appears in Figure \ref{fig:mainus_speed_scale}(a)
 
 \begin{figure}
     \centering
-    \begin{tabular}{cc}
-       \includegraphics[width=0.49\linewidth]{chapterSDCEL/MainUS_speedup} & \includegraphics[width=0.49\linewidth]{chapterSDCEL/MainUS_scaleup} \\
-       (a) & (b)
-    \end{tabular}
-    \caption{Speed-up and Scale-up experiments for the MainUS dataset.} \label{fig:mainus_speed_scale}
+    \includegraphics[width=\textwidth]{chapterSDCEL/MainUS_SS/MainUS_SS} 
+    \caption{Speed-up and Scale-up experiments for the MainUS dataset.} 
+\label{fig:mainus_speed_scale}
 \end{figure}
 
 \begin{figure}
     \centering
-    \begin{tabular}{cc}
-       \includegraphics[width=0.49\linewidth]{chapterSDCEL/GADM_speedup} & \includegraphics[width=0.49\linewidth]{chapterSDCEL/GADM_scaleup} \\
-       (a) & (b)
-    \end{tabular}
+    \includegraphics[width=\textwidth]{chapterSDCEL/GADM_SS/GADM_SS}
     \caption{Speed-up and Scale-up experiments for the GADM dataset.} \label{fig:gadm_speed_scale}
 \end{figure}
 

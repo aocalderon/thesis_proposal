@@ -1,0 +1,14 @@
+*.cache
+*.log
+.RData
+.Rhistory
+.history
+
+*.aux
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+*.pcl
+*~

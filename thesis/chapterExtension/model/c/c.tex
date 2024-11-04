@@ -1,0 +1,35 @@
+\documentclass[border=1]{standalone}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+\definecolor{magenta}{HTML}{f8766d}
+\definecolor{cyan}{HTML}{00bfc4}
+\usetikzlibrary{arrows, arrows.meta, patterns}
+
+\tikzset{
+    point/.style={ draw, scale=0.25, color=blue, circle, fill },
+    cell/.style={draw, dashed},
+    p1/.style={solid, fill=magenta!15},
+    %p2/.style={solid,pattern color=cyan!75, pattern={north east lines}},
+    p2/.style={solid, fill=cyan!15},
+    line/.style={ % style that just defines the arrow tip
+        >={Triangle[left,length=5pt,width=5pt]},
+        double,
+        <->
+    },
+    whites/.style={
+        thick, 
+        color=white
+    }
+}
+
+\begin{document}
+    \begin{tikzpicture}
+        \input{polygons1_prime}
+        \input{polygons2_prime}
+        \input{cells_prime}
+        \input{lines_prime}
+        \input{linesw_prime}
+        \input{points_prime}
+    \end{tikzpicture}
+\end{document}
