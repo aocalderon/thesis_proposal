@@ -35,11 +35,12 @@
         \vspace{0.25cm}
         \begin{minipage}{0.49\textwidth}
             \centering
-            \includegraphics[width=0.8\textwidth]{figures/dcel_representation2}
+            \includegraphics[width=0.85\textwidth]{figures/dcel_representation2}
         \end{minipage}\hfill % maximize the horizontal separation
         \begin{minipage}{0.49\textwidth}
             \centering
-            \includegraphics[width=0.7\textwidth]{figures/dcel_records}
+
+            \includegraphics[width=0.85\textwidth]{figures/dcel_records}
         \end{minipage}
     \end{frame}
 
@@ -207,31 +208,25 @@
         \end{itemize}
         \vspace{1cm}
         \centering
-        \includegraphics[width=0.75\textwidth]{figures/datasets}
+        \includegraphics[width=0.9\textwidth]{figures/sdcel_datasets}
     \end{frame}
 
     \begin{frame}{Experimental evaluation}
         \begin{itemize}
             \item Evaluation of the overlapping faces optimization.
         \end{itemize}
-        \vspace{1cm}
+        \vspace{5mm}
         \centering
-        \includegraphics[width=0.75\textwidth]{figures/overlay_tester}
+        \includegraphics[width=0.9\textwidth]{../thesis/chapterSDCEL/OverlayTester/Overlay_Tester}
     \end{frame}
 
     \begin{frame}{Experimental evaluation}
         \begin{itemize}
             \item Evaluation of the unbalanced layers optimization.
         \end{itemize}
-        \vspace{1cm}
-        \begin{minipage}{0.49\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{figures/unbalance1}
-        \end{minipage}\hfill % maximize the horizontal separation
-        \begin{minipage}{0.49\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{figures/unbalance2}
-        \end{minipage}
+        \vspace{5mm}
+        \centering
+        \includegraphics[width=\textwidth]{../thesis/chapterSDCEL/UnbalanceTester/Unbalance_Tester}
     \end{frame}
 
     \begin{frame}{Experimental evaluation}
@@ -242,11 +237,11 @@
 
         \begin{minipage}{0.49\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{figures/ca}
+            \includegraphics[width=\textwidth]{../thesis/chapterSDCEL/CA/CA}
         \end{minipage}\hfill % maximize the horizontal separation
         \begin{minipage}{0.49\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{figures/ca_sample}
+            \includegraphics[width=0.95\textwidth]{../thesis/chapterSDCEL/CA/CA_sample}
         \end{minipage}
     \end{frame}
 
@@ -254,55 +249,31 @@
         \begin{itemize}
             \item Performance with MainUS and GADM datasets.
         \end{itemize}
-        \vspace{1cm}
-
-        \begin{minipage}{0.49\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{figures/mainus}
-        \end{minipage}\hfill % maximize the horizontal separation
-        \begin{minipage}{0.49\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{figures/gadm}
-        \end{minipage}
+        \vspace{5mm}
+        \includegraphics[width=\textwidth]{../thesis/chapterSDCEL/Performance/Performance}
     \end{frame}
 
     \begin{frame}{Experimental evaluation}
         \begin{itemize}
             \item MainUS scale-up and speed-up.
         \end{itemize}
-        \vspace{1cm}
-
-        \begin{minipage}{0.49\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{figures/MainUS_scaleup}
-        \end{minipage}\hfill % maximize the horizontal separation
-        \begin{minipage}{0.49\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{figures/MainUS_speedup}
-        \end{minipage}
+        \vspace{5mm}
+        \includegraphics[width=\textwidth]{../thesis/chapterSDCEL/MainUS_SS/MainUS_SS}
     \end{frame}
 
     \begin{frame}{Experimental evaluation}
         \begin{itemize}
             \item GADM scale-up and speed-up.
         \end{itemize}
-        \vspace{1cm}
-
-        \begin{minipage}{0.49\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{figures/GADM_scaleup}
-        \end{minipage}\hfill % maximize the horizontal separation
-        \begin{minipage}{0.49\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{figures/GADM_speedup}
-        \end{minipage}
+        \vspace{5mm}
+        \includegraphics[width=\textwidth]{../thesis/chapterSDCEL/GADM_SS/GADM_SS}
     \end{frame}
 
-    \begin{frame}{Conclusions}
-        \begin{itemize}
-            \item We introduced SDCEL, a scalable approach to compute the overlay operation among two layers that represent polygons from a planar subdivision of a surface.
-            \item We use a partition strategy which guarantees that each partition (cell) has the data needed to work independently.
-            \item We also proposed several optimizations to improve performance.
-            \item Our experiments using real datasets show very good performance; we are able to compute overlays over very large layers (each with >35M edges) in few minutes.
-        \end{itemize}
-    \end{frame}
+%     \begin{frame}{Conclusions}
+%         \begin{itemize}
+%             \item We introduced SDCEL, a scalable approach to compute the overlay operation among two layers that represent polygons from a planar subdivision of a surface.
+%             \item We use a partition strategy which guarantees that each partition (cell) has the data needed to work independently.
+%             \item We also proposed several optimizations to improve performance.
+%             \item Our experiments using real datasets show very good performance; we are able to compute overlays over very large layers (each with >35M edges) in few minutes.
+%         \end{itemize}
+%     \end{frame}

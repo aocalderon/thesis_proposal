@@ -1,0 +1,59 @@
+\documentclass[border=0]{standalone}
+\usepackage{tikz}
+
+\begin{document}
+    \begin{tikzpicture}
+        \draw[thick] (0.00, 0.00) rectangle (4.00, 4.00);
+        \draw (2.00, 0.00) -- (2.00, 4.00);
+        \draw (0.00, 2.00) -- (4.00, 2.00);
+        \draw (0.00, 3.00) -- (2.00, 3.00);
+        \draw (1.00, 2.00) -- (1.00, 4.00);
+
+        \coordinate (C1) at (3.00, 2.21);
+        \coordinate (C2) at (1.00, 1.00);
+        \coordinate (C3) at (1.35, 3.61);
+        \coordinate (C4) at (1.50, 2.66);
+        \coordinate (C5) at (0.32, 3.65);
+        \coordinate (C6) at (0.21, 3.34);
+        \coordinate (C7) at (0.55, 3.44);
+        \coordinate (C8) at (0.55, 2.67);
+
+        \draw (C1) circle (0.90);
+        \draw (C2) circle (0.60);
+        \draw (C3) circle (0.30);
+        \draw (C4) circle (0.30);
+        \draw (C5) circle (0.10);
+        \draw (C6) circle (0.10);
+        \draw (C7) circle (0.10);
+        \draw (C8) circle (0.10);
+
+        \node[above] (T1) at (2,4){Quadtree};
+
+        \def\delta{5.00}
+        \draw[thick] (0.00+\delta, 0.00) rectangle (4.00+\delta, 4.00);
+        \draw (2.00+\delta, 0.00) -- (2.00+\delta, 4.00);
+        \draw (0.00+\delta, 2.00) -- (2.00+\delta, 2.00);
+        \draw (0.00+\delta, 3.00) -- (1.00+\delta, 3.00);
+        \draw (1.00+\delta, 2.00) -- (1.00+\delta, 4.00);
+
+        \coordinate (D1) at (3.00+\delta, 2.21);
+        \coordinate (D2) at (1.00+\delta, 1.00);
+        \coordinate (D3) at (1.35+\delta, 3.61);
+        \coordinate (D4) at (1.50+\delta, 2.66);
+        \coordinate (D5) at (0.32+\delta, 3.65);
+        \coordinate (D6) at (0.21+\delta, 3.34);
+        \coordinate (D7) at (0.55+\delta, 3.44);
+        \coordinate (D8) at (0.55+\delta, 2.67);
+
+        \draw (D1) circle (0.90);
+        \draw (D2) circle (0.60);
+        \draw (D3) circle (0.30);
+        \draw (D4) circle (0.30);
+        \draw (D5) circle (0.10);
+        \draw (D6) circle (0.10);
+        \draw (D7) circle (0.10);
+        \draw (D8) circle (0.10);
+
+        \node[above] (T2) at (2+\delta,4){Kd-tree};
+    \end{tikzpicture}
+\end{document}
