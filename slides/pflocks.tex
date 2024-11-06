@@ -37,11 +37,10 @@
 
 \begin{frame}{\textbf{B}asic \textbf{F}lock \textbf{E}valuation algorithm}
     \begin{itemize}
-        \item Vieira, et al. 2009.
-        \item The first polynomial-time solution for determining disk locations.
-        \item Under fixed time duration it has polynomial time complexity $O(\delta|\tau|^{(2\delta) + 1})$
+        \item The first polynomial-time solution for determining disk locations (Vieira, et al. 2009).
+        \item The algorithm generates a finite set of disk locations based on a given pair of points.
+        \item Under fixed time duration it has polynomial time complexity $O(\delta|\tau|^{(2\delta) + 1})$.
     \end{itemize}
-    \vspace{0.25cm}
 
     \centering
     \includegraphics[width=0.5\textwidth]{figures/theorem}
@@ -146,7 +145,7 @@
 \begin{frame}{On the tempora domain}
     \begin{itemize}
         \item Discovered flocks inside the safe area are ready to be reported.
-        \item CPFs require post-processing.  We propose four alternative:
+        \item CPFs require post-processing.  We propose four alternatives:
         \begin{itemize}
             \item Master
             \item By-Level
@@ -154,6 +153,11 @@
             \item Cube-based
         \end{itemize}
     \end{itemize}
+\end{frame}
+
+\begin{frame}{On the temporal domain}
+    \centering
+    \includegraphics[height=0.8\textheight]{../thesis/chapterPFlocks/figures/plots/11_temporal_partitions/MasterByLevel}
 \end{frame}
 
 \begin{frame}{On the temporal domain}
@@ -281,15 +285,15 @@ points.
             {../thesis/chapterPFlocks/figures/plots/10_cmbc_variants/cmbc}
 \end{frame}
 
-\begin{frame}{Experiments}
-    \begin{itemize}
-        \item Relative performance of Phase 1 using synthetic datasets.
-    \end{itemize} \vspace{0.25cm}
-
-    \centering
-    \includegraphics[width=0.8\textwidth]
-            {../thesis/chapterPFlocks/figures/plots/05_uniform_performance/uniform_performance}
-\end{frame}
+% \begin{frame}{Experiments}
+%     \begin{itemize}
+%         \item Relative performance of Phase 1 using synthetic datasets.
+%     \end{itemize} \vspace{0.25cm}
+% 
+%     \centering
+%     \includegraphics[width=0.8\textwidth]
+%             {../thesis/chapterPFlocks/figures/plots/05_uniform_performance/uniform_performance}
+% \end{frame}
 
 \begin{frame}{Experiments}
     \begin{itemize}

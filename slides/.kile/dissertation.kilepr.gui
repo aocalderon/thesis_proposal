@@ -114,16 +114,16 @@ open=true
 order=0
 
 [item:extension.tex]
-open=false
-order=-1
+open=true
+order=3
 
 [item:pflocks.tex]
 open=true
-order=1
+order=2
 
 [item:sdcel.tex]
-open=false
-order=-1
+open=true
+order=1
 
 [view-settings,view=0,item:beamercolorthemefocus.sty]
 CursorColumn=0
@@ -174,24 +174,24 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:extension.tex]
-CursorColumn=0
-CursorLine=2
-Dynamic Word Wrap=false
+CursorColumn=151
+CursorLine=3
+Dynamic Word Wrap=true
 JumpList=
 TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:pflocks.tex]
-CursorColumn=31
-CursorLine=160
+CursorColumn=119
+CursorLine=159
 Dynamic Word Wrap=true
 JumpList=
 TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:sdcel.tex]
-CursorColumn=31
-CursorLine=91
+CursorColumn=91
+CursorLine=64
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]
