@@ -17,17 +17,6 @@
         \end{minipage}
     \end{frame}
 
-    \begin{frame}{DCEL description}
-        \begin{itemize}
-                \item DCEL uses three tables: Vertices, Faces and Half-edges.
-        \end{itemize}
-        \vspace{0.25cm}
-        \begin{minipage}{0.79\textwidth}
-            \centering
-            \includegraphics[width=0.8\textwidth]{figures/dcel_representation2}
-        \end{minipage}\hfill % maximize the horizontal separation
-    \end{frame}
-
    \begin{frame}{DCEL description}
         \begin{itemize}
                 \item DCEL uses three tables: Vertices, Faces and Half-edges.
@@ -50,10 +39,8 @@
             \item \textbf{Re-usability}: allows multiple operations over the same DCEL.
             \item \textbf{Pipelining}: the output of a DCEL operator can be input to another DCEL operator.
         \end{itemize}
-        \vspace{0.25cm}
 
         \centering
-
         \begin{tikzpicture}
         \node (A) {\includegraphics[width=0.4\textwidth]{figures/A}};
         \pause
@@ -84,7 +71,6 @@
                 \item Consider two (simple) input DCELs $A_1$ and $B_1$.  The sequential algorithm first finds the intersections of half-edges.
                 \item Then, new vertices (e.g. $c_1, c_2$) are created,  half-edges are updated, new faces are added and labeled (e.g. $A_1B_1$).
         \end{itemize}
-        \vspace{0.5cm}
 
         \centering
         \includegraphics[width=\textwidth]{../thesis/chapterSDCEL/dcel2}
@@ -96,30 +82,20 @@
             \item Two phases: (1) Distributed DCEL construction, and (2) Distributed overlay evaluation.
             \item Distribution is based on a spatial index (e.g. quadtree)
             \item Each input DCEL layer (e.g. A, B) is partitioned using the same index
-        \end{itemize}
-        \vspace{0.25cm}
-
-        \centering
-        \includegraphics[width=0.8\textwidth]{../thesis/chapterSDCEL/partition_schema/PolygonsParted}
-    \end{frame}
-
-    \begin{frame}{Scalable Implementation}
-        \begin{itemize}
-            \small
             \item Each index cell should contain all information needed so that it can compute the overlay DCEL locally
             \item For each cell to be independent, we need to create "artificial" edges and vertices
         \end{itemize}
-        \vspace{0.25cm}
+    \end{frame}
 
+    \begin{frame}{Scalable Implementation}
         \centering
-        \includegraphics[width=0.8\textwidth]{../thesis/chapterSDCEL/partition_schema/PolygonsParted}
+        \includegraphics[width=\textwidth]{../thesis/chapterSDCEL/partition_schema/PolygonsParted}
     \end{frame}
 
     \begin{frame}{Distributed DCEL construction}
         \centering
-        \includegraphics[width=0.65\textwidth]{../thesis/chapterSDCEL/overlay_partition/overlay_partition} \\
-        \vspace{0.5cm}
-        \includegraphics[width=0.35\textwidth]{../thesis/chapterSDCEL/distributed_dcel}
+        \includegraphics[width=0.675\textwidth]{../thesis/chapterSDCEL/overlay_partition/overlay_partition} \\
+        \includegraphics[width=0.390\textwidth]{../thesis/chapterSDCEL/distributed_dcel}
     \end{frame}
 
    \begin{frame}{Overlay evaluation}
@@ -156,10 +132,8 @@
         \begin{itemize}
             \item We provide an algorithm to efficiently solve the orphan cell problem.
         \end{itemize}
-        \vspace{0.25cm}
 
         \centering
-
         \begin{tikzpicture}
         \node (A) {\includegraphics[width=0.5\textwidth]{../thesis/chapterSDCEL/orphan_cells/example1}};
         \pause
@@ -255,18 +229,38 @@
 
     \begin{frame}{Experimental evaluation}
         \begin{itemize}
-            \item MainUS scale-up and speed-up.
+            \item Scale-up and Speed-up.
         \end{itemize}
-        \vspace{5mm}
-        \includegraphics[width=\textwidth]{../thesis/chapterSDCEL/MainUS_SS/MainUS_SS}
-    \end{frame}
 
+        \begin{tikzpicture}
+            \node[] (A) {\includegraphics[width=\textwidth]{../thesis/chapterSDCEL/MainUS_SS/MainUS_SS}};
+            \pause
+            \node[] (B) {\includegraphics[width=\textwidth]{../thesis/chapterSDCEL/GADM_SS/GADM_SS}};
+        \end{tikzpicture}
+    \end{frame}
+    
     \begin{frame}{Experimental evaluation}
         \begin{itemize}
-            \item GADM scale-up and speed-up.
+            \item Space-oriented vs Data-oriented partitioners.
         \end{itemize}
         \vspace{5mm}
-        \includegraphics[width=\textwidth]{../thesis/chapterSDCEL/GADM_SS/GADM_SS}
+        \begin{tikzpicture}
+            \node (A) {\includegraphics[width=\textwidth]{../thesis/chapterExtension/K/K_Creation}};
+            \pause
+            \node (B) {\includegraphics[width=\textwidth]{../thesis/chapterExtension/K/K_Space}};
+            \pause
+            \node (C) {\includegraphics[width=\textwidth]{../thesis/chapterExtension/K/K_Partitioning}};
+            \pause
+            \node (D) {\includegraphics[width=\textwidth]{../thesis/chapterExtension/K/K_Overlay}};
+        \end{tikzpicture}
+    \end{frame}
+    
+    \begin{frame}{Experimental evaluation}
+        \begin{itemize}
+            \item Space-oriented vs Data-oriented partitioners.
+        \end{itemize}
+        \vspace{5mm}
+        \includegraphics[width=\textwidth]{../thesis/chapterExtension/K_SS/K_SS}
     \end{frame}
 
 %     \begin{frame}{Conclusions}
