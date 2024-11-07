@@ -5,17 +5,23 @@
     \end{itemize}
 \end{frame}
 
-% \begin{frame}{Space-oriented vs Data-oriented}
-%     \centering
-%     \includegraphics[width=\textwidth]{figures/SpaceVsData/SvsD}
-% \end{frame}
-
 \begin{frame}{Dangle and cut edges}
     \centering
     \includegraphics[width=0.6\textwidth]{../thesis/chapterExtension/dcel_example2}
 \end{frame}
 
-\begin{frame}{Dangle and cut edges}
+\begin{frame}{Implementation}
+    \begin{itemize}
+        \item The \textbf{DDCEL Construction} consists of two primary phases:
+            \begin{itemize}
+                \item Generation Phase \textbf{(Gen Phase)} 
+                \item Remaining Phase (Rem Phase)
+            \end{itemize}
+        \item Optimization Step: Replace the Rem Phase with the optimization of faces spanning multiple cells based on \textit{Face ID}.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Gen Phase}
     \centering
 
     \begin{tikzpicture}
@@ -32,7 +38,7 @@
     \end{tikzpicture}
 \end{frame}
 
-\begin{frame}{Dangle and cut edges}
+\begin{frame}{Reduce by ID re-partition}
     \centering
     \includegraphics[width=\textwidth]{../thesis/chapterExtension/dangles_cuts/DAC}
 \end{frame}

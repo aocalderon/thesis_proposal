@@ -18,19 +18,7 @@
                 \bottomrule
         \end{tabular}
     };
-    \node[below = 5mm of vertices] (faces) {
-        \begin{tabular}{c c c}
-            \toprule
-                & boundary  & hole\\
-            face & edge      & list\\
-            \midrule
-            $f_1$ & $\vec{ab}$ & $nil$ \\
-            $f_2$ & $\vec{fe}$ & $nil$ \\
-            $f_3$ & $nil$      & $nil$ \\
-            \bottomrule
-        \end{tabular}
-    };
-    \node[below = 5mm of faces] (hedges) {
+    \node[below = 5mm of vertices] (hedges) {
         \begin{tabular}{c c c c c c}
             \toprule
             half-edge & origin & face & twin & next & prev \\
@@ -39,6 +27,18 @@
             $\vec{ca}$ & c & $f_1$  & $\vec{ac}$ & $\vec{ab}$ & $\vec{dc}$ \\
             $\vec{db}$ & d & $f_3$  & $\vec{bd}$ & $\vec{ba}$ & $\vec{fd}$ \\
             \vdots     & \vdots & \vdots & \vdots     & \vdots     & \vdots     \\
+            \bottomrule
+        \end{tabular}
+    };
+    \node[below = 5mm of hedges] (faces) {
+        \begin{tabular}{c c c}
+            \toprule
+                & boundary  & hole\\
+            face & edge      & list\\
+            \midrule
+            $f_1$ & $\vec{ab}$ & $nil$ \\
+            $f_2$ & $\vec{fe}$ & $nil$ \\
+            $f_3$ & $nil$      & $nil$ \\
             \bottomrule
         \end{tabular}
     };

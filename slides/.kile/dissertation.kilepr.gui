@@ -2,7 +2,7 @@
 kile_livePreviewEnabled=true
 kile_livePreviewStatusUserSpecified=false
 kile_livePreviewTool=LivePreview-PDFLaTeX
-lastDocument=pflocks.tex
+lastDocument=sdcel.tex
 
 [document-settings,item:beamercolorthemefocus.sty]
 Bookmarks=
@@ -115,11 +115,11 @@ order=0
 
 [item:extension.tex]
 open=true
-order=3
+order=2
 
 [item:pflocks.tex]
 open=true
-order=2
+order=3
 
 [item:sdcel.tex]
 open=true
@@ -166,16 +166,16 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:dissertation.tex]
-CursorColumn=4
-CursorLine=65
+CursorColumn=66
+CursorLine=51
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:extension.tex]
-CursorColumn=151
-CursorLine=3
+CursorColumn=31
+CursorLine=17
 Dynamic Word Wrap=true
 JumpList=
 TextFolding=[]
@@ -190,8 +190,8 @@ TextFolding=[]
 ViMarks=
 
 [view-settings,view=0,item:sdcel.tex]
-CursorColumn=91
-CursorLine=64
+CursorColumn=39
+CursorLine=232
 Dynamic Word Wrap=false
 JumpList=
 TextFolding=[]
